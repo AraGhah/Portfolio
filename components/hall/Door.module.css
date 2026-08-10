@@ -1,0 +1,74 @@
+.door {
+  flex: 0 0 auto;
+  position: relative;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  scroll-snap-align: center;
+  transition:
+    transform 750ms var(--ease-out),
+    opacity 600ms var(--ease-out),
+    filter 600ms var(--ease-out);
+  outline: none;
+}
+
+.wBase {
+  width: clamp(232px, 24vw, 296px);
+}
+
+.w4 {
+  width: clamp(240px, 25vw, 306px);
+}
+
+.w5 {
+  width: clamp(258px, 27vw, 340px);
+}
+
+.door:focus-visible {
+  outline: 2px solid var(--acc);
+  outline-offset: 4px;
+}
+
+.doorFiltered {
+  pointer-events: none;
+}
+
+.glow {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 550ms linear;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.glowBrass {
+  background: radial-gradient(
+    ellipse at 50% 40%,
+    rgba(201, 164, 101, 0.34),
+    transparent 68%
+  );
+}
+
+.glowCool {
+  background: radial-gradient(
+    ellipse at 50% 40%,
+    rgba(126, 151, 184, 0.34),
+    transparent 68%
+  );
+}
+
+.previewWrap {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 450ms var(--ease-out),
+    transform 500ms var(--ease-out);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.pushing {
+  transition: transform 750ms var(--ease-out);
+}

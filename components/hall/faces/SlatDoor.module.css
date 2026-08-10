@@ -1,0 +1,27 @@
+.root {
+  composes: face from './DoorFace.module.css';
+  background: repeating-linear-gradient(0deg, #171a1d 0 9px, #131619 9px 18px);
+}
+
+.sheen {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0.08),
+    transparent 38%,
+    rgba(0, 0, 0, 0.45)
+  );
+  pointer-events: none;
+}
+
+.control {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 64%;
+  height: 34px;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0e1114;
+}

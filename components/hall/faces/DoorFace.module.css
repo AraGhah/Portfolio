@@ -1,0 +1,16 @@
+.face {
+  position: relative;
+  width: 100%;
+  height: clamp(340px, 44vh, 490px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: none;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-door), var(--shadow-inner);
+}
+
+.faceSecure {
+  composes: face;
+  height: clamp(376px, 50vh, 556px);
+  box-shadow: var(--shadow-heavy), var(--shadow-inner);
+}

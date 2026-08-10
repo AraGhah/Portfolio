@@ -1,0 +1,104 @@
+{
+  "nav": {
+    "hall": "Couloir",
+    "about": "À propos",
+    "skills": "Compétences",
+    "experience": "Parcours",
+    "contact": "Contact",
+    "skipToHall": "Aller au couloir",
+    "languageToggle": "Passer à l’anglais",
+    "languageTarget": "English"
+  },
+  "hero": {
+    "location": "Montréal, Québec",
+    "role": "Ingénieur logiciel",
+    "paragraph": "Systèmes backend, infrastructure infonuagique et automatisation IA. Chaque projet ici est une porte. Derrière chacune, l’étude de cas complète : le problème, ce que j’ai construit, les décisions prises et ce qui a cassé en chemin.",
+    "enterHall": "Entrer dans le couloir",
+    "hireMe": "Embauchez-moi"
+  },
+  "hall": {
+    "title": "Le Couloir des projets",
+    "intro": "Les portes sont classées selon la complexité technique, notée sur l’architecture, les intégrations, la sécurité, la scalabilité, les tests et la difficulté des problèmes résolus. Filtrez le couloir par niveau, ou parcourez-le d’un bout à l’autre.",
+    "hint": "Glissez ou faites défiler latéralement · Cliquez une porte pour entrer",
+    "filterAll": "Tous",
+    "complexityLabel": "Filtrer par complexité",
+    "openDoor": "Ouvrir la porte →",
+    "doorAria": "Ouvrir l’étude de cas : {title}",
+    "closeOverlay": "Fermer la porte ✕"
+  },
+  "caseStudy": {
+    "door": "Porte",
+    "complexity": "Complexité technique",
+    "whyRated": "Pourquoi cette note",
+    "highlights": "Points techniques",
+    "stack": "Stack",
+    "result": "Résultat",
+    "currentStatus": "Statut actuel",
+    "sectionHeadings": {
+      "Overview": "Aperçu",
+      "The problem": "Le problème",
+      "The solution": "La solution",
+      "My contribution": "Ma contribution",
+      "Key challenge": "Défi clé",
+      "What I learned": "Ce que j'ai appris"
+    }
+  },
+  "status": {
+    "Delivered": "Livré",
+    "Live": "En ligne",
+    "In development": "En développement",
+    "Livré": "Livré",
+    "En ligne": "En ligne",
+    "En développement": "En développement"
+  },
+  "about": {
+    "title": "À propos",
+    "p1": "Je suis étudiant en troisième année en techniques de l’informatique au Collège de Bois-de-Boulogne, avec deux années de construction concrète derrière moi. La majeure partie de ce temps est allée au backend : API REST, authentification, conception de bases de données, et plus récemment infrastructure infonuagique et automatisation IA.",
+    "p2": "Ce qui m’importe, c’est la partie que personne ne voit. Une architecture propre qui survit à la deuxième demande de fonctionnalité. Une sécurité conçue dès le départ plutôt que rapiécée après coup. Du code qu’un coéquipier peut lire six mois plus tard et modifier sans crainte. Je préfère livrer quelque chose de petit qui tient, plutôt que quelque chose de grand qui fuit.",
+    "p3": "Loin de l’éditeur, je m’entraîne en lutte, judo et musculation, suis les marchés de près, et passe mes étés à animer des activités pour aînés dans un centre communautaire à Montréal."
+  },
+  "skills": {
+    "title": "Compétences et technologies",
+    "backend": "Backend",
+    "backendItems": "Conception d’API REST · Authentification JWT · Node.js / Express · ASP.NET Core / C#",
+    "data": "Données",
+    "dataItems": "PostgreSQL · MongoDB · Oracle / SQL / PL/SQL · Conception de schémas · Procédures stockées",
+    "frontend": "Frontend",
+    "frontendItems": "React · Next.js · TypeScript · Vite",
+    "cloud": "Infonuagique et outils",
+    "cloudItems": "AWS · Cloudflare Workers · OpenNext · Supabase · n8n · Docker · Git & GitHub · Unity / C# (3D)",
+    "certifications": "Certifications",
+    "certItems": "Claude with Amazon Bedrock · Model Context Protocol · Retrieval Augmented Generation"
+  },
+  "experience": {
+    "title": "Formation et expérience",
+    "education": "Formation",
+    "work": "Expérience",
+    "educationItems": [
+      "Collège de Bois-de-Boulogne — Techniques de l’informatique (DEC), 2024 → maintenant. Troisième année.",
+      "École Sourp Hagop"
+    ],
+    "workItems": [
+      "Développeur indépendant, 2025 → maintenant — Construction de Dossier, Trade Catch et SentinelOps. Architecture backend, API, authentification, déploiement infonuagique et agents IA.",
+      "Animateur jeunesse, Centre communautaire SCAMA — Animation d’activités récréatives et sociales pour aînés pendant deux étés.",
+      "Commis de salle, Grillade Nostos, Sep → Nov 2025 — Débarrassage et remise en place des tables, soutien à l’équipe de service aux heures de pointe."
+    ]
+  },
+  "contact": {
+    "titleLead": "À la recherche d’un stage en",
+    "titleAccent": "développement logiciel",
+    "body": "Je suis étudiant en troisième année en techniques de l’informatique à Montréal, disponible pour un stage en backend, infonuagique ou développement pleine pile. Le courriel est le moyen le plus rapide de me joindre.",
+    "email": "Courriel",
+    "phone": "Téléphone",
+    "linkedIn": "LinkedIn",
+    "resumeEn": "Résumé EN",
+    "resumeFr": "CV FR"
+  },
+  "footer": {
+    "copyright": "© {year} Ara Ghahramanyan"
+  },
+  "Meta": {
+    "title": "Ara Ghahramanyan — Ingénieur logiciel",
+    "description": "Systèmes backend, infrastructure infonuagique et automatisation IA. Chaque projet est une porte — ouvrez-en une pour l’étude de cas complète."
+  }
+}

@@ -1,0 +1,57 @@
+.root {
+  composes: faceSecure from './DoorFace.module.css';
+  background: linear-gradient(160deg, #242a30, #0d1013 62%);
+}
+
+.innerFrame {
+  position: absolute;
+  inset: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.plate {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  height: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, #2c333a, #1a1f24);
+}
+
+.plateUpper {
+  composes: plate;
+  top: 28%;
+}
+
+.plateLower {
+  composes: plate;
+  top: 58%;
+}
+
+.bolts {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.bolt {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  transform: translate(-50%, -50%);
+}
+
+.handle {
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  width: 44px;
+  height: 72px;
+  margin-top: -36px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(90deg, #3a4148, #22282e);
+}

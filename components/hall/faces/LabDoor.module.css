@@ -1,0 +1,19 @@
+.root {
+  composes: face from './DoorFace.module.css';
+  background: linear-gradient(170deg, #1c2026, #0d1014);
+}
+
+.viewport {
+  position: absolute;
+  left: 50%;
+  top: 34px;
+  width: 52%;
+  height: 56%;
+  transform: translateX(-50%);
+  border: 1px solid rgba(160, 200, 230, 0.35);
+  background: linear-gradient(
+    180deg,
+    rgba(120, 180, 220, 0.2),
+    rgba(20, 30, 40, 0.6)
+  );
+}

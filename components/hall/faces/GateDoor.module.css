@@ -1,0 +1,43 @@
+.root {
+  composes: face from './DoorFace.module.css';
+  background: linear-gradient(180deg, #1a1e23, #0e1116);
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 44px;
+  background: linear-gradient(180deg, #0d1014, #141920);
+  border-bottom: 1px solid var(--line-faint);
+}
+
+.panels {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  top: 58px;
+  bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.panel {
+  flex: 1;
+  min-height: 0;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.handle {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  width: 34px;
+  height: 44px;
+  margin-top: -22px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #15181d;
+}

@@ -1,0 +1,64 @@
+.root {
+  composes: face from './DoorFace.module.css';
+  background: linear-gradient(160deg, #141a23, #0b0e13);
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.55;
+  background-image:
+    linear-gradient(rgba(126, 151, 184, 0.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(126, 151, 184, 0.16) 1px, transparent 1px);
+  background-size: 26px 26px;
+  pointer-events: none;
+}
+
+.frame {
+  position: absolute;
+  inset: 16px;
+  border: 1px solid rgba(126, 151, 184, 0.3);
+  pointer-events: none;
+}
+
+.dimension {
+  position: absolute;
+  left: 30px;
+  top: 30%;
+  width: 1px;
+  height: 34%;
+  background: rgba(126, 151, 184, 0.45);
+}
+
+.capTop,
+.capBottom {
+  position: absolute;
+  left: 50%;
+  width: 13px;
+  height: 1px;
+  margin-left: -6.5px;
+  background: rgba(126, 151, 184, 0.55);
+}
+
+.capTop {
+  top: 0;
+}
+
+.capBottom {
+  bottom: 0;
+}
+
+.handle {
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  width: 26px;
+  height: 26px;
+  margin-top: -13px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 35% 30%,
+    rgba(200, 220, 240, 0.35),
+    rgba(20, 26, 34, 0.9)
+  );
+}

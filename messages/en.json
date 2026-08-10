@@ -1,0 +1,104 @@
+{
+  "nav": {
+    "hall": "Hall",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "contact": "Contact",
+    "skipToHall": "Skip to the hall",
+    "languageToggle": "Switch to French",
+    "languageTarget": "Français"
+  },
+  "hero": {
+    "location": "Montréal, Québec",
+    "role": "Software Engineer",
+    "paragraph": "Backend systems, cloud infrastructure and AI automation. Every project here is a door. Behind each one is the full case study: the problem, what I built, the decisions I made and what broke on the way.",
+    "enterHall": "Enter the hall",
+    "hireMe": "Hire me"
+  },
+  "hall": {
+    "title": "The Hall of Projects",
+    "intro": "Doors are rated by technical complexity, scored on architecture, integrations, security, scalability, testing and the difficulty of the problems solved. Filter the corridor by level, or walk it end to end.",
+    "hint": "Drag or scroll sideways · Click a door to enter",
+    "filterAll": "All",
+    "complexityLabel": "Filter by complexity",
+    "openDoor": "Open door →",
+    "doorAria": "Open case study: {title}",
+    "closeOverlay": "Close door ✕"
+  },
+  "caseStudy": {
+    "door": "Door",
+    "complexity": "Technical complexity",
+    "whyRated": "Why this rating",
+    "highlights": "Technical highlights",
+    "stack": "Stack",
+    "result": "Result",
+    "currentStatus": "Current status",
+    "sectionHeadings": {
+      "Overview": "Overview",
+      "The problem": "The problem",
+      "The solution": "The solution",
+      "My contribution": "My contribution",
+      "Key challenge": "Key challenge",
+      "What I learned": "What I learned"
+    }
+  },
+  "status": {
+    "Delivered": "Delivered",
+    "Live": "Live",
+    "In development": "In development",
+    "Livré": "Delivered",
+    "En ligne": "Live",
+    "En développement": "In development"
+  },
+  "about": {
+    "title": "About",
+    "p1": "I am a third year Computer Science student at Collège de Bois-de-Boulogne with two years of hands on building behind me. Most of that time went into backend work: REST APIs, authentication, database design, and lately cloud infrastructure and AI automation.",
+    "p2": "What I care about is the part nobody sees. Clean architecture that survives the second feature request. Security that is designed in rather than patched on. Code that a teammate can read six months later and change without fear. I would rather ship something small that holds than something large that leaks.",
+    "p3": "Away from the editor I train in wrestling, judo and weightlifting, follow markets closely, and spend my summers running activities for seniors at a community centre in Montréal."
+  },
+  "skills": {
+    "title": "Skills and technologies",
+    "backend": "Backend",
+    "backendItems": "REST API design · JWT authentication · Node.js / Express · ASP.NET Core / C#",
+    "data": "Data",
+    "dataItems": "PostgreSQL · MongoDB · Oracle / SQL / PL/SQL · Schema design · Stored procedures",
+    "frontend": "Frontend",
+    "frontendItems": "React · Next.js · TypeScript · Vite",
+    "cloud": "Cloud & tooling",
+    "cloudItems": "AWS · Cloudflare Workers · OpenNext · Supabase · n8n · Docker · Git & GitHub · Unity / C# (3D)",
+    "certifications": "Certifications",
+    "certItems": "Claude with Amazon Bedrock · Model Context Protocol · Retrieval Augmented Generation"
+  },
+  "experience": {
+    "title": "Education & experience",
+    "education": "Education",
+    "work": "Experience",
+    "educationItems": [
+      "Collège de Bois-de-Boulogne — Computer Science Technology (DEC), 2024 → now. Third year.",
+      "Sourp Hagop High School"
+    ],
+    "workItems": [
+      "Independent developer, 2025 → now — Building Dossier, Trade Catch and SentinelOps. Backend architecture, APIs, authentication, cloud deployment and AI agents.",
+      "Youth leader, SCAMA Community Centre — Led recreational and social activities for seniors over two summers.",
+      "Busser, Grillade Nostos, Sep → Nov 2025 — Cleared and reset tables and supported the serving team through peak service."
+    ]
+  },
+  "contact": {
+    "titleLead": "Looking for a software",
+    "titleAccent": "development internship",
+    "body": "I am a third year Computer Science student in Montréal, available for an internship in backend, cloud or full stack development. Email is the fastest way to reach me.",
+    "email": "Email",
+    "phone": "Phone",
+    "linkedIn": "LinkedIn",
+    "resumeEn": "Résumé EN",
+    "resumeFr": "CV FR"
+  },
+  "footer": {
+    "copyright": "© {year} Ara Ghahramanyan"
+  },
+  "Meta": {
+    "title": "Ara Ghahramanyan — Software Engineer",
+    "description": "Backend systems, cloud infrastructure and AI automation. Every project is a door — open one for the full case study."
+  }
+}

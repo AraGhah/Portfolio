@@ -1,0 +1,36 @@
+.footer {
+  padding: clamp(48px, 6vw, 72px) clamp(20px, 7vw, 110px);
+  border-top: 1px solid var(--line-faint);
+  background: var(--bg-raised);
+  text-align: center;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  max-width: var(--w-hall);
+  margin: 0 auto;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3vw, 28px);
+  color: var(--ink);
+  letter-spacing: 0.04em;
+}
+
+.meta {
+  font-family: var(--font-mono);
+  font-size: var(--t-mono-nav);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-label);
+}
+
+.copyright {
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--ink-dim);
+}

@@ -1,0 +1,75 @@
+.root {
+  composes: face from './DoorFace.module.css';
+  background: repeating-linear-gradient(90deg, #1b1e22 0 2px, #16191d 2px 4px);
+}
+
+.sheen {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(255, 255, 255, 0.09),
+    transparent 32%,
+    rgba(0, 0, 0, 0.4) 70%
+  );
+  pointer-events: none;
+}
+
+.dial {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 38%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px solid rgba(201, 164, 101, 0.35);
+  background: radial-gradient(circle at 38% 32%, #3a3f45, #16191c);
+}
+
+.spokes {
+  position: absolute;
+  inset: 0;
+}
+
+.spoke {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1px;
+  height: 50%;
+  background: rgba(201, 164, 101, 0.55);
+  transform-origin: center bottom;
+}
+
+.bolt {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.boltTl {
+  composes: bolt;
+  top: 18px;
+  left: 18px;
+}
+
+.boltTr {
+  composes: bolt;
+  top: 18px;
+  right: 18px;
+}
+
+.boltBl {
+  composes: bolt;
+  bottom: 18px;
+  left: 18px;
+}
+
+.boltBr {
+  composes: bolt;
+  bottom: 18px;
+  right: 18px;
+}

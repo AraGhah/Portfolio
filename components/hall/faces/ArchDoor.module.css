@@ -1,0 +1,63 @@
+.root {
+  composes: face from './DoorFace.module.css';
+  border-radius: 120px 120px 0 0;
+  background: repeating-linear-gradient(90deg, #2a2118 0 14px, #241c14 14px 28px);
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.55),
+    transparent 40%,
+    rgba(0, 0, 0, 0.6)
+  );
+  pointer-events: none;
+}
+
+.band {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.bandUpper {
+  composes: band;
+  top: 26%;
+}
+
+.bandLower {
+  composes: band;
+  top: 68%;
+}
+
+.studs {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.stud {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  transform: translate(-50%, -50%);
+}
+
+.handle {
+  position: absolute;
+  right: 26px;
+  top: 50%;
+  width: 28px;
+  height: 28px;
+  margin-top: -14px;
+  border-radius: 50%;
+  border: 2px solid rgba(201, 164, 101, 0.4);
+  background: transparent;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.35);
+}
