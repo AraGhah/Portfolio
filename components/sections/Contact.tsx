@@ -4,6 +4,20 @@ import { useTranslations } from 'next-intl';
 import { profile } from '@/content/profile';
 import { ScrollReveal } from '@/components/ScrollReveal';
 
+async function forceDownload(url: string, filename: string) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Failed to fetch ${url}`);
+  const blob = await res.blob();
+  const objectUrl = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = objectUrl;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(objectUrl);
+}
+
 export function Contact() {
   const t = useTranslations('contact');
 
@@ -102,7 +116,11 @@ export function Contact() {
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
             <a
               href={profile.resumeEn}
-              download
+              download="Ara_Ghahramanyan_EN.pdf"
+              onClick={(e) => {
+                e.preventDefault();
+                void forceDownload(profile.resumeEn, 'Ara_Ghahramanyan_EN.pdf');
+              }}
               style={{
                 fontFamily: 'var(--font-mono)',
                 fontSize: 'var(--t-mono-nav)',
@@ -119,7 +137,11 @@ export function Contact() {
             </a>
             <a
               href={profile.resumeFr}
-              download
+              download="Ara_Ghahramanyan_FR.pdf"
+              onClick={(e) => {
+                e.preventDefault();
+                void forceDownload(profile.resumeFr, 'Ara_Ghahramanyan_FR.pdf');
+              }}
               style={{
                 fontFamily: 'var(--font-mono)',
                 fontSize: 'var(--t-mono-nav)',
