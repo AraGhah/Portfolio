@@ -49,14 +49,14 @@ export async function generateMetadata({
   const { locale } = await params;
   const title =
     locale === 'fr'
-      ? 'Ara Ghahramanyan — Ingénieur logiciel'
-      : 'Ara Ghahramanyan — Software Engineer';
+      ? 'Ara Ghahramanyan · Ingénieur logiciel'
+      : 'Ara Ghahramanyan · Software Engineer';
   return {
     title,
     description:
       locale === 'fr'
-        ? 'Portfolio — hall des projets et études de cas.'
-        : 'Portfolio — hall of projects and case studies.',
+        ? 'Portfolio · hall des projets et études de cas.'
+        : 'Portfolio · hall of projects and case studies.',
   };
 }
 

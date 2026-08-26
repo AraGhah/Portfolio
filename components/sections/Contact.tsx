@@ -76,7 +76,7 @@ export function Contact() {
                   color: 'var(--acc)',
                 }}
               >
-                {t('email')} — {profile.email}
+                {t('email')}: {profile.email}
               </a>
             </li>
             <li>
@@ -90,7 +90,7 @@ export function Contact() {
                   color: 'var(--ink-muted)',
                 }}
               >
-                {t('phone')} — {profile.phone}
+                {t('phone')}: {profile.phone}
               </a>
             </li>
             <li>

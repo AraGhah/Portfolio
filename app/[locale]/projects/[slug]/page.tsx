@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props) {
   const project = getProject(locale, slug);
   if (!project) return {};
   return {
-    title: `${project.title} — Ara Ghahramanyan`,
+    title: `${project.title} · Ara Ghahramanyan`,
     description: project.tagline,
   };
 }
