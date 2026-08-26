@@ -33,15 +33,7 @@
     "highlights": "Points techniques",
     "stack": "Stack",
     "result": "Résultat",
-    "currentStatus": "Statut actuel",
-    "sectionHeadings": {
-      "Overview": "Aperçu",
-      "The problem": "Le problème",
-      "The solution": "La solution",
-      "My contribution": "Ma contribution",
-      "Key challenge": "Défi clé",
-      "What I learned": "Ce que j'ai appris"
-    }
+    "currentStatus": "Statut actuel"
   },
   "status": {
     "Delivered": "Livré",
@@ -53,8 +45,8 @@
   },
   "about": {
     "title": "À propos",
-    "p1": "Je suis étudiant en troisième année en techniques de l’informatique au Collège de Bois-de-Boulogne, avec deux années de construction concrète derrière moi. La majeure partie de ce temps est allée au backend : API REST, authentification, conception de bases de données, et plus récemment infrastructure infonuagique et automatisation IA.",
-    "p2": "Ce qui m’importe, c’est la partie que personne ne voit. Une architecture propre qui survit à la deuxième demande de fonctionnalité. Une sécurité conçue dès le départ plutôt que rapiécée après coup. Du code qu’un coéquipier peut lire six mois plus tard et modifier sans crainte. Je préfère livrer quelque chose de petit qui tient, plutôt que quelque chose de grand qui fuit.",
+    "p1": "Étudiant en troisième année en techniques de l’informatique au Collège de Bois-de-Boulogne, avec deux années de construction concrète derrière moi. La majeure partie de ce temps est allée au backend : API REST, authentification, conception de bases de données, et plus récemment infrastructure infonuagique et automatisation IA.",
+    "p2": "Ce qui m’importe, c’est la partie que personne ne voit : une architecture propre qui survit à la deuxième demande de fonctionnalité, une sécurité conçue dès le départ plutôt que rapiécée après coup, du code qu’un coéquipier peut lire six mois plus tard et modifier sans crainte. Je préfère livrer quelque chose de petit qui tient, plutôt que quelque chose de grand qui fuit.",
     "p3": "Loin de l’éditeur, je m’entraîne en lutte, judo et musculation, suis les marchés de près, et passe mes étés à animer des activités pour aînés dans un centre communautaire à Montréal."
   },
   "skills": {
@@ -75,19 +67,19 @@
     "education": "Formation",
     "work": "Expérience",
     "educationItems": [
-      "Collège de Bois-de-Boulogne — Techniques de l’informatique (DEC), 2024 → maintenant. Troisième année.",
+      "Collège de Bois-de-Boulogne : Techniques de l’informatique (DEC), 2024 → maintenant. Troisième année.",
       "École Sourp Hagop"
     ],
     "workItems": [
-      "Développeur indépendant, 2025 → maintenant — Construction de Dossier, Trade Catch et SentinelOps. Architecture backend, API, authentification, déploiement infonuagique et agents IA.",
-      "Animateur jeunesse, Centre communautaire SCAMA — Animation d’activités récréatives et sociales pour aînés pendant deux étés.",
-      "Commis de salle, Grillade Nostos, Sep → Nov 2025 — Débarrassage et remise en place des tables, soutien à l’équipe de service aux heures de pointe."
+      "Développeur indépendant, 2025 → maintenant. Construction de Dossier, Trade Catch et SentinelOps : architecture backend, API, authentification, déploiement infonuagique et agents IA.",
+      "Animateur jeunesse, Centre communautaire SCAMA. Animation d’activités récréatives et sociales pour aînés pendant deux étés.",
+      "Commis de salle, Grillade Nostos, Sep → Nov 2025. Débarrassage et remise en place des tables, soutien à l’équipe de service aux heures de pointe."
     ]
   },
   "contact": {
     "titleLead": "À la recherche d’un stage en",
     "titleAccent": "développement logiciel",
-    "body": "Je suis étudiant en troisième année en techniques de l’informatique à Montréal, disponible pour un stage en backend, infonuagique ou développement pleine pile. Le courriel est le moyen le plus rapide de me joindre.",
+    "body": "Étudiant en troisième année en techniques de l’informatique à Montréal, ouvert à un stage en backend, infonuagique ou développement pleine pile. Le courriel est le moyen le plus rapide de me joindre.",
     "email": "Courriel",
     "phone": "Téléphone",
     "linkedIn": "LinkedIn",
@@ -98,7 +90,7 @@
     "copyright": "© {year} Ara Ghahramanyan"
   },
   "Meta": {
-    "title": "Ara Ghahramanyan — Ingénieur logiciel",
-    "description": "Systèmes backend, infrastructure infonuagique et automatisation IA. Chaque projet est une porte — ouvrez-en une pour l’étude de cas complète."
+    "title": "Ara Ghahramanyan · Ingénieur logiciel",
+    "description": "Systèmes backend, infrastructure infonuagique et automatisation IA. Chaque projet est une porte. Ouvrez-en une pour l’étude de cas complète."
   }
 }

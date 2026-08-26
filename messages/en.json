@@ -33,15 +33,7 @@
     "highlights": "Technical highlights",
     "stack": "Stack",
     "result": "Result",
-    "currentStatus": "Current status",
-    "sectionHeadings": {
-      "Overview": "Overview",
-      "The problem": "The problem",
-      "The solution": "The solution",
-      "My contribution": "My contribution",
-      "Key challenge": "Key challenge",
-      "What I learned": "What I learned"
-    }
+    "currentStatus": "Current status"
   },
   "status": {
     "Delivered": "Delivered",
@@ -53,8 +45,8 @@
   },
   "about": {
     "title": "About",
-    "p1": "I am a third year Computer Science student at Collège de Bois-de-Boulogne with two years of hands on building behind me. Most of that time went into backend work: REST APIs, authentication, database design, and lately cloud infrastructure and AI automation.",
-    "p2": "What I care about is the part nobody sees. Clean architecture that survives the second feature request. Security that is designed in rather than patched on. Code that a teammate can read six months later and change without fear. I would rather ship something small that holds than something large that leaks.",
+    "p1": "Third year Computer Science student at Collège de Bois-de-Boulogne, with two years of real building behind me. Most of it backend: REST APIs, authentication, database design, and more recently cloud infrastructure and AI automation.",
+    "p2": "What I care about is the part nobody sees: architecture that survives the second feature request, security designed in instead of patched on, code a teammate can read six months later and change without fear. I'd rather ship something small that holds than something large that leaks.",
     "p3": "Away from the editor I train in wrestling, judo and weightlifting, follow markets closely, and spend my summers running activities for seniors at a community centre in Montréal."
   },
   "skills": {
@@ -75,19 +67,19 @@
     "education": "Education",
     "work": "Experience",
     "educationItems": [
-      "Collège de Bois-de-Boulogne — Computer Science Technology (DEC), 2024 → now. Third year.",
+      "Collège de Bois-de-Boulogne: Computer Science Technology (DEC), 2024 → now. Third year.",
       "Sourp Hagop High School"
     ],
     "workItems": [
-      "Independent developer, 2025 → now — Building Dossier, Trade Catch and SentinelOps. Backend architecture, APIs, authentication, cloud deployment and AI agents.",
-      "Youth leader, SCAMA Community Centre — Led recreational and social activities for seniors over two summers.",
-      "Busser, Grillade Nostos, Sep → Nov 2025 — Cleared and reset tables and supported the serving team through peak service."
+      "Independent developer, 2025 → now. Building Dossier, Trade Catch and SentinelOps: backend architecture, APIs, authentication, cloud deployment and AI agents.",
+      "Youth leader, SCAMA Community Centre. Led recreational and social activities for seniors over two summers.",
+      "Busser, Grillade Nostos, Sep → Nov 2025. Cleared and reset tables, supported the serving team through peak service."
     ]
   },
   "contact": {
     "titleLead": "Looking for a software",
     "titleAccent": "development internship",
-    "body": "I am a third year Computer Science student in Montréal, available for an internship in backend, cloud or full stack development. Email is the fastest way to reach me.",
+    "body": "Third year Computer Science student in Montréal, open to an internship in backend, cloud or full stack development. Email's the fastest way to reach me.",
     "email": "Email",
     "phone": "Phone",
     "linkedIn": "LinkedIn",
@@ -98,7 +90,7 @@
     "copyright": "© {year} Ara Ghahramanyan"
   },
   "Meta": {
-    "title": "Ara Ghahramanyan — Software Engineer",
-    "description": "Backend systems, cloud infrastructure and AI automation. Every project is a door — open one for the full case study."
+    "title": "Ara Ghahramanyan · Software Engineer",
+    "description": "Backend systems, cloud infrastructure and AI automation. Every project is a door. Open one for the full case study."
   }
 }
