@@ -68,13 +68,13 @@
     "education": "Education",
     "work": "Experience",
     "educationItems": [
-      "Collège de Bois-de-Boulogne: Computer Science Technology (DEC), 2024 → now. Third year.",
+      "Collège de Bois-de-Boulogne: Computer Science Technology (DEC), 2024–now. Third year.",
       "Sourp Hagop High School"
     ],
     "workItems": [
       "Independent Developer, 2025–present. Building Dossier, Trade Catch and SentinelOps: backend architecture, REST APIs, authentication, databases, cloud deployment, and full-stack applications.",
       "Youth leader, SCAMA Community Centre. Led recreational and social activities for seniors over two summers.",
-      "Busser, Grillade Nostos, Sep → Nov 2025. Cleared and reset tables, supported the serving team through peak service."
+      "Busser, Grillade Nostos, Sep–Nov 2025. Cleared and reset tables, supported the serving team through peak service."
     ]
   },
   "contact": {
@@ -83,9 +83,7 @@
     "body": "Third year Computer Science student in Montréal, open to an internship in backend, cloud or full stack development. Email's the fastest way to reach me.",
     "email": "Email",
     "phone": "Phone",
-    "linkedIn": "LinkedIn",
-    "resumeEn": "Résumé EN",
-    "resumeFr": "CV FR"
+    "linkedIn": "LinkedIn"
   },
   "footer": {
     "copyright": "© {year} Ara Ghahramanyan"

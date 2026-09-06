@@ -68,13 +68,13 @@
     "education": "Formation",
     "work": "Expérience",
     "educationItems": [
-      "Collège de Bois-de-Boulogne : Techniques de l’informatique (DEC), 2024 → maintenant. Troisième année.",
+      "Collège de Bois-de-Boulogne : Techniques de l’informatique (DEC), 2024–maintenant. Troisième année.",
       "École Sourp Hagop"
     ],
     "workItems": [
-      "Développeur indépendant, 2025 → maintenant. Construction de Dossier, Trade Catch et SentinelOps : architecture backend, API REST, authentification, bases de données, déploiement infonuagique et applications full stack.",
+      "Développeur indépendant, 2025–maintenant. Construction de Dossier, Trade Catch et SentinelOps : architecture backend, API REST, authentification, bases de données, déploiement infonuagique et applications full stack.",
       "Animateur jeunesse, Centre communautaire SCAMA. Animation d’activités récréatives et sociales pour aînés pendant deux étés.",
-      "Commis de salle, Grillade Nostos, Sep → Nov 2025. Débarrassage et remise en place des tables, soutien à l’équipe de service aux heures de pointe."
+      "Commis de salle, Grillade Nostos, Sep–Nov 2025. Débarrassage et remise en place des tables, soutien à l’équipe de service aux heures de pointe."
     ]
   },
   "contact": {
@@ -83,9 +83,7 @@
     "body": "Étudiant en troisième année en techniques de l’informatique à Montréal, ouvert à un stage en backend, infonuagique ou développement pleine pile. Le courriel est le moyen le plus rapide de me joindre.",
     "email": "Courriel",
     "phone": "Téléphone",
-    "linkedIn": "LinkedIn",
-    "resumeEn": "Résumé EN",
-    "resumeFr": "CV FR"
+    "linkedIn": "LinkedIn"
   },
   "footer": {
     "copyright": "© {year} Ara Ghahramanyan"

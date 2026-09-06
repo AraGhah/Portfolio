@@ -4,20 +4,6 @@ import { useTranslations } from 'next-intl';
 import { profile } from '@/content/profile';
 import { ScrollReveal } from '@/components/ScrollReveal';
 
-async function forceDownload(url: string, filename: string) {
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`Failed to fetch ${url}`);
-  const blob = await res.blob();
-  const objectUrl = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = objectUrl;
-  a.download = filename;
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  URL.revokeObjectURL(objectUrl);
-}
-
 export function Contact() {
   const t = useTranslations('contact');
 
@@ -58,7 +44,7 @@ export function Contact() {
           <ul
             style={{
               listStyle: 'none',
-              margin: '0 0 32px',
+              margin: 0,
               padding: 0,
               display: 'flex',
               flexDirection: 'column',
@@ -110,52 +96,6 @@ export function Contact() {
               </a>
             </li>
           </ul>
-        </ScrollReveal>
-
-        <ScrollReveal delay={0.24}>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
-            <a
-              href={profile.resumeEn}
-              download="Ara_Ghahramanyan_EN.pdf"
-              onClick={(e) => {
-                e.preventDefault();
-                void forceDownload(profile.resumeEn, 'Ara_Ghahramanyan_EN.pdf');
-              }}
-              style={{
-                fontFamily: 'var(--font-mono)',
-                fontSize: 'var(--t-mono-nav)',
-                letterSpacing: '0.2em',
-                textTransform: 'uppercase',
-                padding: '14px 22px',
-                background: 'var(--acc-12)',
-                border: '1px solid rgba(201,164,101,.45)',
-                color: 'var(--acc)',
-                textDecoration: 'none',
-              }}
-            >
-              {t('resumeEn')}
-            </a>
-            <a
-              href={profile.resumeFr}
-              download="Ara_Ghahramanyan_FR.pdf"
-              onClick={(e) => {
-                e.preventDefault();
-                void forceDownload(profile.resumeFr, 'Ara_Ghahramanyan_FR.pdf');
-              }}
-              style={{
-                fontFamily: 'var(--font-mono)',
-                fontSize: 'var(--t-mono-nav)',
-                letterSpacing: '0.2em',
-                textTransform: 'uppercase',
-                padding: '14px 22px',
-                border: '1px solid var(--line)',
-                color: 'var(--ink-muted)',
-                textDecoration: 'none',
-              }}
-            >
-              {t('resumeFr')}
-            </a>
-          </div>
         </ScrollReveal>
       </div>
     </section>
