@@ -59,26 +59,6 @@ export function Skills() {
               </div>
             </ScrollReveal>
           ))}
-
-          <ScrollReveal delay={0.35}>
-            <div>
-              <h3
-                style={{
-                  fontFamily: 'var(--font-mono)',
-                  fontSize: 'var(--t-mono-label)',
-                  letterSpacing: '0.26em',
-                  textTransform: 'uppercase',
-                  color: 'var(--acc)',
-                  margin: '0 0 12px',
-                }}
-              >
-                {t('certifications')}
-              </h3>
-              <p style={{ fontSize: 'var(--t-body-sm)', lineHeight: 1.65, color: 'var(--ink-muted)', margin: 0 }}>
-                {t('certItems')}
-              </p>
-            </div>
-          </ScrollReveal>
         </div>
       </div>
     </section>

@@ -12,15 +12,18 @@
   "hero": {
     "location": "Montréal, Québec",
     "role": "Ingénieur logiciel",
-    "paragraph": "Systèmes backend, infrastructure infonuagique et automatisation IA. Chaque projet ici est une porte. Derrière chacune, l’étude de cas complète : le problème, ce que j’ai construit, les décisions prises et ce qui a cassé en chemin.",
+    "paragraph": "Systèmes backend, infrastructure infonuagique et applications full stack. Explorez les projets ci-dessous pour voir ce que j’ai construit, les technologies utilisées et les décisions techniques derrière chacun.",
     "enterHall": "Entrer dans le couloir",
     "hireMe": "Embauchez-moi"
   },
   "hall": {
     "title": "Le Couloir des projets",
-    "intro": "Les portes sont classées selon la complexité technique, notée sur l’architecture, les intégrations, la sécurité, la scalabilité, les tests et la difficulté des problèmes résolus. Filtrez le couloir par niveau, ou parcourez-le d’un bout à l’autre.",
+    "intro": "Les projets sont organisés par catégorie et complexité technique. Parcourez les applications, API, systèmes et sites Web que j’ai construits.",
     "hint": "Glissez ou faites défiler latéralement · Cliquez une porte pour entrer",
     "filterAll": "Tous",
+    "categoryLabel": "Filtrer par catégorie",
+    "categoryFullstack": "Fullstack",
+    "categorySoftware": "Software",
     "complexityLabel": "Filtrer par complexité",
     "openDoor": "Ouvrir la porte →",
     "doorAria": "Ouvrir l’étude de cas : {title}",
@@ -45,9 +48,9 @@
   },
   "about": {
     "title": "À propos",
-    "p1": "Étudiant en troisième année en techniques de l’informatique au Collège de Bois-de-Boulogne, avec deux années de construction concrète derrière moi. La majeure partie de ce temps est allée au backend : API REST, authentification, conception de bases de données, et plus récemment infrastructure infonuagique et automatisation IA.",
-    "p2": "Ce qui m’importe, c’est la partie que personne ne voit : une architecture propre qui survit à la deuxième demande de fonctionnalité, une sécurité conçue dès le départ plutôt que rapiécée après coup, du code qu’un coéquipier peut lire six mois plus tard et modifier sans crainte. Je préfère livrer quelque chose de petit qui tient, plutôt que quelque chose de grand qui fuit.",
-    "p3": "Loin de l’éditeur, je m’entraîne en lutte, judo et musculation, suis les marchés de près, et passe mes étés à animer des activités pour aînés dans un centre communautaire à Montréal."
+    "p1": "Étudiant en troisième année en techniques de l’informatique au Collège de Bois-de-Boulogne. Je travaille surtout sur des projets backend et full stack : API REST, authentification, bases de données, conception de systèmes et infrastructure infonuagique.",
+    "p2": "Je vise un code clair et maintenable, et des systèmes sécurisés et faciles à comprendre. La plupart de mon expérience vient de mes propres projets : résoudre les problèmes au fur et à mesure, et améliorer l’architecture à mesure que les projets grandissent.",
+    "p3": "En dehors de la programmation, je m’entraîne en lutte, judo et musculation, suis les marchés financiers, et passe mes étés à organiser des activités pour aînés dans un centre communautaire à Montréal."
   },
   "skills": {
     "title": "Compétences et technologies",
@@ -58,9 +61,7 @@
     "frontend": "Frontend",
     "frontendItems": "React · Next.js · TypeScript · Vite",
     "cloud": "Infonuagique et outils",
-    "cloudItems": "AWS · Cloudflare Workers · OpenNext · Supabase · n8n · Docker · Git & GitHub · Unity / C# (3D)",
-    "certifications": "Certifications",
-    "certItems": "Claude with Amazon Bedrock · Model Context Protocol · Retrieval Augmented Generation"
+    "cloudItems": "AWS · Cloudflare Workers · OpenNext · Supabase · n8n · Docker · Git & GitHub · Unity / C# (3D)"
   },
   "experience": {
     "title": "Formation et expérience",
@@ -71,7 +72,7 @@
       "École Sourp Hagop"
     ],
     "workItems": [
-      "Développeur indépendant, 2025 → maintenant. Construction de Dossier, Trade Catch et SentinelOps : architecture backend, API, authentification, déploiement infonuagique et agents IA.",
+      "Développeur indépendant, 2025 → maintenant. Construction de Dossier, Trade Catch et SentinelOps : architecture backend, API REST, authentification, bases de données, déploiement infonuagique et applications full stack.",
       "Animateur jeunesse, Centre communautaire SCAMA. Animation d’activités récréatives et sociales pour aînés pendant deux étés.",
       "Commis de salle, Grillade Nostos, Sep → Nov 2025. Débarrassage et remise en place des tables, soutien à l’équipe de service aux heures de pointe."
     ]
@@ -91,6 +92,6 @@
   },
   "Meta": {
     "title": "Ara Ghahramanyan · Ingénieur logiciel",
-    "description": "Systèmes backend, infrastructure infonuagique et automatisation IA. Chaque projet est une porte. Ouvrez-en une pour l’étude de cas complète."
+    "description": "Systèmes backend, infrastructure infonuagique et applications full stack. Explorez les projets pour des études de cas sur les API, les bases de données et le déploiement infonuagique."
   }
 }

@@ -1,5 +1,7 @@
 export type Complexity = 2 | 3 | 4 | 5;
 
+export type ProjectCategory = 'fullstack' | 'software';
+
 export type DoorKind =
   | 'blueprint'
   | 'vault'
@@ -25,6 +27,7 @@ export interface Project {
   doorNumber: string;
   order: number;
   complexity: Complexity;
+  category: ProjectCategory;
   doorKind: DoorKind;
   title: string;
   type: string;

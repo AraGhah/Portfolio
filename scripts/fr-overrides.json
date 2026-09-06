@@ -133,7 +133,7 @@
       }
     ],
     "highlights": [
-      "Intelligence artificielle ennemie par machine à états",
+      "Comportement ennemi par machine à états",
       "Comportement de gameplay orienté événements",
       "Patron de conception Observer",
       "Sélection de cible basée sur les interfaces",
@@ -195,7 +195,7 @@
     "links": [{ "label": "Dépôt non public", "href": "#" }]
   },
   "dossier": {
-    "type": "Plateforme B2B de recherche et de personnalisation alimentée par l'IA",
+    "type": "Plateforme B2B de recherche et de personnalisation",
     "tagline": "Un système de recherche et de personnalisation qui aide les équipes de vente sortantes à bâtir des campagnes de courriel à froid pertinentes à grande échelle, sans sacrifier la précision.",
     "preview": "Un pipeline B2B de recherche et de personnalisation : prospects en entrée, recherche et notation, variantes personnalisées en sortie. Un pilote de 100 prospects a atteint un taux de réponse de 9,6 %.",
     "meta": [
@@ -204,15 +204,15 @@
       ["Domaine", "Recherche commerciale B2B"],
       ["Statut", "En ligne"]
     ],
-    "whyRated": "Orchestration de flux de travail IA multiphase, intégrations de données externes, notation de la recherche et garde-fous qualité, état des flux dans PostgreSQL, nouvelles tentatives et gestion des lettres mortes, plus surveillance opérationnelle de livraisons réelles.",
+    "whyRated": "Orchestration de flux de travail multiphase, intégrations de données externes, notation de la recherche et garde-fous qualité, état des flux dans PostgreSQL, nouvelles tentatives et gestion des lettres mortes, plus surveillance opérationnelle de livraisons réelles.",
     "sections": [
       {
         "heading": "Vue d'ensemble",
-        "body": "Dossier est un système de recherche et de personnalisation conçu pour aider les équipes de vente sortantes à créer des campagnes de courriel à froid pertinentes à grande échelle. Il combine recherche automatisée de prospects, validation des données, notation et personnalisation générée par l'IA dans un pipeline de livraison structuré."
+        "body": "Dossier est un système de recherche et de personnalisation conçu pour aider les équipes de vente sortantes à créer des campagnes de courriel à froid pertinentes à grande échelle. Il combine recherche automatisée de prospects, validation des données, notation et génération de courriels personnalisés dans un pipeline de livraison structuré."
       },
       {
         "heading": "Le problème",
-        "body": "La plupart des démarches à froid automatisées s'appuient sur de l'information générique et des messages répétitifs générés par l'IA. Rechercher chaque prospect à la main produit une meilleure personnalisation, mais c'est beaucoup trop lent et coûteux pour des campagnes de milliers de prospects."
+        "body": "La plupart des démarches à froid automatisées s'appuient sur de l'information générique et des modèles répétitifs. Rechercher chaque prospect à la main produit une meilleure personnalisation, mais c'est beaucoup trop lent et coûteux pour des campagnes de milliers de prospects."
       },
       {
         "heading": "La solution",
@@ -228,7 +228,7 @@
       },
       {
         "heading": "Ce que j'ai appris",
-        "body": "Dossier m'a appris à bâtir des flux de travail IA en plusieurs étapes qui restent mesurables et contrôlables. J'ai acquis de l'expérience en pipelines de données, API externes, conception de prompts, assurance qualité, gestion d'état en base de données et analyse des échecs en production."
+        "body": "Dossier m'a appris à bâtir des flux de travail en plusieurs étapes qui restent mesurables et contrôlables. J'ai acquis de l'expérience en pipelines de données, API externes, assurance qualité, gestion d'état en base de données et analyse des échecs en production."
       }
     ],
     "result": "Un pilote externe de 100 prospects recherchés a atteint environ 9,6 % de taux de réponse. Une livraison ultérieure de 500 prospects a révélé des leçons plus exigeantes sur la qualité des données, la stratégie de nouvelles tentatives et la surveillance opérationnelle.",
@@ -236,7 +236,7 @@
       "Ingestion et déduplication de prospects",
       "Recherche automatisée d'entreprises et de prospects",
       "Notation de la qualité de la recherche",
-      "Variantes de personnalisation générées par l'IA",
+      "Variantes de courriel personnalisées",
       "Garde-fous de contrôle qualité et de validation",
       "État des flux de travail basé sur PostgreSQL",
       "Nouvelles tentatives et gestion des lettres mortes",
@@ -259,7 +259,7 @@
       ["Domaine", "Métiers et services à domicile"],
       ["Statut", "En développement"]
     ],
-    "whyRated": "Authentification, intégrations téléphonie et paiement, moteur de flux automatisés, déploiement en périphérie, communication client bilingue et frontière nette entre langage assisté par l'IA et règles d'affaires déterministes.",
+    "whyRated": "Authentification, intégrations téléphonie et paiement, moteur de flux automatisés, déploiement en périphérie, communication client bilingue et frontière nette entre la messagerie et les règles d'affaires déterministes.",
     "statusNote": "La plateforme et l'expérience de démonstration sont en développement actif. Les prochaines étapes visent les intégrations de production, la surveillance, l'analytique et l'intégration d'entreprises réelles.",
     "sections": [
       {
@@ -280,7 +280,7 @@
       },
       {
         "heading": "Défi principal",
-        "body": "Concevoir une automatisation qui paraît immédiate et utile sans devenir imprévisible. J'ai séparé le langage et la classification assistés par l'IA des règles strictes qui régissent la planification, la tarification, les désinscriptions, la sécurité et l'escalade. Le modèle peut formuler un message. Il ne peut pas décider qui est facturé."
+        "body": "Concevoir une automatisation qui paraît immédiate et utile sans devenir imprévisible. J'ai séparé la messagerie et la classification des prospects des règles strictes qui régissent la planification, la tarification, les désinscriptions, la sécurité et l'escalade. Le texte peut varier. Les décisions de facturation et de réservation, non."
       },
       {
         "heading": "Ce que j'ai appris",
@@ -295,7 +295,7 @@
       "Flux de prise de rendez-vous",
       "Séquences de suivi de soumissions",
       "Tableau de bord pour suivre prospects et résultats",
-      "Séparation claire entre tâches assistées par l'IA et règles déterministes"
+      "Séparation claire entre messagerie et règles déterministes"
     ],
     "links": [{ "label": "Dépôt non public", "href": "#" }]
   },

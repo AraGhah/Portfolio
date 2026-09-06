@@ -12,15 +12,18 @@
   "hero": {
     "location": "Montréal, Québec",
     "role": "Software Engineer",
-    "paragraph": "Backend systems, cloud infrastructure and AI automation. Every project here is a door. Behind each one is the full case study: the problem, what I built, the decisions I made and what broke on the way.",
+    "paragraph": "Backend systems, cloud infrastructure, and full-stack applications. Explore the projects below to see what I built, the technologies I used, and the technical decisions behind each one.",
     "enterHall": "Enter the hall",
     "hireMe": "Hire me"
   },
   "hall": {
     "title": "The Hall of Projects",
-    "intro": "Doors are rated by technical complexity, scored on architecture, integrations, security, scalability, testing and the difficulty of the problems solved. Filter the corridor by level, or walk it end to end.",
+    "intro": "Projects are organized by category and technical complexity. Explore the applications, APIs, systems, and websites I have built.",
     "hint": "Drag or scroll sideways · Click a door to enter",
     "filterAll": "All",
+    "categoryLabel": "Filter by category",
+    "categoryFullstack": "Fullstack",
+    "categorySoftware": "Software",
     "complexityLabel": "Filter by complexity",
     "openDoor": "Open door →",
     "doorAria": "Open case study: {title}",
@@ -45,9 +48,9 @@
   },
   "about": {
     "title": "About",
-    "p1": "Third year Computer Science student at Collège de Bois-de-Boulogne, with two years of real building behind me. Most of it backend: REST APIs, authentication, database design, and more recently cloud infrastructure and AI automation.",
-    "p2": "What I care about is the part nobody sees: architecture that survives the second feature request, security designed in instead of patched on, code a teammate can read six months later and change without fear. I'd rather ship something small that holds than something large that leaks.",
-    "p3": "Away from the editor I train in wrestling, judo and weightlifting, follow markets closely, and spend my summers running activities for seniors at a community centre in Montréal."
+    "p1": "Third-year Computer Science student at Collège de Bois-de-Boulogne. I mainly work on backend and full-stack projects involving REST APIs, authentication, databases, system design, and cloud infrastructure.",
+    "p2": "I focus on writing clean, maintainable code and building systems that are secure and easy to understand. Most of my experience comes from building my own projects, solving problems as they appear, and improving the architecture as the projects grow.",
+    "p3": "Outside programming, I train in wrestling, judo and weightlifting, follow financial markets, and spend my summers organizing activities for seniors at a community centre in Montréal."
   },
   "skills": {
     "title": "Skills and technologies",
@@ -58,9 +61,7 @@
     "frontend": "Frontend",
     "frontendItems": "React · Next.js · TypeScript · Vite",
     "cloud": "Cloud & tooling",
-    "cloudItems": "AWS · Cloudflare Workers · OpenNext · Supabase · n8n · Docker · Git & GitHub · Unity / C# (3D)",
-    "certifications": "Certifications",
-    "certItems": "Claude with Amazon Bedrock · Model Context Protocol · Retrieval Augmented Generation"
+    "cloudItems": "AWS · Cloudflare Workers · OpenNext · Supabase · n8n · Docker · Git & GitHub · Unity / C# (3D)"
   },
   "experience": {
     "title": "Education & experience",
@@ -71,7 +72,7 @@
       "Sourp Hagop High School"
     ],
     "workItems": [
-      "Independent developer, 2025 → now. Building Dossier, Trade Catch and SentinelOps: backend architecture, APIs, authentication, cloud deployment and AI agents.",
+      "Independent Developer, 2025–present. Building Dossier, Trade Catch and SentinelOps: backend architecture, REST APIs, authentication, databases, cloud deployment, and full-stack applications.",
       "Youth leader, SCAMA Community Centre. Led recreational and social activities for seniors over two summers.",
       "Busser, Grillade Nostos, Sep → Nov 2025. Cleared and reset tables, supported the serving team through peak service."
     ]
@@ -91,6 +92,6 @@
   },
   "Meta": {
     "title": "Ara Ghahramanyan · Software Engineer",
-    "description": "Backend systems, cloud infrastructure and AI automation. Every project is a door. Open one for the full case study."
+    "description": "Backend systems, cloud infrastructure, and full-stack applications. Explore the projects for case studies on APIs, databases, and cloud deployment."
   }
 }

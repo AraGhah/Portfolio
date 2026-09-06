@@ -11,7 +11,6 @@ type DoorProps = {
   project: Project;
   index: number;
   hoverIndex: number | null;
-  filterLevel: number;
   suppressClickRef: RefObject<boolean>;
   onHover: (index: number | null) => void;
   onOpen: (slug: string) => void;
@@ -38,7 +37,6 @@ export function Door({
   project,
   index,
   hoverIndex,
-  filterLevel,
   suppressClickRef,
   onHover,
   onOpen,
@@ -46,41 +44,30 @@ export function Door({
   const t = useTranslations('hall');
   const [pushing, setPushing] = useState(false);
 
-  const filtered =
-    filterLevel !== 0 && project.complexity !== filterLevel;
-
-  const k = filtered ? 0 : proximityK(index, hoverIndex);
+  const k = proximityK(index, hoverIndex);
 
   const transform = useMemo(() => {
     if (pushing) return 'rotateY(0deg) translateZ(160px)';
-    if (filtered) {
-      return 'rotateY(-9deg) translateZ(-90px) scale(0.94)';
-    }
-  if (k > 0) {
+    if (k > 0) {
       return `translateY(${-14 * k}px) rotateY(${-2 * k}deg) translateZ(${70 * k}px)`;
     }
     return 'rotateY(-9deg)';
-  }, [filtered, k, pushing]);
-
-  const opacity = filtered ? 0.28 : 1;
-  const filterStyle = filtered ? 'saturate(0.4)' : 'none';
+  }, [k, pushing]);
 
   const openDoor = useCallback(() => {
-    if (filtered) return;
     setPushing(true);
     window.setTimeout(() => {
       onOpen(project.slug);
       setPushing(false);
     }, 180);
-  }, [filtered, onOpen, project.slug]);
+  }, [onOpen, project.slug]);
 
   const handleClick = () => {
-    if (suppressClickRef.current || filtered) return;
+    if (suppressClickRef.current) return;
     openDoor();
   };
 
   const handleKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
-    if (filtered) return;
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
       openDoor();
@@ -94,19 +81,15 @@ export function Door({
   return (
     <div
       role="button"
-      tabIndex={filtered ? -1 : 0}
+      tabIndex={0}
       data-door={project.slug}
       data-lvl={project.complexity}
-      data-filtered={filtered ? 'true' : undefined}
+      data-category={project.category}
       aria-label={t('doorAria', { title: project.title })}
       className={`${styles.door} ${widthClass(project.complexity)} ${
-        filtered ? styles.doorFiltered : ''
-      } ${pushing ? styles.pushing : ''}`}
-      style={{
-        transform,
-        opacity,
-        filter: filterStyle,
-      }}
+        pushing ? styles.pushing : ''
+      }`}
+      style={{ transform }}
       onMouseEnter={() => onHover(index)}
       onMouseLeave={() => onHover(null)}
       onFocus={() => onHover(index)}

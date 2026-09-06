@@ -1,11 +1,15 @@
 'use client';
 
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { getProjects } from '@/lib/projects';
 import type { Project } from '@/lib/types';
 import { CaseStudyContent } from '@/components/case-study/CaseStudyContent';
 import { CaseStudyOverlay } from '@/components/case-study/CaseStudyOverlay';
+import {
+  CategoryFilter,
+  type CategoryFilterValue,
+} from './CategoryFilter';
 import { ComplexityFilter, type FilterLevel } from './ComplexityFilter';
 import { Door } from './Door';
 import styles from './Hall.module.css';
@@ -17,11 +21,23 @@ export function Hall() {
 
   const hallRef = useRef<HTMLDivElement>(null);
   const corridorRef = useRef<HTMLDivElement>(null);
+  const [categoryFilter, setCategoryFilter] =
+    useState<CategoryFilterValue>('all');
   const [filterLevel, setFilterLevel] = useState<FilterLevel>(0);
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
   const [openSlug, setOpenSlug] = useState<string | null>(null);
   const dragRef = useRef({ down: false, sx: 0, sl: 0, dragged: false });
   const suppressClickRef = useRef(false);
+
+  const visibleProjects = useMemo(() => {
+    return projects.filter((project) => {
+      const categoryOk =
+        categoryFilter === 'all' || project.category === categoryFilter;
+      const complexityOk =
+        filterLevel === 0 || project.complexity === filterLevel;
+      return categoryOk && complexityOk;
+    });
+  }, [projects, categoryFilter, filterLevel]);
 
   const openProject: Project | undefined = openSlug
     ? projects.find((p) => p.slug === openSlug)
@@ -134,15 +150,11 @@ export function Hall() {
   }, []);
 
   useEffect(() => {
-    if (filterLevel === 0 || !hallRef.current) return;
-    const first = hallRef.current.querySelector<HTMLElement>(
-      `[data-lvl="${filterLevel}"]:not([data-filtered="true"])`,
-    );
-    if (!first) return;
+    setHoverIndex(null);
     const hall = hallRef.current;
-    const target = first.offsetLeft - hall.clientWidth / 2 + first.offsetWidth / 2;
-    hall.scrollTo({ left: Math.max(0, target), behavior: 'smooth' });
-  }, [filterLevel]);
+    if (!hall) return;
+    hall.scrollTo({ left: 0, behavior: 'smooth' });
+  }, [categoryFilter, filterLevel]);
 
   return (
     <section id="hall" className={styles.section} aria-labelledby="hall-heading">
@@ -153,7 +165,13 @@ export function Hall() {
           </h2>
           <p className={styles.intro}>{t('intro')}</p>
         </div>
-        <ComplexityFilter activeLevel={filterLevel} onChange={setFilterLevel} />
+        <div className={styles.filters}>
+          <CategoryFilter
+            activeCategory={categoryFilter}
+            onChange={setCategoryFilter}
+          />
+          <ComplexityFilter activeLevel={filterLevel} onChange={setFilterLevel} />
+        </div>
       </div>
 
       <div ref={corridorRef} className={styles.corridor} data-corridor>
@@ -165,13 +183,12 @@ export function Hall() {
           tabIndex={0}
           aria-label={t('title')}
         >
-          {projects.map((project, index) => (
+          {visibleProjects.map((project, index) => (
             <div key={project.slug} className={styles.doorCol}>
               <Door
                 project={project}
                 index={index}
                 hoverIndex={hoverIndex}
-                filterLevel={filterLevel}
                 suppressClickRef={suppressClickRef}
                 onHover={setHoverIndex}
                 onOpen={openDoor}
