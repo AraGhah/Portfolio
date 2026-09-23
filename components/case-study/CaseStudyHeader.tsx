@@ -178,7 +178,7 @@ export function CaseStudyHeader({ project }: CaseStudyHeaderProps) {
               }}
             >
               {key === 'Status' || key === 'Statut'
-                ? tStatus(val as 'Delivered' | 'Live' | 'In development' | 'Livré' | 'En ligne' | 'En développement')
+                ? tStatus(val as 'Delivered' | 'Live' | 'In development' | 'Livré' | 'En ligne' | 'En développement' | 'Public')
                 : val}
             </dd>
           </div>

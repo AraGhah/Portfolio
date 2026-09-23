@@ -34,7 +34,7 @@ export interface Project {
   tagline: string;
   preview: string;
   previewStack: string;
-  status: 'Delivered' | 'Live' | 'In development';
+  status: 'Delivered' | 'Live' | 'In development' | 'Public';
   statusNote?: string;
   links: ProjectLink[];
   meta: Array<[string, string]>;
