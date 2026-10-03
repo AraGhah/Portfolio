@@ -29,5 +29,4 @@ npm run start
 
 - Door faces are pure CSS
 - Case studies open as an overlay with swinging leaves; also available at `/projects/[slug]`
-- Place résumé PDFs in `public/resume/` (`ara-ghahramanyan-en.pdf`, `ara-ghahramanyan-fr.pdf`)
 - Profile photo: `public/ara.jpg`
