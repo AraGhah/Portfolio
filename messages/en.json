@@ -7,7 +7,9 @@
     "contact": "Contact",
     "skipToHall": "Skip to the hall",
     "languageToggle": "Switch to French",
-    "languageTarget": "Français"
+    "languageTarget": "Français",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "hero": {
     "location": "Montréal, Québec",
@@ -27,7 +29,8 @@
     "complexityLabel": "Filter by complexity",
     "openDoor": "Open door →",
     "doorAria": "Open case study: {title}",
-    "closeOverlay": "Close door ✕"
+    "closeOverlay": "Close door ✕",
+    "empty": "No door matches these filters yet."
   },
   "caseStudy": {
     "door": "Door",
@@ -84,10 +87,14 @@
     "body": "Third year Computer Science student in Montréal, open to an internship in backend, cloud or full stack development. Email's the fastest way to reach me.",
     "email": "Email",
     "phone": "Phone",
-    "linkedIn": "LinkedIn"
+    "linkedIn": "LinkedIn",
+    "copyEmail": "Copy email",
+    "copied": "Copied"
   },
   "footer": {
-    "copyright": "© {year} Ara Ghahramanyan"
+    "copyright": "© {year} Ara Ghahramanyan",
+    "backToTop": "Back to top",
+    "tagline": "Built in Montréal · Next.js on Cloudflare"
   },
   "Meta": {
     "title": "Ara Ghahramanyan · Software Engineer",

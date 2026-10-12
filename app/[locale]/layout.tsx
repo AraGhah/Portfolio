@@ -8,6 +8,9 @@ import {
   Manrope,
 } from 'next/font/google';
 import { routing } from '@/i18n/routing';
+import { MotionProvider } from '@/components/motion/MotionProvider';
+import { BackToTop } from '@/components/motion/BackToTop';
+import { CursorFollower } from '@/components/motion/CursorFollower';
 import '../globals.css';
 
 const instrumentSerif = Instrument_Serif({
@@ -71,12 +74,17 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
-      <body
-        className={`${instrumentSerif.variable} ${manrope.variable} ${jetbrainsMono.variable}`}
-      >
+    <html
+      lang={locale}
+      className={`${instrumentSerif.variable} ${manrope.variable} ${jetbrainsMono.variable}`}
+    >
+      <body>
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <MotionProvider>
+            {children}
+            <BackToTop />
+            <CursorFollower />
+          </MotionProvider>
         </NextIntlClientProvider>
       </body>
     </html>

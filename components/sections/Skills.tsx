@@ -1,14 +1,39 @@
 'use client';
 
+import { motion, type Variants } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import { ScrollReveal } from '@/components/ScrollReveal';
+import { RevealHeading } from '@/components/motion/RevealHeading';
+import { SpotlightCard } from '@/components/motion/SpotlightCard';
+import styles from './Skills.module.css';
+
+const EASE = [0.16, 0.84, 0.28, 1] as const;
 
 const skillBlocks = [
-  { titleKey: 'backend', itemsKey: 'backendItems' },
-  { titleKey: 'data', itemsKey: 'dataItems' },
-  { titleKey: 'frontend', itemsKey: 'frontendItems' },
-  { titleKey: 'cloud', itemsKey: 'cloudItems' },
+  { titleKey: 'backend', itemsKey: 'backendItems', glyph: '{ }' },
+  { titleKey: 'data', itemsKey: 'dataItems', glyph: '⌗' },
+  { titleKey: 'frontend', itemsKey: 'frontendItems', glyph: '◐' },
+  { titleKey: 'cloud', itemsKey: 'cloudItems', glyph: '☁' },
 ] as const;
+
+const grid: Variants = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.12 } },
+};
+
+const card: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.9, ease: EASE } },
+};
+
+const chips: Variants = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.05, delayChildren: 0.35 } },
+};
+
+const chip: Variants = {
+  hidden: { opacity: 0, y: 10, scale: 0.9 },
+  show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.5, ease: EASE } },
+};
 
 export function Skills() {
   const t = useTranslations('skills');
@@ -16,50 +41,46 @@ export function Skills() {
   return (
     <section id="skills" className="section-block section-block--base" aria-labelledby="skills-heading">
       <div className="container-content">
-        <ScrollReveal>
-          <h2
-            id="skills-heading"
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'var(--t-h2)',
-              lineHeight: 1.02,
-              color: 'var(--ink)',
-              margin: '0 0 40px',
-            }}
-          >
-            {t('title')}
-          </h2>
-        </ScrollReveal>
+        <RevealHeading
+          id="skills-heading"
+          className={styles.title}
+          segments={[{ text: t('title') }]}
+        />
 
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-            gap: 'clamp(28px, 4vw, 40px)',
-          }}
+        <motion.div
+          className={styles.grid}
+          variants={grid}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: '0px 0px -10% 0px' }}
         >
           {skillBlocks.map((block, i) => (
-            <ScrollReveal key={block.titleKey} delay={0.08 * i}>
-              <div>
-                <h3
-                  style={{
-                    fontFamily: 'var(--font-mono)',
-                    fontSize: 'var(--t-mono-label)',
-                    letterSpacing: '0.26em',
-                    textTransform: 'uppercase',
-                    color: 'var(--acc)',
-                    margin: '0 0 12px',
-                  }}
-                >
-                  {t(block.titleKey)}
-                </h3>
-                <p style={{ fontSize: 'var(--t-body-sm)', lineHeight: 1.65, color: 'var(--ink-muted)', margin: 0 }}>
-                  {t(block.itemsKey)}
-                </p>
-              </div>
-            </ScrollReveal>
+            <motion.div key={block.titleKey} variants={card}>
+              <SpotlightCard>
+                <div className={styles.card}>
+                  <div className={styles.cardHead}>
+                    <span className={styles.index}>{String(i + 1).padStart(2, '0')}</span>
+                    <span className={styles.glyph} aria-hidden>
+                      {block.glyph}
+                    </span>
+                  </div>
+                  <h3 className={styles.cardTitle}>{t(block.titleKey)}</h3>
+                  <motion.ul className={styles.chips} variants={chips}>
+                    {t(block.itemsKey)
+                      .split('·')
+                      .map((item) => item.trim())
+                      .filter(Boolean)
+                      .map((item) => (
+                        <motion.li key={item} className={styles.chip} variants={chip}>
+                          {item}
+                        </motion.li>
+                      ))}
+                  </motion.ul>
+                </div>
+              </SpotlightCard>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

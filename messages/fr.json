@@ -7,7 +7,9 @@
     "contact": "Contact",
     "skipToHall": "Aller au couloir",
     "languageToggle": "Passer à l’anglais",
-    "languageTarget": "English"
+    "languageTarget": "English",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu"
   },
   "hero": {
     "location": "Montréal, Québec",
@@ -27,7 +29,8 @@
     "complexityLabel": "Filtrer par complexité",
     "openDoor": "Ouvrir la porte →",
     "doorAria": "Ouvrir l’étude de cas : {title}",
-    "closeOverlay": "Fermer la porte ✕"
+    "closeOverlay": "Fermer la porte ✕",
+    "empty": "Aucune porte ne correspond à ces filtres pour l’instant."
   },
   "caseStudy": {
     "door": "Porte",
@@ -84,10 +87,14 @@
     "body": "Étudiant en troisième année en techniques de l’informatique à Montréal, ouvert à un stage en backend, infonuagique ou développement pleine pile. Le courriel est le moyen le plus rapide de me joindre.",
     "email": "Courriel",
     "phone": "Téléphone",
-    "linkedIn": "LinkedIn"
+    "linkedIn": "LinkedIn",
+    "copyEmail": "Copier le courriel",
+    "copied": "Copié"
   },
   "footer": {
-    "copyright": "© {year} Ara Ghahramanyan"
+    "copyright": "© {year} Ara Ghahramanyan",
+    "backToTop": "Retour en haut",
+    "tagline": "Conçu à Montréal · Next.js sur Cloudflare"
   },
   "Meta": {
     "title": "Ara Ghahramanyan · Ingénieur logiciel",

@@ -1,108 +1,202 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+import {
+  AnimatePresence,
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useSpring,
+} from 'framer-motion';
 import { useLocale, useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import { profile } from '@/content/profile';
+import styles from './Nav.module.css';
 
 const links = [
-  { href: '/#hall', key: 'hall' as const },
-  { href: '/#about', key: 'about' as const },
-  { href: '/#skills', key: 'skills' as const },
-  { href: '/#experience', key: 'experience' as const },
-  { href: '/#contact', key: 'contact' as const },
+  { id: 'hall', key: 'hall' as const },
+  { id: 'about', key: 'about' as const },
+  { id: 'skills', key: 'skills' as const },
+  { id: 'experience', key: 'experience' as const },
+  { id: 'contact', key: 'contact' as const },
 ];
 
 export function Nav() {
   const t = useTranslations('nav');
   const locale = useLocale();
   const pathname = usePathname();
-
+  const isHome = pathname === '/';
   const switchLocale = locale === 'en' ? 'fr' : 'en';
 
+  const { scrollY, scrollYProgress } = useScroll();
+  const progress = useSpring(scrollYProgress, {
+    stiffness: 140,
+    damping: 28,
+    restDelta: 0.001,
+  });
+  const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const [active, setActive] = useState<string | null>(null);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useMotionValueEvent(scrollY, 'change', (y) => {
+    const prev = scrollY.getPrevious() ?? 0;
+    setScrolled(y > 24);
+    if (menuOpen) return;
+    if (y > 320 && y > prev + 4) setHidden(true);
+    else if (y < prev - 4 || y <= 320) setHidden(false);
+  });
+
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setMenuOpen(false);
+    };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [menuOpen]);
+
+  useEffect(() => {
+    if (!isHome) return;
+    const sections = links
+      .map((l) => document.getElementById(l.id))
+      .filter((el): el is HTMLElement => !!el);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible) setActive(visible.target.id);
+      },
+      { rootMargin: '-45% 0px -50% 0px', threshold: [0, 0.25, 0.5] },
+    );
+
+    sections.forEach((s) => observer.observe(s));
+    const onTop = () => {
+      if (window.scrollY < window.innerHeight * 0.4) setActive(null);
+    };
+    window.addEventListener('scroll', onTop, { passive: true });
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('scroll', onTop);
+    };
+  }, [isHome]);
+
   return (
-    <header
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 70,
-        backdropFilter: 'blur(14px)',
-        background: 'linear-gradient(180deg, rgba(8,9,11,.86), rgba(8,9,11,0))',
-        borderBottom: '1px solid var(--line-faint)',
-      }}
+    <motion.header
+      className={`${styles.header} ${scrolled ? styles.headerScrolled : ''}`}
+      initial={{ y: -80, opacity: 0 }}
+      animate={{ y: hidden ? -90 : 0, opacity: 1 }}
+      transition={{ duration: 0.5, ease: [0.2, 0.7, 0.2, 1] }}
     >
       <a href="#hall" className="skip-link">
         {t('skipToHall')}
       </a>
-      <nav
-        aria-label="Primary"
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          padding: '18px clamp(20px, 5vw, 48px)',
-          maxWidth: 'var(--w-content)',
-          margin: '0 auto',
-        }}
-      >
-        <Link
-          href="/"
-          style={{
-            fontFamily: 'var(--font-display)',
-            fontSize: 20,
-            letterSpacing: '0.06em',
-            color: 'var(--ink)',
-          }}
-        >
+      <nav aria-label="Primary" className={styles.nav}>
+        <Link href="/" className={styles.name}>
+          <span className={styles.monogram} aria-hidden>
+            A
+          </span>
           {profile.name.split(' ')[0]}
         </Link>
 
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 'clamp(12px, 2vw, 28px)',
-            flexWrap: 'wrap',
-          }}
-        >
-          {links.map((link) => (
-            <a
-              key={link.key}
-              href={link.href.replace(/^\//, '')}
-              style={{
-                fontFamily: 'var(--font-mono)',
-                fontSize: 'var(--t-mono-nav)',
-                letterSpacing: '0.2em',
-                textTransform: 'uppercase',
-                color: link.key === 'contact' ? 'var(--acc)' : 'var(--ink-label)',
-                borderBottom:
-                  link.key === 'contact' ? '1px solid var(--acc-42)' : 'none',
-                paddingBottom: link.key === 'contact' ? 2 : 0,
-                transition: 'color 350ms',
-              }}
-            >
-              {t(link.key)}
-            </a>
-          ))}
+        <div className={styles.right}>
+          <ul className={styles.links}>
+            {links.map((link) => {
+              const isActive = active === link.id;
+              const isContact = link.key === 'contact';
+              return (
+                <li key={link.key}>
+                  <a
+                    href={isHome ? `#${link.id}` : `/${locale}#${link.id}`}
+                    className={`${styles.link} ${isContact ? styles.linkContact : ''} ${
+                      isActive ? styles.linkActive : ''
+                    }`}
+                    aria-current={isActive ? 'true' : undefined}
+                  >
+                    {t(link.key)}
+                    {isActive ? (
+                      <motion.span
+                        layoutId="nav-active"
+                        className={styles.activeBar}
+                        transition={{ type: 'spring', stiffness: 380, damping: 32 }}
+                      />
+                    ) : null}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
           <Link
             href={pathname}
             locale={switchLocale}
             aria-label={t('languageToggle')}
-            style={{
-              fontFamily: 'var(--font-mono)',
-              fontSize: 'var(--t-mono-nav)',
-              letterSpacing: '0.2em',
-              textTransform: 'uppercase',
-              color: 'var(--ink-muted)',
-              border: '1px solid var(--line)',
-              padding: '8px 12px',
-            }}
+            className={styles.lang}
           >
             {t('languageTarget')}
           </Link>
+          <button
+            type="button"
+            className={`${styles.burger} ${menuOpen ? styles.burgerOpen : ''}`}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
+            aria-label={menuOpen ? t('closeMenu') : t('openMenu')}
+            onClick={() => setMenuOpen((o) => !o)}
+          >
+            <span />
+            <span />
+          </button>
         </div>
       </nav>
-    </header>
+      <motion.div
+        aria-hidden
+        className={styles.progress}
+        style={{ scaleX: progress }}
+      />
+      <AnimatePresence>
+        {menuOpen ? (
+          <motion.div
+            id="mobile-menu"
+            className={styles.mobileMenu}
+            initial={{ clipPath: 'inset(0 0 100% 0)' }}
+            animate={{ clipPath: 'inset(0 0 0% 0)' }}
+            exit={{ clipPath: 'inset(0 0 100% 0)' }}
+            transition={{ duration: 0.55, ease: [0.16, 0.84, 0.28, 1] }}
+          >
+            <motion.ul
+              initial="hidden"
+              animate="show"
+              variants={{
+                hidden: {},
+                show: { transition: { staggerChildren: 0.06, delayChildren: 0.12 } },
+              }}
+            >
+              {links.map((link, i) => (
+                <motion.li
+                  key={link.key}
+                  variants={{
+                    hidden: { opacity: 0, y: 24 },
+                    show: { opacity: 1, y: 0 },
+                  }}
+                  transition={{ duration: 0.5, ease: [0.2, 0.7, 0.2, 1] }}
+                >
+                  <a
+                    href={isHome ? `#${link.id}` : `/${locale}#${link.id}`}
+                    className={styles.mobileLink}
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    <span className={styles.mobileIndex}>
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    {t(link.key)}
+                  </a>
+                </motion.li>
+              ))}
+            </motion.ul>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
+    </motion.header>
   );
 }

@@ -62,13 +62,13 @@
   --w-hall: 1600px;
   --w-contact: 1000px;
 
-  --font-display: var(--font-instrument-serif), "Instrument Serif", Georgia, serif;
-  --font-body: var(--font-manrope), "Manrope", system-ui, sans-serif;
-  --font-mono: var(--font-jetbrains-mono), "JetBrains Mono", ui-monospace, monospace;
+  --font-display: var(--font-instrument-serif), "Instrument Serif Local", Georgia, serif;
+  --font-body: var(--font-manrope), "Manrope Local", system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), "JetBrains Mono Local", ui-monospace, monospace;
 }
 
 @font-face {
-  font-family: "Instrument Serif";
+  font-family: "Instrument Serif Local";
   src: url("/fonts/InstrumentSerif-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -76,7 +76,7 @@
 }
 
 @font-face {
-  font-family: "Instrument Serif";
+  font-family: "Instrument Serif Local";
   src: url("/fonts/InstrumentSerif-Italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
@@ -84,7 +84,7 @@
 }
 
 @font-face {
-  font-family: "Manrope";
+  font-family: "Manrope Local";
   src: url("/fonts/Manrope-Variable.woff2") format("woff2");
   font-weight: 300 600;
   font-style: normal;
@@ -92,7 +92,7 @@
 }
 
 @font-face {
-  font-family: "JetBrains Mono";
+  font-family: "JetBrains Mono Local";
   src: url("/fonts/JetBrainsMono-Variable.woff2") format("woff2");
   font-weight: 300 500;
   font-style: normal;
@@ -136,12 +136,63 @@
   background: var(--bg-panel);
 }
 
+.about-photo-clip {
+  overflow: hidden;
+}
+
 .about-photo {
   width: 100%;
   height: clamp(360px, 42vw, 540px);
   object-fit: cover;
   object-position: 50% 22%;
   filter: grayscale(0.42) contrast(1.06) brightness(0.9);
+  transition: filter 900ms var(--ease-out);
+}
+
+.about-photo-frame:hover .about-photo {
+  filter: grayscale(0) contrast(1.04) brightness(1);
+}
+
+.about-corner {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-color: var(--acc);
+  border-style: solid;
+  border-width: 0;
+  pointer-events: none;
+}
+
+.about-corner--tl {
+  top: -1px;
+  left: -1px;
+  border-top-width: 1px;
+  border-left-width: 1px;
+}
+
+.about-corner--tr {
+  top: -1px;
+  right: -1px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+}
+
+.about-corner--bl {
+  bottom: -1px;
+  left: -1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+}
+
+.about-corner--br {
+  bottom: -1px;
+  right: -1px;
+  border-bottom-width: 1px;
+  border-right-width: 1px;
+}
+
+.about-coords {
+  color: var(--acc-75);
 }
 
 .about-photo-meta {
@@ -226,6 +277,26 @@ img {
 :focus-visible {
   outline: 2px solid var(--acc);
   outline-offset: 4px;
+}
+
+::selection {
+  background: rgba(201, 164, 101, 0.35);
+  color: var(--ink);
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(201, 164, 101, 0.35) var(--bg);
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 150;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 .skip-link {

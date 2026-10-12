@@ -1,0 +1,94 @@
+.title {
+  font-family: var(--font-display);
+  font-size: var(--t-h2);
+  font-weight: 400;
+  line-height: 1.02;
+  color: var(--ink);
+  margin: 0 0 clamp(36px, 5vw, 56px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(16px, 2vw, 24px);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: clamp(24px, 2.6vw, 32px);
+}
+
+.cardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.index {
+  font-family: var(--font-mono);
+  font-size: var(--t-mono-meta);
+  letter-spacing: 0.3em;
+  color: var(--ink-label);
+}
+
+.glyph {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--acc-20);
+  border-radius: 50%;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--acc);
+  transition:
+    transform 700ms var(--ease-door),
+    background 400ms var(--ease-out),
+    border-color 400ms var(--ease-out);
+}
+
+.card:hover .glyph {
+  transform: rotate(180deg);
+  background: var(--acc-12);
+  border-color: var(--acc-42);
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 2.4vw, 32px);
+  font-weight: 400;
+  color: var(--ink);
+  margin: 0 0 18px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.chip {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--ink-muted);
+  transition:
+    border-color 300ms var(--ease-out),
+    color 300ms var(--ease-out),
+    background 300ms var(--ease-out);
+}
+
+.chip:hover {
+  border-color: var(--acc-42);
+  color: var(--acc-hover);
+  background: var(--acc-06);
+}

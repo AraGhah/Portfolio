@@ -29,6 +29,34 @@
   max-width: 720px;
 }
 
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  font-family: var(--font-mono);
+  font-size: var(--t-mono-label);
+  letter-spacing: 0.3em;
+  color: var(--acc);
+}
+
+.eyebrowLine {
+  width: 36px;
+  height: 1px;
+  background: var(--acc-75);
+}
+
+.empty {
+  flex: 0 0 auto;
+  align-self: center;
+  margin: 120px auto;
+  font-family: var(--font-mono);
+  font-size: var(--t-mono-nav);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-label);
+}
+
 .title {
   font-family: var(--font-display);
   font-size: var(--t-h2-hall);
@@ -69,6 +97,7 @@
 }
 
 .hall {
+  position: relative;
   display: flex;
   align-items: flex-end;
   gap: clamp(26px, 3.4vw, 58px);
@@ -99,6 +128,16 @@
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
+  transform-style: preserve-3d;
+}
+
+.doorCol .doorTitle {
+  transition: color 400ms var(--ease-out);
+}
+
+.doorCol:hover .doorTitle,
+.doorCol:focus-within .doorTitle {
+  color: var(--acc-hover);
 }
 
 .meta {
