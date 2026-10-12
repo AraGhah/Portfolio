@@ -2,28 +2,40 @@
 
 :root {
   /* Backgrounds — three steps */
-  --bg: #08090b;
-  --bg-raised: #0a0b0e;
-  --bg-panel: #0d0e11;
+  --bg: #0a0e17;
+  --bg-raised: #0d1220;
+  --bg-panel: #111827;
 
   /* Text — four steps */
-  --ink: #f2efe8;
-  --ink-body: #e9e6df;
-  --ink-muted: #bcb8ae;
-  --ink-dim: #a8a49b;
-  --ink-label: #8a8780;
+  --ink: #f8fafc;
+  --ink-body: #e2e8f0;
+  --ink-muted: #b8c4d6;
+  --ink-dim: #9aa8bd;
+  --ink-label: #7d8ba1;
 
-  /* Accent — brass */
-  --acc: #c9a465;
-  --acc-hover: #e7cf9d;
-  --acc-06: rgba(201, 164, 101, 0.06);
-  --acc-12: rgba(201, 164, 101, 0.12);
-  --acc-20: rgba(201, 164, 101, 0.2);
-  --acc-42: rgba(201, 164, 101, 0.42);
-  --acc-75: rgba(201, 164, 101, 0.75);
+  /* Accent — trust blue */
+  --acc: #60a5fa;
+  --acc-hover: #93c5fd;
+  --acc-06: rgba(96, 165, 250, 0.06);
+  --acc-12: rgba(96, 165, 250, 0.12);
+  --acc-20: rgba(96, 165, 250, 0.2);
+  --acc-42: rgba(96, 165, 250, 0.42);
+  --acc-75: rgba(96, 165, 250, 0.75);
 
   /* Cool accent */
-  --acc-cool: #7e97b8;
+  --acc-cool: #2dd4bf;
+
+  /* Brand palette: blue signals competence and trust, green is reserved for availability */
+  --c-blue: #60a5fa;
+  --c-blue-strong: #2563eb;
+  --c-sky: #7dd3fc;
+  --c-indigo: #818cf8;
+  --c-indigo-deep: #4f46e5;
+  --c-teal: #5eead4;
+  --c-success: #34d399;
+  --grad-brand: linear-gradient(110deg, #bfdbfe, var(--c-blue) 40%, var(--c-indigo) 80%, #a5b4fc);
+  --grad-primary: linear-gradient(110deg, var(--c-blue-strong), var(--c-indigo-deep));
+  --grad-cool: linear-gradient(110deg, var(--c-blue), var(--c-teal));
 
   /* Hairlines */
   --line-faint: rgba(255, 255, 255, 0.05);
@@ -153,11 +165,20 @@
   filter: grayscale(0) contrast(1.04) brightness(1);
 }
 
+.about-photo-frame {
+  transition: box-shadow 700ms var(--ease-out);
+}
+
+.about-photo-frame:hover {
+  box-shadow:
+    -30px 30px 80px -40px rgba(129, 140, 248, 0.6),
+    30px -30px 80px -40px rgba(45, 212, 191, 0.5);
+}
+
 .about-corner {
   position: absolute;
-  width: 18px;
-  height: 18px;
-  border-color: var(--acc);
+  width: 22px;
+  height: 22px;
   border-style: solid;
   border-width: 0;
   pointer-events: none;
@@ -166,33 +187,37 @@
 .about-corner--tl {
   top: -1px;
   left: -1px;
-  border-top-width: 1px;
-  border-left-width: 1px;
+  border-color: var(--c-blue);
+  border-top-width: 2px;
+  border-left-width: 2px;
 }
 
 .about-corner--tr {
   top: -1px;
   right: -1px;
-  border-top-width: 1px;
-  border-right-width: 1px;
+  border-color: var(--c-indigo);
+  border-top-width: 2px;
+  border-right-width: 2px;
 }
 
 .about-corner--bl {
   bottom: -1px;
   left: -1px;
-  border-bottom-width: 1px;
-  border-left-width: 1px;
+  border-color: var(--c-indigo-deep);
+  border-bottom-width: 2px;
+  border-left-width: 2px;
 }
 
 .about-corner--br {
   bottom: -1px;
   right: -1px;
-  border-bottom-width: 1px;
-  border-right-width: 1px;
+  border-color: var(--c-teal);
+  border-bottom-width: 2px;
+  border-right-width: 2px;
 }
 
 .about-coords {
-  color: var(--acc-75);
+  color: var(--c-teal);
 }
 
 .about-photo-meta {
@@ -280,13 +305,31 @@ img {
 }
 
 ::selection {
-  background: rgba(201, 164, 101, 0.35);
-  color: var(--ink);
+  background: rgba(96, 165, 250, 0.35);
+  color: #fff;
 }
 
 html {
   scrollbar-width: thin;
-  scrollbar-color: rgba(201, 164, 101, 0.35) var(--bg);
+  scrollbar-color: rgba(96, 165, 250, 0.4) var(--bg);
+}
+
+.text-gradient {
+  background: var(--grad-brand);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientShift 8s ease-in-out infinite alternate;
+}
+
+@keyframes gradientShift {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
 }
 
 body::after {
@@ -295,7 +338,7 @@ body::after {
   inset: 0;
   z-index: 150;
   pointer-events: none;
-  opacity: 0.035;
+  opacity: 0.022;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 

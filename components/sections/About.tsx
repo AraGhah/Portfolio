@@ -33,8 +33,8 @@ export function About() {
         <div className="about-photo-wrap" ref={photoRef}>
           <motion.div
             className="about-photo-frame"
-            initial={{ clipPath: 'inset(100% 0% 0% 0%)' }}
-            whileInView={{ clipPath: 'inset(0% 0% 0% 0%)' }}
+            initial={{ clipPath: 'inset(100% -30% -30% -30%)' }}
+            whileInView={{ clipPath: 'inset(-30% -30% -30% -30%)' }}
             viewport={{ once: true, margin: '0px 0px -15% 0px' }}
             transition={{ duration: 1.4, ease: EASE }}
           >
@@ -100,9 +100,9 @@ export function About() {
             viewport={{ once: true }}
             transition={{ duration: 1.3, ease: EASE, delay: 0.2 }}
             style={{
-              height: 1,
+              height: 2,
               transformOrigin: '0% 50%',
-              background: 'linear-gradient(90deg, rgba(201,164,101,.6), transparent)',
+              background: 'linear-gradient(90deg, var(--c-blue), var(--c-indigo) 45%, var(--c-indigo-deep) 70%, transparent)',
               margin: '32px 0',
             }}
           />

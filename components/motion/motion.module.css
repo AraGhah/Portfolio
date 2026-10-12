@@ -1,3 +1,22 @@
+.rotator {
+  position: relative;
+  display: inline-grid;
+  vertical-align: bottom;
+  overflow: hidden;
+  text-align: left;
+}
+
+.rotatorSizer {
+  grid-area: 1 / 1;
+  visibility: hidden;
+  white-space: nowrap;
+}
+
+.rotatorWord {
+  grid-area: 1 / 1;
+  white-space: nowrap;
+}
+
 .wordMask {
   display: inline-block;
   overflow: hidden;
@@ -14,20 +33,40 @@
 
 .accent {
   font-style: italic;
-  color: var(--acc);
+  padding-right: 0.06em;
+  background: linear-gradient(110deg, #bfdbfe, var(--c-blue) 55%, var(--c-indigo));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .spotCard {
+  --card-rgb: 96, 165, 250;
   position: relative;
   height: 100%;
-  border: 1px solid var(--line);
-  background: linear-gradient(160deg, var(--bg-panel), var(--bg-raised));
+  border: 1px solid rgba(var(--card-rgb), 0.18);
+  background:
+    linear-gradient(160deg, rgba(var(--card-rgb), 0.07), transparent 45%),
+    linear-gradient(160deg, var(--bg-panel), var(--bg-raised));
   transform-style: preserve-3d;
-  transition: border-color 450ms var(--ease-out);
+  transition:
+    border-color 450ms var(--ease-out),
+    box-shadow 450ms var(--ease-out);
+}
+
+.spotCard::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  height: 2px;
+  background: linear-gradient(90deg, rgb(var(--card-rgb)), transparent);
 }
 
 .spotCard:hover {
-  border-color: var(--acc-42);
+  border-color: rgba(var(--card-rgb), 0.6);
+  box-shadow: 0 30px 70px -30px rgba(var(--card-rgb), 0.55);
 }
 
 .spotGlow {
@@ -55,7 +94,7 @@
   width: 34px;
   height: 34px;
   margin: -17px 0 0 -17px;
-  border: 1px solid rgba(201, 164, 101, 0.4);
+  border: 1px solid rgba(96, 165, 250, 0.4);
 }
 
 .cursorDot {
@@ -75,7 +114,7 @@
   display: grid;
   place-items: center;
   border-radius: 50%;
-  background: rgba(13, 14, 17, 0.88);
+  background: rgba(18, 26, 43, 0.88);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 18px 40px -18px #000;
@@ -95,8 +134,8 @@
 
 .ringProgress {
   fill: none;
-  stroke: var(--acc);
-  stroke-width: 1.5;
+  stroke: url(#back-to-top-grad);
+  stroke-width: 2.5;
   stroke-linecap: round;
 }
 

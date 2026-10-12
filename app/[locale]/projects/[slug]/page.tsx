@@ -61,7 +61,7 @@ export default async function ProjectPage({ params }: Props) {
             color: 'var(--acc)',
           }}
         >
-          ← {t('title')}
+          {t('title')}
         </Link>
         <CaseStudyContent project={project} />
       </main>

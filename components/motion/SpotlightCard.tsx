@@ -2,6 +2,7 @@
 
 import {
   motion,
+  type MotionStyle,
   useMotionTemplate,
   useMotionValue,
   useSpring,
@@ -14,9 +15,16 @@ type SpotlightCardProps = {
   children: ReactNode;
   className?: string;
   tilt?: number;
+  /** Comma-separated RGB triplet, e.g. "96, 165, 250". */
+  rgb?: string;
 };
 
-export function SpotlightCard({ children, className = '', tilt = 6 }: SpotlightCardProps) {
+export function SpotlightCard({
+  children,
+  className = '',
+  tilt = 6,
+  rgb = '96, 165, 250',
+}: SpotlightCardProps) {
   const ref = useRef<HTMLDivElement>(null);
   const px = useMotionValue(0.5);
   const py = useMotionValue(0.5);
@@ -32,7 +40,7 @@ export function SpotlightCard({ children, className = '', tilt = 6 }: SpotlightC
   });
   const gx = useTransform(px, (v) => `${v * 100}%`);
   const gy = useTransform(py, (v) => `${v * 100}%`);
-  const spotlight = useMotionTemplate`radial-gradient(420px circle at ${gx} ${gy}, rgba(201,164,101,.16), transparent 60%)`;
+  const spotlight = useMotionTemplate`radial-gradient(420px circle at ${gx} ${gy}, rgba(${rgb}, .24), transparent 60%)`;
   const opacity = useSpring(glowOpacity, { stiffness: 200, damping: 30 });
 
   const onMove = (e: PointerEvent<HTMLDivElement>) => {
@@ -54,7 +62,14 @@ export function SpotlightCard({ children, className = '', tilt = 6 }: SpotlightC
     <motion.div
       ref={ref}
       className={`${styles.spotCard} ${className}`.trim()}
-      style={{ rotateX, rotateY, transformPerspective: 900 }}
+      style={
+        {
+          rotateX,
+          rotateY,
+          transformPerspective: 900,
+          '--card-rgb': rgb,
+        } as MotionStyle
+      }
       onPointerMove={onMove}
       onPointerLeave={onLeave}
       whileHover={{ y: -6 }}

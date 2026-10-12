@@ -10,7 +10,7 @@ export type DoorPreviewProps = {
 export function DoorPreview({
   preview,
   previewStack,
-  openCta = 'Open door →',
+  openCta = 'Open door',
   className,
 }: DoorPreviewProps) {
   return (

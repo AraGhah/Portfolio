@@ -24,7 +24,7 @@
 }
 
 .btn:hover {
-  border-color: rgba(201, 164, 101, 0.35);
+  border-color: rgba(96, 165, 250, 0.35);
   color: var(--ink-muted);
   transform: translateY(-2px);
 }
@@ -34,10 +34,16 @@
 }
 
 .btnActive {
-  background: var(--acc-12);
-  border-color: rgba(201, 164, 101, 0.5);
-  color: var(--acc);
-  box-shadow: 0 0 24px -10px rgba(201, 164, 101, 0.7);
+  background: var(--grad-primary);
+  border-color: transparent;
+  color: #ffffff;
+  font-weight: 500;
+  box-shadow: 0 8px 26px -10px rgba(129, 140, 248, 0.8);
+}
+
+.btnActive:hover {
+  color: #ffffff;
+  border-color: transparent;
 }
 
 .btn:focus-visible {

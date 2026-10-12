@@ -11,8 +11,9 @@
   top: -1px;
   left: 0;
   right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--acc), transparent);
+  height: 2px;
+  background: var(--grad-brand);
+  box-shadow: 0 0 18px rgba(129, 140, 248, 0.5);
 }
 
 .inner {
@@ -27,7 +28,6 @@
 .name {
   font-family: var(--font-display);
   font-size: clamp(22px, 3vw, 28px);
-  color: var(--ink);
   letter-spacing: 0.04em;
 }
 

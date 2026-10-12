@@ -66,8 +66,8 @@ export function CursorFollower() {
         animate={{
           scale,
           opacity: visible ? 1 : 0,
-          borderColor: hovering ? 'rgba(201,164,101,.85)' : 'rgba(201,164,101,.4)',
-          backgroundColor: hovering ? 'rgba(201,164,101,.08)' : 'rgba(201,164,101,0)',
+          borderColor: hovering ? 'rgba(129, 140, 248, 0.9)' : 'rgba(96, 165, 250, 0.55)',
+          backgroundColor: hovering ? 'rgba(129, 140, 248, 0.12)' : 'rgba(129, 140, 248, 0)',
         }}
         transition={{ type: 'spring', stiffness: 300, damping: 24 }}
       />

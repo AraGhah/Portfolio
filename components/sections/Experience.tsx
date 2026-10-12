@@ -7,6 +7,7 @@ import { RevealHeading } from '@/components/motion/RevealHeading';
 import styles from './Experience.module.css';
 
 const EASE = [0.16, 0.84, 0.28, 1] as const;
+const DOT_COLORS = ['#60a5fa', '#38bdf8', '#818cf8', '#6366f1', '#2dd4bf'];
 
 function splitItem(item: string): { head: string; body: string } {
   const match = item.match(/^(.+?[.:])\s+(.*)$/);
@@ -14,7 +15,17 @@ function splitItem(item: string): { head: string; body: string } {
   return { head: match[1].replace(/[.:]$/, '').trim(), body: match[2] };
 }
 
-function Timeline({ title, items, delay }: { title: string; items: string[]; delay: number }) {
+function Timeline({
+  title,
+  items,
+  delay,
+  colorOffset,
+}: {
+  title: string;
+  items: string[];
+  delay: number;
+  colorOffset: number;
+}) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -25,7 +36,7 @@ function Timeline({ title, items, delay }: { title: string; items: string[]; del
   return (
     <div ref={ref}>
       <motion.h3
-        className={styles.colTitle}
+        className={`${styles.colTitle} text-gradient`}
         initial={{ opacity: 0, x: -12 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
@@ -47,6 +58,11 @@ function Timeline({ title, items, delay }: { title: string; items: string[]; del
               <motion.li
                 key={item}
                 className={styles.item}
+                style={
+                  {
+                    '--dot': DOT_COLORS[(i + colorOffset) % DOT_COLORS.length],
+                  } as React.CSSProperties
+                }
                 initial={{ opacity: 0, x: 24 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: '0px 0px -12% 0px' }}
@@ -91,8 +107,8 @@ export function Experience() {
         />
 
         <div className={styles.columns}>
-          <Timeline title={t('education')} items={education} delay={0.05} />
-          <Timeline title={t('work')} items={work} delay={0.15} />
+          <Timeline title={t('education')} items={education} delay={0.05} colorOffset={3} />
+          <Timeline title={t('work')} items={work} delay={0.15} colorOffset={0} />
         </div>
       </div>
     </section>

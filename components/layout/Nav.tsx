@@ -15,11 +15,13 @@ import styles from './Nav.module.css';
 
 const links = [
   { id: 'hall', key: 'hall' as const },
-  { id: 'about', key: 'about' as const },
-  { id: 'skills', key: 'skills' as const },
   { id: 'experience', key: 'experience' as const },
+  { id: 'skills', key: 'skills' as const },
+  { id: 'about', key: 'about' as const },
   { id: 'contact', key: 'contact' as const },
 ];
+
+const desktopLinks = links.filter((l) => l.key !== 'contact');
 
 export function Nav() {
   const t = useTranslations('nav');
@@ -103,16 +105,13 @@ export function Nav() {
 
         <div className={styles.right}>
           <ul className={styles.links}>
-            {links.map((link) => {
+            {desktopLinks.map((link) => {
               const isActive = active === link.id;
-              const isContact = link.key === 'contact';
               return (
                 <li key={link.key}>
                   <a
                     href={isHome ? `#${link.id}` : `/${locale}#${link.id}`}
-                    className={`${styles.link} ${isContact ? styles.linkContact : ''} ${
-                      isActive ? styles.linkActive : ''
-                    }`}
+                    className={`${styles.link} ${isActive ? styles.linkActive : ''}`}
                     aria-current={isActive ? 'true' : undefined}
                   >
                     {t(link.key)}
@@ -136,6 +135,15 @@ export function Nav() {
           >
             {t('languageTarget')}
           </Link>
+          <motion.a
+            href={isHome ? '#contact' : `/${locale}#contact`}
+            className={`${styles.cta} ${active === 'contact' ? styles.ctaActive : ''}`}
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            <span className={styles.ctaDot} aria-hidden />
+            {t('cta')}
+          </motion.a>
           <button
             type="button"
             className={`${styles.burger} ${menuOpen ? styles.burgerOpen : ''}`}

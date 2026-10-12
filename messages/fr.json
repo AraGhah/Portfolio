@@ -9,14 +9,57 @@
     "languageToggle": "Passer à l’anglais",
     "languageTarget": "English",
     "openMenu": "Ouvrir le menu",
-    "closeMenu": "Fermer le menu"
+    "closeMenu": "Fermer le menu",
+    "cta": "Discutons"
   },
   "hero": {
+    "available": "Disponible pour un stage",
     "location": "Montréal, Québec",
     "role": "Ingénieur logiciel",
-    "paragraph": "Systèmes backend, infrastructure infonuagique et applications full stack. Explorez les projets ci-dessous pour voir ce que j’ai construit, les technologies utilisées et les décisions techniques derrière chacun.",
-    "enterHall": "Entrer dans le couloir",
-    "hireMe": "Embauchez-moi"
+    "buildPrefix": "Je construis",
+    "buildWords": ["des API REST sécurisées", "des applis dans le nuage", "des produits full stack", "des pipelines de données"],
+    "paragraph": "Systèmes backend, infrastructure infonuagique et applications full stack. Chaque projet ci-dessous présente les technologies utilisées et les décisions qui le sous-tendent.",
+    "enterHall": "Voir mes projets",
+    "hireMe": "Embauchez-moi",
+    "trustProjects": "projets réalisés",
+    "trustLive": "produit en production",
+    "trustLanguages": "Français · Anglais"
+  },
+  "proof": {
+    "eyebrow": "En chiffres",
+    "titleLead": "Des preuves,",
+    "titleAccent": "pas des promesses",
+    "projects": "Projets réalisés",
+    "projectsNote": "De l’analyse des besoins au déploiement en production",
+    "tech": "Technologies utilisées",
+    "techNote": "Backend, données, frontend et infonuagique",
+    "reply": "Taux de réponse",
+    "replyNote": "Projet pilote externe de Dossier, 100 prospects",
+    "prospects": "Prospects livrés",
+    "prospectsNote": "Une livraison ultérieure de Dossier, avec des leçons tirées de la production"
+  },
+  "why": {
+    "eyebrow": "Pourquoi travailler avec moi",
+    "titleLead": "Ce que j’apporte",
+    "titleAccent": "à votre équipe",
+    "intro": "Quatre choses sur lesquelles vous pouvez compter dès le premier jour, chacune appuyée par un projet que vous pouvez ouvrir et examiner.",
+    "evidence": "Voir la preuve : {project}",
+    "backend": {
+      "title": "Un backend fiable",
+      "body": "API REST avec authentification JWT, validation et modèles de données propres en Node.js, ASP.NET Core et SQL."
+    },
+    "cloud": {
+      "title": "Déployé, pas seulement en local",
+      "body": "Applications déployées sur Cloudflare Workers et AWS, avec la configuration et les compromis documentés."
+    },
+    "ownership": {
+      "title": "De l’idée jusqu’aux utilisateurs",
+      "body": "Dossier construit de bout en bout pour un vrai projet pilote : résultat mesuré, puis corrigé selon ce que les données de production ont révélé."
+    },
+    "clarity": {
+      "title": "Pensée claire, documentation claire",
+      "body": "Besoins, diagrammes et décisions écrites, pour qu’une équipe comprenne et prolonge le travail rapidement."
+    }
   },
   "hall": {
     "title": "Le Couloir des projets",
@@ -27,7 +70,7 @@
     "categoryFullstack": "Fullstack",
     "categorySoftware": "Software",
     "complexityLabel": "Filtrer par complexité",
-    "openDoor": "Ouvrir la porte →",
+    "openDoor": "Ouvrir la porte",
     "doorAria": "Ouvrir l’étude de cas : {title}",
     "closeOverlay": "Fermer la porte ✕",
     "empty": "Aucune porte ne correspond à ces filtres pour l’instant."
@@ -77,6 +120,7 @@
     ],
     "workItems": [
       "Développeur indépendant, 2025–maintenant. Construction de Dossier, Trade Catch et SentinelOps : architecture backend, API REST, authentification, bases de données, déploiement infonuagique et applications full stack.",
+      "Service à la clientèle et vente, Globo Chaussures, Sep 2026–maintenant. Vente de chaussures en magasin, accueil de la clientèle, réponse à leurs questions et conseils pour trouver la bonne paire.",
       "Animateur jeunesse, Centre communautaire SCAMA. Animation d’activités récréatives et sociales pour aînés pendant deux étés.",
       "Commis de salle, Grillade Nostos, Sep–Nov 2025. Débarrassage et remise en place des tables, soutien à l’équipe de service aux heures de pointe."
     ]
@@ -89,7 +133,13 @@
     "phone": "Téléphone",
     "linkedIn": "LinkedIn",
     "copyEmail": "Copier le courriel",
-    "copied": "Copié"
+    "copied": "Copié",
+    "factRole": "Recherche",
+    "factRoleValue": "Stage en développement logiciel",
+    "factFocus": "Spécialités",
+    "factFocusValue": "Backend · Infonuagique · Full stack",
+    "factBase": "Basé à",
+    "factBaseValue": "Montréal, QC"
   },
   "footer": {
     "copyright": "© {year} Ara Ghahramanyan",

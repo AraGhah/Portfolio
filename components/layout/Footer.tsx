@@ -26,7 +26,7 @@ export function Footer() {
         viewport={{ once: true }}
         transition={{ duration: 0.9, delay: 0.2 }}
       >
-        <span className={styles.name}>{profile.name}</span>
+        <span className={`${styles.name} text-gradient`}>{profile.name}</span>
         <span className={styles.meta}>{t('tagline')}</span>
         <p className={styles.copyright}>{t('copyright', { year })}</p>
       </motion.div>

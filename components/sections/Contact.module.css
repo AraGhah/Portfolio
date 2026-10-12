@@ -9,8 +9,10 @@
   width: min(900px, 120vw);
   height: 520px;
   margin-left: calc(min(900px, 120vw) / -2);
-  background: radial-gradient(50% 50% at 50% 50%, rgba(201, 164, 101, 0.1), transparent 70%);
-  filter: blur(20px);
+  background:
+    radial-gradient(35% 50% at 35% 50%, rgba(37, 99, 235, 0.16), transparent 70%),
+    radial-gradient(35% 50% at 65% 50%, rgba(79, 70, 229, 0.12), transparent 70%);
+  filter: blur(30px);
   pointer-events: none;
   animation: contactGlow 9s ease-in-out infinite;
 }
@@ -38,6 +40,54 @@
   margin: 0 0 36px;
 }
 
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 0 0 36px;
+}
+
+.fact {
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.015);
+  transition:
+    border-color 400ms var(--ease-out),
+    background 400ms var(--ease-out);
+}
+
+.fact:hover {
+  border-color: rgba(96, 165, 250, 0.4);
+  background: rgba(96, 165, 250, 0.05);
+}
+
+.factLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-family: var(--font-mono);
+  font-size: var(--t-mono-meta);
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ink-label);
+}
+
+.factDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c-success);
+  box-shadow: 0 0 10px rgba(52, 211, 153, 0.7);
+}
+
+.factValue {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
 .cta {
   display: flex;
   flex-wrap: wrap;
@@ -57,34 +107,29 @@
   font-size: var(--t-mono-nav);
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--bg);
-  background: var(--acc);
+  font-weight: 500;
+  color: #ffffff;
+  background: var(--grad-primary);
+  background-size: 200% 100%;
+  border: 1px solid rgba(147, 197, 253, 0.35);
+  box-shadow: 0 16px 44px -16px rgba(37, 99, 235, 0.85);
   transition:
-    background 400ms var(--ease-out),
+    background-position 700ms var(--ease-out),
     box-shadow 500ms var(--ease-out);
 }
 
 .ctaPrimary:hover {
-  background: var(--acc-hover);
-  box-shadow: 0 18px 50px -18px rgba(201, 164, 101, 0.8);
+  background-position: 100% 50%;
+  box-shadow: 0 22px 60px -14px rgba(37, 99, 235, 0.95);
 }
 
 .ctaShine {
   position: absolute;
   inset: 0;
-  background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.45) 50%, transparent 70%);
+  background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.25) 50%, transparent 70%);
   transform: translateX(-120%);
   animation: ctaShine 4.5s var(--ease-out) 2s infinite;
   pointer-events: none;
-}
-
-.ctaArrow {
-  display: inline-block;
-  transition: transform 450ms var(--ease-door);
-}
-
-.ctaPrimary:hover .ctaArrow {
-  transform: translate(3px, -3px);
 }
 
 .copy {
@@ -105,8 +150,9 @@
 }
 
 .copy:hover {
-  border-color: var(--acc-42);
-  color: var(--acc-hover);
+  border-color: rgba(96, 165, 250, 0.6);
+  color: var(--ink);
+  background: rgba(96, 165, 250, 0.08);
 }
 
 .copyLabel {
@@ -123,7 +169,7 @@
 .row {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(90px, 140px) 1fr auto;
+  grid-template-columns: minmax(90px, 140px) 1fr;
   align-items: baseline;
   gap: 16px;
   padding: clamp(18px, 2.4vw, 26px) 4px;
@@ -148,22 +194,14 @@
     transform 600ms var(--ease-door);
 }
 
-.rowArrow {
-  font-family: var(--font-mono);
-  font-size: 18px;
-  color: var(--ink-label);
-  transition:
-    transform 500ms var(--ease-door),
-    color 400ms var(--ease-out);
-}
-
 .rowLine {
   position: absolute;
   left: 0;
   right: 0;
   bottom: -1px;
-  height: 1px;
-  background: linear-gradient(90deg, var(--acc), var(--acc-hover));
+  height: 2px;
+  background: linear-gradient(90deg, var(--row-color, var(--acc)), transparent);
+  box-shadow: 0 0 12px var(--row-color, var(--acc));
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 700ms var(--ease-door);
@@ -171,14 +209,13 @@
 
 .row:hover .rowValue,
 .row:focus-visible .rowValue {
-  color: var(--acc-hover);
+  color: var(--row-color, var(--acc-hover));
   transform: translateX(10px);
 }
 
-.row:hover .rowArrow,
-.row:focus-visible .rowArrow {
-  color: var(--acc);
-  transform: translateX(6px) rotate(-45deg);
+.row:hover .rowLabel,
+.row:focus-visible .rowLabel {
+  color: var(--row-color, var(--acc));
 }
 
 .row:hover .rowLine,
@@ -189,11 +226,7 @@
 
 @media (max-width: 560px) {
   .row {
-    grid-template-columns: 1fr auto;
-  }
-
-  .rowLabel {
-    grid-column: 1 / -1;
+    grid-template-columns: 1fr;
   }
 }
 

@@ -9,10 +9,10 @@ import styles from './Skills.module.css';
 const EASE = [0.16, 0.84, 0.28, 1] as const;
 
 const skillBlocks = [
-  { titleKey: 'backend', itemsKey: 'backendItems', glyph: '{ }' },
-  { titleKey: 'data', itemsKey: 'dataItems', glyph: '⌗' },
-  { titleKey: 'frontend', itemsKey: 'frontendItems', glyph: '◐' },
-  { titleKey: 'cloud', itemsKey: 'cloudItems', glyph: '☁' },
+  { titleKey: 'backend', itemsKey: 'backendItems', glyph: '{ }', rgb: '96, 165, 250' },
+  { titleKey: 'data', itemsKey: 'dataItems', glyph: '⌗', rgb: '56, 189, 248' },
+  { titleKey: 'frontend', itemsKey: 'frontendItems', glyph: '◐', rgb: '99, 102, 241' },
+  { titleKey: 'cloud', itemsKey: 'cloudItems', glyph: '☁', rgb: '45, 212, 191' },
 ] as const;
 
 const grid: Variants = {
@@ -56,7 +56,7 @@ export function Skills() {
         >
           {skillBlocks.map((block, i) => (
             <motion.div key={block.titleKey} variants={card}>
-              <SpotlightCard>
+              <SpotlightCard rgb={block.rgb}>
                 <div className={styles.card}>
                   <div className={styles.cardHead}>
                     <span className={styles.index}>{String(i + 1).padStart(2, '0')}</span>

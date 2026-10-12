@@ -9,14 +9,57 @@
     "languageToggle": "Switch to French",
     "languageTarget": "Français",
     "openMenu": "Open menu",
-    "closeMenu": "Close menu"
+    "closeMenu": "Close menu",
+    "cta": "Let’s talk"
   },
   "hero": {
+    "available": "Open to internships",
     "location": "Montréal, Québec",
     "role": "Software Engineer",
-    "paragraph": "Backend systems, cloud infrastructure, and full-stack applications. Explore the projects below to see what I built, the technologies I used, and the technical decisions behind each one.",
-    "enterHall": "Enter the hall",
-    "hireMe": "Hire me"
+    "buildPrefix": "I build",
+    "buildWords": ["secure REST APIs", "cloud-deployed apps", "full-stack products", "data pipelines"],
+    "paragraph": "Backend systems, cloud infrastructure, and full-stack applications. Every project below comes with the technologies I used and the decisions behind it.",
+    "enterHall": "See my projects",
+    "hireMe": "Hire me",
+    "trustProjects": "projects built",
+    "trustLive": "product live in production",
+    "trustLanguages": "English · French"
+  },
+  "proof": {
+    "eyebrow": "By the numbers",
+    "titleLead": "Proof,",
+    "titleAccent": "not promises",
+    "projects": "Projects built",
+    "projectsNote": "From requirements analysis to production deployment",
+    "tech": "Technologies used",
+    "techNote": "Across backend, data, frontend and cloud",
+    "reply": "Reply rate",
+    "replyNote": "Dossier’s 100-prospect external pilot",
+    "prospects": "Prospects delivered",
+    "prospectsNote": "A later Dossier delivery, with lessons learned in production"
+  },
+  "why": {
+    "eyebrow": "Why work with me",
+    "titleLead": "What I bring",
+    "titleAccent": "to your team",
+    "intro": "Four things you can expect from day one, each backed by a project you can open and inspect.",
+    "evidence": "See the proof: {project}",
+    "backend": {
+      "title": "Backend you can trust",
+      "body": "REST APIs with JWT authentication, validation and clean data models in Node.js, ASP.NET Core and SQL."
+    },
+    "cloud": {
+      "title": "Shipped, not just localhost",
+      "body": "Applications deployed on Cloudflare Workers and AWS, with the configuration and trade-offs documented."
+    },
+    "ownership": {
+      "title": "Ownership from idea to users",
+      "body": "Built Dossier end to end for a real pilot, measured the result, and fixed what production data revealed."
+    },
+    "clarity": {
+      "title": "Clear thinking, clear docs",
+      "body": "Requirements, diagrams and written decisions, so a team can understand and extend the work quickly."
+    }
   },
   "hall": {
     "title": "The Hall of Projects",
@@ -27,7 +70,7 @@
     "categoryFullstack": "Fullstack",
     "categorySoftware": "Software",
     "complexityLabel": "Filter by complexity",
-    "openDoor": "Open door →",
+    "openDoor": "Open door",
     "doorAria": "Open case study: {title}",
     "closeOverlay": "Close door ✕",
     "empty": "No door matches these filters yet."
@@ -77,6 +120,7 @@
     ],
     "workItems": [
       "Independent Developer, 2025–present. Building Dossier, Trade Catch and SentinelOps: backend architecture, REST APIs, authentication, databases, cloud deployment, and full-stack applications.",
+      "Customer Service & Sales Associate, Globo Shoes, Sep 2026–present. Selling shoes in store, welcoming customers, answering their questions and helping them find the right pair.",
       "Youth leader, SCAMA Community Centre. Led recreational and social activities for seniors over two summers.",
       "Busser, Grillade Nostos, Sep–Nov 2025. Cleared and reset tables, supported the serving team through peak service."
     ]
@@ -89,7 +133,13 @@
     "phone": "Phone",
     "linkedIn": "LinkedIn",
     "copyEmail": "Copy email",
-    "copied": "Copied"
+    "copied": "Copied",
+    "factRole": "Seeking",
+    "factRoleValue": "Software dev internship",
+    "factFocus": "Focus",
+    "factFocusValue": "Backend · Cloud · Full stack",
+    "factBase": "Based in",
+    "factBaseValue": "Montréal, QC"
   },
   "footer": {
     "copyright": "© {year} Ara Ghahramanyan",

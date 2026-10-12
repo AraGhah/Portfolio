@@ -15,9 +15,15 @@ export function Contact() {
   const [copied, setCopied] = useState(false);
 
   const rows = [
-    { label: t('email'), value: profile.email, href: `mailto:${profile.email}`, external: false },
-    { label: t('phone'), value: profile.phone, href: `tel:${profile.phone.replace(/-/g, '')}`, external: false },
-    { label: t('linkedIn'), value: 'in/ara-ghahramanyan', href: profile.linkedIn, external: true },
+    { label: t('email'), value: profile.email, href: `mailto:${profile.email}`, external: false, color: 'var(--c-blue)' },
+    { label: t('phone'), value: profile.phone, href: `tel:${profile.phone.replace(/-/g, '')}`, external: false, color: 'var(--c-sky)' },
+    { label: t('linkedIn'), value: 'in/ara-ghahramanyan', href: profile.linkedIn, external: true, color: 'var(--c-indigo)' },
+  ];
+
+  const facts = [
+    { label: t('factRole'), value: t('factRoleValue'), live: true },
+    { label: t('factFocus'), value: t('factFocusValue'), live: false },
+    { label: t('factBase'), value: t('factBaseValue'), live: false },
   ];
 
   const copyEmail = async () => {
@@ -54,6 +60,34 @@ export function Contact() {
           {t('body')}
         </motion.p>
 
+        <motion.dl
+          className={styles.facts}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={{
+            hidden: {},
+            show: { transition: { staggerChildren: 0.08, delayChildren: 0.35 } },
+          }}
+        >
+          {facts.map((fact) => (
+            <motion.div
+              key={fact.label}
+              className={styles.fact}
+              variants={{
+                hidden: { opacity: 0, y: 14 },
+                show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE } },
+              }}
+            >
+              <dt className={styles.factLabel}>
+                {fact.live ? <span className={styles.factDot} aria-hidden /> : null}
+                {fact.label}
+              </dt>
+              <dd className={styles.factValue}>{fact.value}</dd>
+            </motion.div>
+          ))}
+        </motion.dl>
+
         <motion.div
           className={styles.cta}
           initial={{ opacity: 0, y: 20 }}
@@ -65,9 +99,6 @@ export function Contact() {
             <a href={`mailto:${profile.email}`} className={styles.ctaPrimary}>
               <span className={styles.ctaShine} aria-hidden />
               {t('email')}
-              <span aria-hidden className={styles.ctaArrow}>
-                ↗
-              </span>
             </a>
           </Magnetic>
           <button type="button" className={styles.copy} onClick={copyEmail}>
@@ -98,13 +129,11 @@ export function Contact() {
               <a
                 href={row.href}
                 className={styles.row}
+                style={{ '--row-color': row.color } as React.CSSProperties}
                 {...(row.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
               >
                 <span className={styles.rowLabel}>{row.label}</span>
                 <span className={styles.rowValue}>{row.value}</span>
-                <span className={styles.rowArrow} aria-hidden>
-                  →
-                </span>
                 <span className={styles.rowLine} aria-hidden />
               </a>
             </motion.li>

@@ -32,6 +32,13 @@ export function BackToTop() {
           transition={{ type: 'spring', stiffness: 320, damping: 22 }}
         >
           <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden>
+            <defs>
+              <linearGradient id="back-to-top-grad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="#60a5fa" />
+                <stop offset="45%" stopColor="#818cf8" />
+                <stop offset="100%" stopColor="#2dd4bf" />
+              </linearGradient>
+            </defs>
             <circle cx="24" cy="24" r={RADIUS} className={styles.ringTrack} />
             <motion.circle
               cx="24"

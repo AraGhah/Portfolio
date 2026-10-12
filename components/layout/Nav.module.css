@@ -2,7 +2,7 @@
   position: fixed;
   inset: 0 0 auto;
   z-index: 70;
-  background: linear-gradient(180deg, rgba(8, 9, 11, 0.86), rgba(8, 9, 11, 0));
+  background: linear-gradient(180deg, rgba(10, 14, 23, 0.86), rgba(10, 14, 23, 0));
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid transparent;
@@ -12,7 +12,7 @@
 }
 
 .headerScrolled {
-  background: rgba(8, 9, 11, 0.82);
+  background: rgba(10, 14, 23, 0.82);
   border-bottom-color: var(--line-faint);
 }
 
@@ -41,18 +41,23 @@
   place-items: center;
   width: 30px;
   height: 30px;
-  border: 1px solid var(--acc-42);
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--bg), var(--bg)) padding-box,
+    var(--grad-brand) border-box;
   font-style: italic;
   font-size: 17px;
-  color: var(--acc);
+  color: var(--c-blue);
   transition:
     transform 600ms var(--ease-door),
-    background 400ms var(--ease-out);
+    color 400ms var(--ease-out),
+    box-shadow 400ms var(--ease-out);
 }
 
 .name:hover .monogram {
   transform: rotate(-90deg);
-  background: var(--acc-12);
+  color: var(--c-indigo);
+  box-shadow: 0 0 22px -4px rgba(129, 140, 248, 0.7);
 }
 
 .right {
@@ -92,14 +97,14 @@
   right: 0;
   bottom: 0;
   height: 1px;
-  background: var(--acc-42);
+  background: var(--grad-primary);
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 450ms var(--ease-out);
 }
 
 .link:hover {
-  color: var(--acc-hover);
+  color: var(--c-sky);
 }
 
 .link:hover::after {
@@ -107,12 +112,53 @@
   transform-origin: left;
 }
 
-.linkContact {
-  color: var(--acc);
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 16px;
+  border: 1px solid rgba(147, 197, 253, 0.35);
+  border-radius: 2px;
+  background: var(--grad-primary);
+  font-family: var(--font-mono);
+  font-size: var(--t-mono-nav);
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #ffffff;
+  white-space: nowrap;
+  box-shadow: 0 10px 28px -14px rgba(37, 99, 235, 0.9);
+  transition: box-shadow 400ms var(--ease-out);
 }
 
-.linkContact::after {
-  transform: scaleX(1);
+.cta:hover,
+.ctaActive {
+  box-shadow: 0 14px 34px -12px rgba(37, 99, 235, 1);
+}
+
+.cta:focus-visible {
+  outline: 2px solid var(--acc);
+  outline-offset: 3px;
+}
+
+.ctaDot {
+  position: relative;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c-success);
+  box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.6);
+  animation: ctaPulse 2.4s var(--ease-out) infinite;
+}
+
+@keyframes ctaPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.6);
+  }
+  70%,
+  100% {
+    box-shadow: 0 0 0 7px rgba(52, 211, 153, 0);
+  }
 }
 
 .linkActive {
@@ -125,8 +171,8 @@
   right: 0;
   bottom: -1px;
   height: 2px;
-  background: var(--acc);
-  box-shadow: 0 0 12px rgba(201, 164, 101, 0.6);
+  background: var(--grad-brand);
+  box-shadow: 0 0 12px rgba(129, 140, 248, 0.7);
 }
 
 .lang {
@@ -144,9 +190,9 @@
 }
 
 .lang:hover {
-  border-color: var(--acc-42);
-  color: var(--acc-hover);
-  background: var(--acc-06);
+  border-color: rgba(96, 165, 250, 0.55);
+  color: var(--ink);
+  background: rgba(96, 165, 250, 0.08);
 }
 
 .progress {
@@ -154,10 +200,10 @@
   left: 0;
   right: 0;
   bottom: -1px;
-  height: 2px;
+  height: 3px;
   transform-origin: 0% 50%;
-  background: linear-gradient(90deg, var(--acc), var(--acc-hover));
-  box-shadow: 0 0 10px rgba(201, 164, 101, 0.5);
+  background: var(--grad-brand);
+  box-shadow: 0 0 14px rgba(129, 140, 248, 0.6);
 }
 
 .burger {
@@ -188,7 +234,7 @@
 }
 
 .burgerOpen span {
-  background: var(--acc);
+  background: var(--c-indigo);
 }
 
 .burgerOpen span:nth-child(1) {
@@ -241,6 +287,22 @@
 
   .burger {
     display: block;
+  }
+
+  .right {
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+
+  .cta {
+    padding: 9px 12px;
+    letter-spacing: 0.12em;
+  }
+}
+
+@media (max-width: 380px) {
+  .lang {
+    padding: 8px 8px;
   }
 }
 
