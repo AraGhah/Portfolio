@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   outputFileTracingRoot: path.join(__dirname),
+  devIndicators: false,
 };
 
 export default withNextIntl(nextConfig);
