@@ -11,9 +11,8 @@
   top: -1px;
   left: 0;
   right: 0;
-  height: 2px;
-  background: var(--grad-brand);
-  box-shadow: 0 0 18px rgba(129, 140, 248, 0.5);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(var(--acc-rgb), 0.6), transparent);
 }
 
 .inner {

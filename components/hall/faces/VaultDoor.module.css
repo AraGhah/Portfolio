@@ -23,7 +23,7 @@
   aspect-ratio: 1;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  border: 2px solid rgba(96, 165, 250, 0.35);
+  border: 2px solid rgba(var(--sand-rgb), 0.35);
   background: radial-gradient(circle at 38% 32%, #3a3f45, #16191c);
 }
 
@@ -38,7 +38,7 @@
   top: 50%;
   width: 1px;
   height: 50%;
-  background: rgba(96, 165, 250, 0.55);
+  background: rgba(var(--sand-rgb), 0.55);
   transform-origin: center bottom;
 }
 

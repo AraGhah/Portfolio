@@ -112,7 +112,7 @@ export function CaseStudyHeader({ project }: CaseStudyHeaderProps) {
               letterSpacing: '0.18em',
               textTransform: 'uppercase' as const,
               padding: '10px 18px',
-              border: `1px solid ${link.primary ? 'rgba(96, 165, 250,.5)' : 'var(--line)'}`,
+              border: `1px solid ${link.primary ? 'rgba(var(--acc-rgb), .5)' : 'var(--line)'}`,
               background: link.primary ? 'var(--acc-12)' : 'transparent',
               color: link.primary ? 'var(--acc)' : 'var(--ink-label)',
               textDecoration: 'none',

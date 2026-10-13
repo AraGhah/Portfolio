@@ -76,7 +76,6 @@ export function About() {
             transition={{ duration: 1, delay: 0.9 }}
           >
             <span>Montréal, QC</span>
-            <span className="about-coords">45.50° N · 73.57° W</span>
           </motion.div>
         </div>
 
@@ -102,7 +101,7 @@ export function About() {
             style={{
               height: 2,
               transformOrigin: '0% 50%',
-              background: 'linear-gradient(90deg, var(--c-blue), var(--c-indigo) 45%, var(--c-indigo-deep) 70%, transparent)',
+              background: 'linear-gradient(90deg, var(--c-blue), var(--c-slate-deep) 60%, transparent)',
               margin: '32px 0',
             }}
           />

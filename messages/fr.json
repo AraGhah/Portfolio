@@ -25,19 +25,6 @@
     "trustLive": "produit en production",
     "trustLanguages": "Français · Anglais"
   },
-  "proof": {
-    "eyebrow": "En chiffres",
-    "titleLead": "Des preuves,",
-    "titleAccent": "pas des promesses",
-    "projects": "Projets réalisés",
-    "projectsNote": "De l’analyse des besoins au déploiement en production",
-    "tech": "Technologies utilisées",
-    "techNote": "Backend, données, frontend et infonuagique",
-    "reply": "Taux de réponse",
-    "replyNote": "Projet pilote externe de Dossier, 100 prospects",
-    "prospects": "Prospects livrés",
-    "prospectsNote": "Une livraison ultérieure de Dossier, avec des leçons tirées de la production"
-  },
   "why": {
     "eyebrow": "Pourquoi travailler avec moi",
     "titleLead": "Ce que j’apporte",

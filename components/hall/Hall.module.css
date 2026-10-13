@@ -3,10 +3,10 @@
   padding: clamp(70px, 9vw, 130px) 0 clamp(60px, 7vw, 100px);
   border-top: 1px solid var(--line-faint);
   background:
-    radial-gradient(40% 50% at 8% 70%, rgba(99, 102, 241, 0.14), transparent 70%),
-    radial-gradient(38% 45% at 92% 60%, rgba(129, 140, 248, 0.12), transparent 70%),
-    radial-gradient(30% 30% at 50% 100%, rgba(45, 212, 191, 0.1), transparent 70%),
-    linear-gradient(180deg, #0a0e17, #0d1220 40%, #0a0e17);
+    radial-gradient(40% 50% at 8% 70%, rgba(var(--strong-rgb), 0.12), transparent 70%),
+    radial-gradient(38% 45% at 92% 60%, rgba(var(--slate-rgb), 0.06), transparent 70%),
+    radial-gradient(30% 30% at 50% 100%, rgba(var(--sand-rgb), 0.04), transparent 70%),
+    linear-gradient(180deg, var(--bg), var(--bg-raised) 40%, var(--bg));
   overflow: hidden;
 }
 
@@ -47,7 +47,7 @@
 .eyebrowLine {
   width: 36px;
   height: 2px;
-  background: var(--grad-brand);
+  background: var(--acc);
 }
 
 .empty {
@@ -190,7 +190,7 @@
   transform: rotateX(70deg);
   transform-origin: top center;
   background-image:
-    linear-gradient(rgba(96, 165, 250, 0.13) 1px, transparent 1px),
+    linear-gradient(rgba(var(--slate-rgb), 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 110px 110px;
   mask-image: linear-gradient(to bottom, #000, transparent 70%);

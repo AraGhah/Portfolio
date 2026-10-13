@@ -16,8 +16,8 @@ export function Contact() {
 
   const rows = [
     { label: t('email'), value: profile.email, href: `mailto:${profile.email}`, external: false, color: 'var(--c-blue)' },
-    { label: t('phone'), value: profile.phone, href: `tel:${profile.phone.replace(/-/g, '')}`, external: false, color: 'var(--c-sky)' },
-    { label: t('linkedIn'), value: 'in/ara-ghahramanyan', href: profile.linkedIn, external: true, color: 'var(--c-indigo)' },
+    { label: t('phone'), value: profile.phone, href: `tel:${profile.phone.replace(/-/g, '')}`, external: false, color: 'var(--c-steel)' },
+    { label: t('linkedIn'), value: 'in/ara-ghahramanyan', href: profile.linkedIn, external: true, color: 'var(--c-sand)' },
   ];
 
   const facts = [

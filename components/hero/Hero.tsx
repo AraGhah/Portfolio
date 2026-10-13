@@ -20,7 +20,7 @@ const NAME = 'Ara';
 const EASE = [0.16, 0.84, 0.28, 1] as const;
 
 const PARTICLES = Array.from({ length: 16 }, (_, i) => ({
-  color: i % 3 === 0 ? '#bfdbfe' : '#60a5fa',
+  color: i % 3 === 0 ? '#e3ebf4' : '#7aa2cf',
   left: (i * 47 + 13) % 100,
   size: 1 + (i % 2),
   delay: (i * 0.91) % 11,
@@ -61,7 +61,7 @@ export function Hero() {
   const my = useMotionValue(32);
   const smx = useSpring(mx, { stiffness: 60, damping: 20 });
   const smy = useSpring(my, { stiffness: 60, damping: 20 });
-  const spotlight = useMotionTemplate`radial-gradient(560px circle at ${smx}% ${smy}%, rgba(96,165,250,.11), transparent 65%)`;
+  const spotlight = useMotionTemplate`radial-gradient(560px circle at ${smx}% ${smy}%, rgba(122,162,207,.07), transparent 65%)`;
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,

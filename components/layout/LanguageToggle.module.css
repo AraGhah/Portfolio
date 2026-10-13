@@ -16,7 +16,7 @@
 
 .toggle:hover {
   color: var(--acc-hover);
-  border-color: rgba(96, 165, 250, 0.35);
+  border-color: rgba(var(--acc-rgb), 0.35);
   background: var(--acc-06);
 }
 

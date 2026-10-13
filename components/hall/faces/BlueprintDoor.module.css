@@ -8,8 +8,8 @@
   inset: 0;
   opacity: 0.55;
   background-image:
-    linear-gradient(rgba(165, 180, 252, 0.16) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(165, 180, 252, 0.16) 1px, transparent 1px);
+    linear-gradient(rgba(var(--steel-rgb), 0.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--steel-rgb), 0.16) 1px, transparent 1px);
   background-size: 26px 26px;
   pointer-events: none;
 }
@@ -17,7 +17,7 @@
 .frame {
   position: absolute;
   inset: 16px;
-  border: 1px solid rgba(165, 180, 252, 0.3);
+  border: 1px solid rgba(var(--steel-rgb), 0.3);
   pointer-events: none;
 }
 
@@ -27,7 +27,7 @@
   top: 30%;
   width: 1px;
   height: 34%;
-  background: rgba(165, 180, 252, 0.45);
+  background: rgba(var(--steel-rgb), 0.45);
 }
 
 .capTop,
@@ -37,7 +37,7 @@
   width: 13px;
   height: 1px;
   margin-left: -6.5px;
-  background: rgba(165, 180, 252, 0.55);
+  background: rgba(var(--steel-rgb), 0.55);
 }
 
 .capTop {

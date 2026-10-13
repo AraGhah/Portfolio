@@ -25,19 +25,6 @@
     "trustLive": "product live in production",
     "trustLanguages": "English · French"
   },
-  "proof": {
-    "eyebrow": "By the numbers",
-    "titleLead": "Proof,",
-    "titleAccent": "not promises",
-    "projects": "Projects built",
-    "projectsNote": "From requirements analysis to production deployment",
-    "tech": "Technologies used",
-    "techNote": "Across backend, data, frontend and cloud",
-    "reply": "Reply rate",
-    "replyNote": "Dossier’s 100-prospect external pilot",
-    "prospects": "Prospects delivered",
-    "prospectsNote": "A later Dossier delivery, with lessons learned in production"
-  },
   "why": {
     "eyebrow": "Why work with me",
     "titleLead": "What I bring",

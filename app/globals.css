@@ -1,41 +1,50 @@
 @import "tailwindcss";
 
 :root {
-  /* Backgrounds — three steps */
-  --bg: #0a0e17;
-  --bg-raised: #0d1220;
-  --bg-panel: #111827;
+  /* Backgrounds — three steps (deep slate) */
+  --bg: #0b1016;
+  --bg-raised: #10161e;
+  --bg-panel: #151c26;
+  --bg-rgb: 11, 16, 22;
 
   /* Text — four steps */
-  --ink: #f8fafc;
-  --ink-body: #e2e8f0;
-  --ink-muted: #b8c4d6;
-  --ink-dim: #9aa8bd;
-  --ink-label: #7d8ba1;
+  --ink: #f3f5f7;
+  --ink-body: #dbe1e8;
+  --ink-muted: #b2bcc8;
+  --ink-dim: #96a1af;
+  --ink-label: #7f8a99;
 
-  /* Accent — trust blue */
-  --acc: #60a5fa;
-  --acc-hover: #93c5fd;
-  --acc-06: rgba(96, 165, 250, 0.06);
-  --acc-12: rgba(96, 165, 250, 0.12);
-  --acc-20: rgba(96, 165, 250, 0.2);
-  --acc-42: rgba(96, 165, 250, 0.42);
-  --acc-75: rgba(96, 165, 250, 0.75);
+  /* RGB triplets, for use inside rgba() */
+  --acc-rgb: 122, 162, 207;
+  --strong-rgb: 47, 93, 143;
+  --steel-rgb: 155, 181, 209;
+  --slate-rgb: 142, 155, 179;
+  --sand-rgb: 200, 171, 125;
+  --success-rgb: 91, 179, 138;
 
-  /* Cool accent */
-  --acc-cool: #2dd4bf;
+  /* Accent — steel blue */
+  --acc: #7aa2cf;
+  --acc-hover: #a3c0e0;
+  --acc-06: rgba(var(--acc-rgb), 0.06);
+  --acc-12: rgba(var(--acc-rgb), 0.12);
+  --acc-20: rgba(var(--acc-rgb), 0.2);
+  --acc-42: rgba(var(--acc-rgb), 0.42);
+  --acc-75: rgba(var(--acc-rgb), 0.75);
 
-  /* Brand palette: blue signals competence and trust, green is reserved for availability */
-  --c-blue: #60a5fa;
-  --c-blue-strong: #2563eb;
-  --c-sky: #7dd3fc;
-  --c-indigo: #818cf8;
-  --c-indigo-deep: #4f46e5;
-  --c-teal: #5eead4;
-  --c-success: #34d399;
-  --grad-brand: linear-gradient(110deg, #bfdbfe, var(--c-blue) 40%, var(--c-indigo) 80%, #a5b4fc);
-  --grad-primary: linear-gradient(110deg, var(--c-blue-strong), var(--c-indigo-deep));
-  --grad-cool: linear-gradient(110deg, var(--c-blue), var(--c-teal));
+  /* Secondary accent — muted sand, used sparingly for detail */
+  --acc-cool: #c8ab7d;
+
+  /* Brand palette: one steel blue, neutral slates, sand for detail, green reserved for availability */
+  --c-blue: #7aa2cf;
+  --c-blue-strong: #2f5d8f;
+  --c-steel: #9bb5d1;
+  --c-slate: #8e9bb3;
+  --c-slate-deep: #4b5b77;
+  --c-sand: #c8ab7d;
+  --c-success: #5bb38a;
+  --grad-brand: linear-gradient(110deg, #e3ebf4, var(--c-blue) 55%, var(--c-slate));
+  --grad-primary: linear-gradient(110deg, var(--c-blue-strong), #3b6c9f 50%, var(--c-blue-strong));
+  --grad-cool: linear-gradient(90deg, var(--c-blue), var(--c-sand));
 
   /* Hairlines */
   --line-faint: rgba(255, 255, 255, 0.05);
@@ -170,9 +179,7 @@
 }
 
 .about-photo-frame:hover {
-  box-shadow:
-    -30px 30px 80px -40px rgba(129, 140, 248, 0.6),
-    30px -30px 80px -40px rgba(45, 212, 191, 0.5);
+  box-shadow: 0 40px 80px -48px rgba(0, 0, 0, 0.9);
 }
 
 .about-corner {
@@ -195,7 +202,7 @@
 .about-corner--tr {
   top: -1px;
   right: -1px;
-  border-color: var(--c-indigo);
+  border-color: var(--c-blue);
   border-top-width: 2px;
   border-right-width: 2px;
 }
@@ -203,7 +210,7 @@
 .about-corner--bl {
   bottom: -1px;
   left: -1px;
-  border-color: var(--c-indigo-deep);
+  border-color: var(--c-blue);
   border-bottom-width: 2px;
   border-left-width: 2px;
 }
@@ -211,13 +218,9 @@
 .about-corner--br {
   bottom: -1px;
   right: -1px;
-  border-color: var(--c-teal);
+  border-color: var(--c-blue);
   border-bottom-width: 2px;
   border-right-width: 2px;
-}
-
-.about-coords {
-  color: var(--c-teal);
 }
 
 .about-photo-meta {
@@ -305,22 +308,20 @@ img {
 }
 
 ::selection {
-  background: rgba(96, 165, 250, 0.35);
+  background: rgba(var(--acc-rgb), 0.32);
   color: #fff;
 }
 
 html {
   scrollbar-width: thin;
-  scrollbar-color: rgba(96, 165, 250, 0.4) var(--bg);
+  scrollbar-color: rgba(var(--slate-rgb), 0.35) var(--bg);
 }
 
 .text-gradient {
   background: var(--grad-brand);
-  background-size: 220% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: gradientShift 8s ease-in-out infinite alternate;
 }
 
 @keyframes gradientShift {

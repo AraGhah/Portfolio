@@ -14,8 +14,8 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  filter: blur(80px);
-  opacity: 0.6;
+  filter: blur(90px);
+  opacity: 0.4;
 }
 
 .blob {
@@ -29,7 +29,7 @@
   height: min(440px, 52vh);
   top: 10%;
   left: 24%;
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.55), transparent 65%);
+  background: radial-gradient(circle, rgba(var(--strong-rgb), 0.55), transparent 65%);
 }
 
 .blobIndigo {
@@ -37,7 +37,7 @@
   height: min(400px, 48vh);
   top: 30%;
   left: 50%;
-  background: radial-gradient(circle, rgba(79, 70, 229, 0.38), transparent 65%);
+  background: radial-gradient(circle, rgba(var(--slate-rgb), 0.22), transparent 65%);
   animation-duration: 28s;
   animation-delay: -9s;
 }
@@ -47,7 +47,7 @@
   height: min(320px, 40vh);
   top: 46%;
   left: 18%;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.2), transparent 65%);
+  background: radial-gradient(circle, rgba(var(--acc-rgb), 0.14), transparent 65%);
   animation-duration: 25s;
   animation-delay: -4s;
 }
@@ -72,8 +72,8 @@
   transform: rotateX(72deg);
   transform-origin: bottom center;
   background-image:
-    linear-gradient(rgba(96, 165, 250, 0.22) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(148, 163, 184, 0.12) 1px, transparent 1px);
+    linear-gradient(rgba(var(--slate-rgb), 0.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--slate-rgb), 0.09) 1px, transparent 1px);
   background-size: 90px 90px;
   mask-image: linear-gradient(to top, #000 10%, transparent 75%);
   -webkit-mask-image: linear-gradient(to top, #000 10%, transparent 75%);
@@ -93,7 +93,6 @@
   bottom: -10px;
   border-radius: 50%;
   background: var(--p-color, var(--acc-hover));
-  box-shadow: 0 0 8px var(--p-color, var(--acc-hover));
   opacity: 0;
   animation-name: floatUp;
   animation-timing-function: linear;
@@ -123,9 +122,9 @@
   gap: 10px;
   margin: 0 0 22px;
   padding: 8px 16px;
-  border: 1px solid rgba(52, 211, 153, 0.35);
+  border: 1px solid rgba(var(--success-rgb), 0.3);
   border-radius: 999px;
-  background: rgba(52, 211, 153, 0.07);
+  background: rgba(var(--success-rgb), 0.06);
   font-family: var(--font-mono);
   font-size: var(--t-mono-nav);
   letter-spacing: 0.18em;
@@ -181,8 +180,8 @@
 .letter {
   display: inline-block;
   transform-origin: 50% 100%;
-  background: linear-gradient(175deg, #ffffff 30%, #dbeafe 60%, var(--c-blue) 115%);
-  filter: drop-shadow(0 12px 40px rgba(37, 99, 235, 0.3));
+  background: linear-gradient(175deg, #ffffff 35%, #e3ebf4 65%, var(--c-steel) 120%);
+  filter: drop-shadow(0 12px 40px rgba(0, 0, 0, 0.45));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -251,10 +250,10 @@
 .btnPrimary {
   background: var(--grad-primary);
   background-size: 180% 100%;
-  border: 1px solid rgba(147, 197, 253, 0.35);
+  border: 1px solid rgba(var(--acc-rgb), 0.35);
   color: #ffffff;
   font-weight: 500;
-  box-shadow: 0 14px 40px -16px rgba(37, 99, 235, 0.8);
+  box-shadow: 0 12px 30px -18px rgba(var(--strong-rgb), 0.7);
   transition:
     background-position 600ms var(--ease-out),
     box-shadow 500ms var(--ease-out);
@@ -262,13 +261,13 @@
 
 .btnPrimary:hover {
   background-position: 100% 50%;
-  box-shadow: 0 20px 50px -14px rgba(37, 99, 235, 0.95);
+  box-shadow: 0 16px 36px -16px rgba(var(--strong-rgb), 0.85);
 }
 
 .btnShine {
   position: absolute;
   inset: 0;
-  background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.25) 50%, transparent 70%);
+  background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.12) 50%, transparent 70%);
   transform: translateX(-120%);
   animation: shine 5s var(--ease-out) 2.5s infinite;
   pointer-events: none;
@@ -286,8 +285,8 @@
 
 .btnSecondary:hover {
   color: #ffffff;
-  border-color: rgba(96, 165, 250, 0.6);
-  background: rgba(96, 165, 250, 0.08);
+  border-color: rgba(var(--acc-rgb), 0.55);
+  background: rgba(var(--acc-rgb), 0.07);
 }
 
 .trust {

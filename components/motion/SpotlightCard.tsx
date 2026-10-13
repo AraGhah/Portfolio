@@ -23,7 +23,7 @@ export function SpotlightCard({
   children,
   className = '',
   tilt = 6,
-  rgb = '96, 165, 250',
+  rgb = '122, 162, 207',
 }: SpotlightCardProps) {
   const ref = useRef<HTMLDivElement>(null);
   const px = useMotionValue(0.5);
@@ -40,7 +40,7 @@ export function SpotlightCard({
   });
   const gx = useTransform(px, (v) => `${v * 100}%`);
   const gy = useTransform(py, (v) => `${v * 100}%`);
-  const spotlight = useMotionTemplate`radial-gradient(420px circle at ${gx} ${gy}, rgba(${rgb}, .24), transparent 60%)`;
+  const spotlight = useMotionTemplate`radial-gradient(420px circle at ${gx} ${gy}, rgba(${rgb}, .1), transparent 60%)`;
   const opacity = useSpring(glowOpacity, { stiffness: 200, damping: 30 });
 
   const onMove = (e: PointerEvent<HTMLDivElement>) => {

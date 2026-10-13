@@ -45,7 +45,6 @@
   font-size: 14px;
   color: rgb(var(--card-rgb));
   background: rgba(var(--card-rgb), 0.1);
-  box-shadow: 0 0 24px -6px rgba(var(--card-rgb), 0.6);
   transition:
     transform 700ms var(--ease-door),
     background 400ms var(--ease-out),

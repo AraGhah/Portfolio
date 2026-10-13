@@ -7,7 +7,7 @@ import { RevealHeading } from '@/components/motion/RevealHeading';
 import styles from './Experience.module.css';
 
 const EASE = [0.16, 0.84, 0.28, 1] as const;
-const DOT_COLORS = ['#60a5fa', '#38bdf8', '#818cf8', '#6366f1', '#2dd4bf'];
+const DOT_COLORS = ['#7aa2cf', '#9bb5d1', '#8e9bb3', '#7aa2cf', '#c8ab7d'];
 
 function splitItem(item: string): { head: string; body: string } {
   const match = item.match(/^(.+?[.:])\s+(.*)$/);

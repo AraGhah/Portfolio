@@ -9,10 +9,10 @@ import styles from './Skills.module.css';
 const EASE = [0.16, 0.84, 0.28, 1] as const;
 
 const skillBlocks = [
-  { titleKey: 'backend', itemsKey: 'backendItems', glyph: '{ }', rgb: '96, 165, 250' },
-  { titleKey: 'data', itemsKey: 'dataItems', glyph: '⌗', rgb: '56, 189, 248' },
-  { titleKey: 'frontend', itemsKey: 'frontendItems', glyph: '◐', rgb: '99, 102, 241' },
-  { titleKey: 'cloud', itemsKey: 'cloudItems', glyph: '☁', rgb: '45, 212, 191' },
+  { titleKey: 'backend', itemsKey: 'backendItems', glyph: '{ }', rgb: '122, 162, 207' },
+  { titleKey: 'data', itemsKey: 'dataItems', glyph: '⌗', rgb: '155, 181, 209' },
+  { titleKey: 'frontend', itemsKey: 'frontendItems', glyph: '◐', rgb: '142, 155, 179' },
+  { titleKey: 'cloud', itemsKey: 'cloudItems', glyph: '☁', rgb: '200, 171, 125' },
 ] as const;
 
 const grid: Variants = {

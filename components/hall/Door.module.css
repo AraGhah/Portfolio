@@ -43,20 +43,20 @@
 
 .glowBrass {
   background:
-    radial-gradient(ellipse at 50% 35%, rgba(96, 165, 250, 0.42), transparent 60%),
-    radial-gradient(ellipse at 50% 85%, rgba(129, 140, 248, 0.32), transparent 65%);
+    radial-gradient(ellipse at 50% 35%, rgba(var(--sand-rgb), 0.26), transparent 60%),
+    radial-gradient(ellipse at 50% 85%, rgba(var(--slate-rgb), 0.14), transparent 65%);
   box-shadow:
-    0 0 0 1px rgba(56, 189, 248, 0.55),
-    0 30px 80px -20px rgba(129, 140, 248, 0.55);
+    0 0 0 1px rgba(var(--sand-rgb), 0.45),
+    0 30px 70px -30px rgba(0, 0, 0, 0.9);
 }
 
 .glowCool {
   background:
-    radial-gradient(ellipse at 50% 35%, rgba(45, 212, 191, 0.42), transparent 60%),
-    radial-gradient(ellipse at 50% 85%, rgba(99, 102, 241, 0.36), transparent 65%);
+    radial-gradient(ellipse at 50% 35%, rgba(var(--acc-rgb), 0.26), transparent 60%),
+    radial-gradient(ellipse at 50% 85%, rgba(var(--slate-rgb), 0.14), transparent 65%);
   box-shadow:
-    0 0 0 1px rgba(45, 212, 191, 0.55),
-    0 30px 80px -20px rgba(99, 102, 241, 0.6);
+    0 0 0 1px rgba(var(--acc-rgb), 0.45),
+    0 30px 70px -30px rgba(0, 0, 0, 0.9);
 }
 
 .previewWrap {

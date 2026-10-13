@@ -1,103 +1,12 @@
 .proof {
   position: relative;
-  padding: clamp(72px, 9vw, 120px) clamp(20px, 7vw, 110px) 0;
-  background:
-    radial-gradient(50% 45% at 50% 45%, rgba(37, 99, 235, 0.07), transparent 100%),
-    var(--bg);
+  padding: 0 clamp(20px, 7vw, 110px);
+  background: var(--bg);
   overflow: hidden;
-}
-
-.head {
-  margin-bottom: clamp(36px, 5vw, 56px);
-}
-
-.eyebrow {
-  font-family: var(--font-mono);
-  font-size: var(--t-mono-meta);
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--acc);
-  margin: 0 0 16px;
-}
-
-.title {
-  font-family: var(--font-display);
-  font-size: var(--t-h2);
-  font-weight: 400;
-  line-height: 1.02;
-  color: var(--ink);
-  margin: 0;
-}
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  margin: 0;
-  border-top: 1px solid var(--line);
-  border-left: 1px solid var(--line);
-}
-
-.stat {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding: clamp(24px, 3vw, 36px) clamp(20px, 2.4vw, 30px);
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  transition: background 500ms var(--ease-out);
-}
-
-.stat::before {
-  content: '';
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  width: 0;
-  height: 2px;
-  background: var(--grad-cool);
-  transition: width 700ms var(--ease-door);
-}
-
-.stat:hover {
-  background: rgba(96, 165, 250, 0.04);
-}
-
-.stat:hover::before {
-  width: calc(100% + 2px);
-}
-
-.value {
-  order: -1;
-  margin: 0 0 12px;
-  font-family: var(--font-display);
-  font-size: clamp(52px, 6vw, 80px);
-  line-height: 1;
-  font-variant-numeric: tabular-nums;
-  background: linear-gradient(170deg, #ffffff 35%, var(--c-blue) 120%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.label {
-  font-family: var(--font-mono);
-  font-size: var(--t-mono-nav);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--ink);
-  margin-bottom: 8px;
-}
-
-.note {
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.55;
-  color: var(--ink-dim);
 }
 
 .marquee {
   position: relative;
-  margin-top: clamp(48px, 6vw, 72px);
   padding: 22px 0;
   border-top: 1px solid var(--line-faint);
   border-bottom: 1px solid var(--line-faint);
@@ -139,7 +48,7 @@
   height: 5px;
   margin: 0 clamp(22px, 3vw, 40px);
   border-radius: 50%;
-  background: rgba(96, 165, 250, 0.45);
+  background: rgba(var(--sand-rgb), 0.55);
 }
 
 .marqueeTrack li:hover {

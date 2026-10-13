@@ -11,10 +11,10 @@ import styles from './WhyHire.module.css';
 const EASE = [0.16, 0.84, 0.28, 1] as const;
 
 const POINTS = [
-  { key: 'backend', slug: 'travel-express', glyph: '{ }', rgb: '96, 165, 250' },
-  { key: 'cloud', slug: 'trade-catch', glyph: '☁', rgb: '125, 211, 252' },
-  { key: 'ownership', slug: 'dossier', glyph: '◆', rgb: '129, 140, 248' },
-  { key: 'clarity', slug: 'file-sharing-system', glyph: '≡', rgb: '94, 234, 212' },
+  { key: 'backend', slug: 'travel-express', glyph: '{ }', rgb: '122, 162, 207' },
+  { key: 'cloud', slug: 'trade-catch', glyph: '☁', rgb: '155, 181, 209' },
+  { key: 'ownership', slug: 'dossier', glyph: '◆', rgb: '200, 171, 125' },
+  { key: 'clarity', slug: 'file-sharing-system', glyph: '≡', rgb: '142, 155, 179' },
 ] as const;
 
 const grid: Variants = {

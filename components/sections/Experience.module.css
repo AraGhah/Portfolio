@@ -44,9 +44,8 @@
 .trackFill {
   width: 2px;
   left: 3.5px;
-  background: linear-gradient(180deg, var(--c-blue), var(--c-sky) 30%, var(--c-indigo) 55%, var(--c-indigo-deep) 80%, var(--c-teal));
+  background: linear-gradient(180deg, var(--c-blue), var(--c-slate) 70%, var(--c-slate-deep));
   transform-origin: 50% 0%;
-  box-shadow: 0 0 12px rgba(129, 140, 248, 0.55);
 }
 
 .list {
@@ -72,7 +71,7 @@
   border-radius: 50%;
   background: var(--bg-raised);
   border: 2px solid var(--dot, var(--acc));
-  box-shadow: 0 0 0 4px var(--bg-raised), 0 0 16px var(--dot, var(--acc));
+  box-shadow: 0 0 0 4px var(--bg-raised);
   transition: background 400ms var(--ease-out);
 }
 

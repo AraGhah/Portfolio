@@ -147,7 +147,7 @@ export function CaseStudyOverlay({
           opacity: spillVisible ? 1 : 0,
           transition: `opacity ${spillDuration} linear`,
           background:
-            'radial-gradient(ellipse 55% 45% at 50% 42%, rgba(96, 165, 250,.18), transparent 68%)',
+            'radial-gradient(ellipse 55% 45% at 50% 42%, rgba(var(--acc-rgb), .1), transparent 68%)',
         }}
       />
 
@@ -195,7 +195,7 @@ export function CaseStudyOverlay({
           textTransform: 'uppercase',
           padding: '12px 18px',
           border: '1px solid var(--line-strong)',
-          background: 'rgba(10, 15, 26,.92)',
+          background: 'rgba(var(--bg-rgb), .94)',
           color: 'var(--ink-muted)',
           cursor: 'pointer',
           backdropFilter: 'blur(8px)',
