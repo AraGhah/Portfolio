@@ -87,13 +87,17 @@
     "diagram": "Schéma illustratif du produit"
   },
   "caseStudy": {
-    "door": "Porte",
+    "door": "Projet",
     "complexity": "Complexité technique",
-    "whyRated": "Pourquoi cette note",
+    "whyRated": "Notes techniques",
     "highlights": "Points techniques",
-    "stack": "Stack",
+    "stack": "Outils utilisés",
     "result": "Résultat",
-    "currentStatus": "Statut actuel"
+    "currentStatus": "Statut actuel",
+    "back": "Retour aux projets",
+    "next": "Projet suivant",
+    "projectNav": "Découvrir d’autres projets",
+    "overview": "Aperçu du projet"
   },
   "status": {
     "Delivered": "Livré",

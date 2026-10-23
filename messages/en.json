@@ -87,13 +87,17 @@
     "diagram": "Illustrative product diagram"
   },
   "caseStudy": {
-    "door": "Door",
+    "door": "Project",
     "complexity": "Technical complexity",
-    "whyRated": "Why this rating",
+    "whyRated": "Engineering notes",
     "highlights": "Technical highlights",
-    "stack": "Stack",
+    "stack": "Tools used",
     "result": "Result",
-    "currentStatus": "Current status"
+    "currentStatus": "Current status",
+    "back": "Back to all projects",
+    "next": "Next project",
+    "projectNav": "Explore more work",
+    "overview": "Project overview"
   },
   "status": {
     "Delivered": "Delivered",
