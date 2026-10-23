@@ -3,28 +3,22 @@ import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Nav } from '@/components/layout/Nav';
 import { Footer } from '@/components/layout/Footer';
 import { CaseStudyContent } from '@/components/case-study/CaseStudyContent';
-import { getProject, getProjects } from '@/lib/projects';
+import { getProject, getProjects, getFeaturedProjects, getArchivedProjects } from '@/lib/projects';
 import { Link } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
+import styles from '@/components/case-study/CaseStudy.module.css';
 
-type Props = {
-  params: Promise<{ locale: string; slug: string }>;
-};
+type Props = { params: Promise<{ locale: string; slug: string }> };
 
 export function generateStaticParams() {
-  const locales = routing.locales;
-  const slugs = getProjects('en').map((p) => p.slug);
-  return locales.flatMap((locale) => slugs.map((slug) => ({ locale, slug })));
+  return routing.locales.flatMap((locale) => getProjects(locale).map((project) => ({ locale, slug: project.slug })));
 }
 
 export async function generateMetadata({ params }: Props) {
   const { locale, slug } = await params;
   const project = getProject(locale, slug);
   if (!project) return {};
-  return {
-    title: `${project.title} · Ara Ghahramanyan`,
-    description: project.tagline,
-  };
+  return { title: `${project.title} · Ara Ghahramanyan`, description: project.tagline };
 }
 
 export default async function ProjectPage({ params }: Props) {
@@ -32,38 +26,22 @@ export default async function ProjectPage({ params }: Props) {
   setRequestLocale(locale);
   const project = getProject(locale, slug);
   if (!project) notFound();
-
-  const t = await getTranslations({ locale, namespace: 'hall' });
+  const t = await getTranslations({ locale, namespace: 'caseStudy' });
+  const projects = [...getFeaturedProjects(locale), ...getArchivedProjects(locale)];
+  const next = projects[(projects.findIndex((item) => item.slug === slug) + 1) % projects.length];
 
   return (
     <>
       <Nav />
-      <main
-        id="main"
-        style={{
-          paddingTop: 80,
-          paddingBottom: 80,
-          maxWidth: 'var(--w-case)',
-          margin: '0 auto',
-          paddingLeft: 'clamp(20px, 5vw, 48px)',
-          paddingRight: 'clamp(20px, 5vw, 48px)',
-        }}
-      >
-        <Link
-          href="/#hall"
-          style={{
-            display: 'inline-block',
-            marginBottom: 32,
-            fontFamily: 'var(--font-mono)',
-            fontSize: 'var(--t-mono-nav)',
-            letterSpacing: '0.2em',
-            textTransform: 'uppercase',
-            color: 'var(--acc)',
-          }}
-        >
-          {t('title')}
-        </Link>
+      <main id="main" className={styles.page}>
+        <Link href="/#hall" className={styles.back}><span aria-hidden>←</span> {t('back')}</Link>
         <CaseStudyContent project={project} />
+        <nav className={styles.projectNav} aria-label={t('projectNav')}>
+          <Link href="/#hall" className="text-link">← {t('back')}</Link>
+          <Link href={`/projects/${next.slug}`} className={styles.next}>
+            <span>{t('next')}</span><strong>{next.title} ↗</strong>
+          </Link>
+        </nav>
       </main>
       <Footer />
     </>
