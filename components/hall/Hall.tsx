@@ -15,7 +15,7 @@ export function Hall() {
             <div className="section-heading"><span className="section-number">01 /</span><h2 id="hall-heading">{t('title')}</h2></div>
             <p className={styles.intro}>{t('intro')}</p>
           </div>
-          <span className={styles.annotation} aria-hidden>Made with a little persistence. ↙</span>
+          <span className={styles.annotation} aria-hidden>{t('annotation')}</span>
         </div>
         <div className={styles.grid}>
           {getFeaturedProjects(locale).map((project) => <ProjectCard key={project.slug} project={project} />)}

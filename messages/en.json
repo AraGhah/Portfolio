@@ -40,7 +40,8 @@
     "archive": "More from the workbench",
     "archiveIntro": "Other projects, experiments and things that taught me something.",
     "projectCount": "{count, plural, one {# project} other {# projects}}",
-    "reset": "Show all"
+    "reset": "Show all",
+    "annotation": "Made with a little persistence. ↙"
   },
   "caseStudy": {
     "door": "Project",
@@ -162,5 +163,15 @@
   "Meta": {
     "title": "Ara Ghahramanyan · Software Developer",
     "description": "Software developer and computer science student in Montréal. Selected projects in backend development, APIs, cloud systems and full stack applications."
+  },
+  "diagrams": {
+    "dossier": "d / research, refined.",
+    "dossierNote": "A little more personal.",
+    "pipeline": "research → relevance",
+    "trade": "tc / always on the line.",
+    "tradeNote": "Every call is a beginning.",
+    "sentinel": "so / order from the noise.",
+    "events": "events → incidents",
+    "sentinelNote": "A clearer signal."
   }
 }

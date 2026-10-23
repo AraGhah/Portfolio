@@ -5,6 +5,8 @@ import path from 'path';
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 const nextConfig: NextConfig = {
+  // Allow a verification build alongside an existing development server.
+  distDir: process.env.PORTFOLIO_BUILD_DIR || '.next',
   images: {
     unoptimized: true,
   },

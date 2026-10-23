@@ -1,4 +1,4 @@
-.hero { max-width: calc(var(--w-content) + 56px); margin: auto; padding: 90px 28px 76px; display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 58px; align-items: center; }
+.hero { max-width: calc(var(--w-content) + 56px); margin: auto; padding: 76px 28px 44px; display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 58px; align-items: center; }
 .eyebrow { margin-bottom: 22px; color: var(--acc); text-transform: uppercase; letter-spacing: .1em; font: 10px/1.5 var(--font-mono); }
 .title { margin: 0 0 24px; font: 400 clamp(48px, 5.6vw, 76px)/1.08 var(--font-display); letter-spacing: -.055em; }
 .title > span { color: var(--acc); }
@@ -18,6 +18,14 @@
 .tape { position: absolute; top: -12px; left: 32%; width: 80px; height: 26px; z-index: 1; background: #d6d7bda3; transform: rotate(-7deg); }
 .photoNote { position: absolute; bottom: -8px; left: -12px; font: italic 14px var(--font-display); color: var(--acc); transform: rotate(-6deg); }
 .doodle { position: absolute; right: -18px; bottom: -9px; width: 74px; color: var(--acc); }
-@media (max-width: 700px) { .hero { grid-template-columns: minmax(0, 1fr); gap: 36px; padding-top: 52px; } }
-@media (max-width: 700px) { .portrait { grid-row: 1; width: 160px; justify-self: end; margin-bottom: -25px; padding-bottom: 20px; } .photoNote { font-size: 12px; left: -136px; bottom: 38px; max-width: 115px; } .doodle { left: -60px; bottom: 3px; width: 60px; } }
-@media (max-width: 600px) { .hero { padding: 50px 22px; } .title { font-size: clamp(42px, 10vw, 60px); } .lead { font-size: 16px; } }
+@media (max-width: 700px) {
+  .hero { position: relative; grid-template-columns: minmax(0, 1fr); gap: 0; padding: 46px 22px 30px; }
+  .portrait { position: absolute; top: 38px; right: 22px; width: 112px; padding: 6px; }
+  .photoFrame { padding: 6px 6px 0; }
+  .photoFrame figcaption { font-size: 7px; padding: 8px 0; }
+  .tape { width: 45px; height: 17px; top: -9px; }
+  .photoNote, .doodle { display: none; }
+  .eyebrow { max-width: calc(100% - 132px); font-size: 9px; margin-bottom: 18px; }
+  .title { max-width: calc(100% - 125px); min-height: 96px; font-size: clamp(38px, 7vw, 56px); margin-bottom: 22px; }
+  .lead { font-size: 16px; }
+}

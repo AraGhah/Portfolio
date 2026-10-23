@@ -40,7 +40,8 @@
     "archive": "Aussi sur l’établi",
     "archiveIntro": "D’autres projets, des expériences et des choses qui m’ont appris quelque chose.",
     "projectCount": "{count, plural, one {# projet} other {# projets}}",
-    "reset": "Tout afficher"
+    "reset": "Tout afficher",
+    "annotation": "Construit avec un peu de persévérance. ↙"
   },
   "caseStudy": {
     "door": "Projet",
@@ -162,5 +163,15 @@
   "Meta": {
     "title": "Ara Ghahramanyan · Développeur logiciel",
     "description": "Développeur logiciel et étudiant en informatique à Montréal. Projets en développement backend, API, systèmes infonuagiques et applications full stack."
+  },
+  "diagrams": {
+    "dossier": "d / une recherche soignée.",
+    "dossierNote": "Un peu plus personnel.",
+    "pipeline": "recherche → pertinence",
+    "trade": "tc / toujours au bout du fil.",
+    "tradeNote": "Chaque appel est un début.",
+    "sentinel": "so / structurer les événements.",
+    "events": "événements → incidents",
+    "sentinelNote": "Un signal plus clair."
   }
 }

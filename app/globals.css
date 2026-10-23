@@ -74,8 +74,9 @@ h1, h2, h3 { color: var(--ink); }
 ::selection { background: #dce8d0; color: var(--ink); }
 .main-shell { min-width: 0; }
 .container-content { width: 100%; max-width: var(--w-content); margin-inline: auto; }
-.section-block { padding: 64px 28px; }
-.section-block + .section-block > .container-content { border-top: 1px solid var(--line); padding-top: 56px; }
+.section-block { padding: 0 28px; }
+.section-block > .container-content { padding-block: 52px; }
+.section-block + .section-block > .container-content { border-top: 1px solid var(--line); }
 .section-heading { display: flex; align-items: baseline; gap: 16px; margin-bottom: 28px; }
 .section-heading h2 { font: 400 var(--t-h2)/1.2 var(--font-display); letter-spacing: -.035em; margin: 0; }
 .section-number { color: var(--acc); font: 11px var(--font-mono); }
@@ -89,8 +90,18 @@ h1, h2, h3 { color: var(--ink); }
 .text-gradient { color: var(--acc); }
 
 @media (max-width: 600px) {
-  .section-block { padding: 40px 22px; }
-  .section-block + .section-block > .container-content { padding-top: 36px; }
+  .section-block { padding-inline: 22px; }
+  .section-block > .container-content { padding-block: 36px; }
+}
+
+@media print {
+  body { background: white; color: #252b26; }
+  header nav, .skip-link, button { display: none !important; }
+  .section-block { padding: 0; }
+  .section-block > .container-content { padding-block: 24px; }
+  h1, h2, h3, h4 { break-after: avoid; }
+  article, figure { break-inside: avoid; }
+  a[href^="mailto:"] { color: inherit; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
