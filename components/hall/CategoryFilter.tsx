@@ -21,7 +21,7 @@ export function CategoryFilter({
 
   return (
     <div className={styles.filter} role="group" aria-label={t('categoryLabel')}>
-      <span className={styles.label}>{t('categoryLabel')}</span>
+      <span className="sr-only">{t('categoryLabel')}</span>
       {OPTIONS.map((option) => {
         const pressed = activeCategory === option;
         const label =

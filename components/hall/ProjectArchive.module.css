@@ -8,6 +8,8 @@
 .summary:hover .title { color: var(--acc); }
 .intro { font-size: 13px; margin: 0 0 20px; color: var(--ink-muted); }
 .list { list-style: none; padding: 0; margin: 0 0 16px; }
+.toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 15px; }
+.resultCount { font: 10px var(--font-mono); color: var(--ink-muted); }
 .row { display: grid; grid-template-columns: 28px minmax(0, 1fr) minmax(0, 1fr) 20px; gap: 16px; align-items: center; border-top: 1px solid var(--line-faint); padding-block: 17px; transition: color .2s; }
 .row:hover { color: var(--acc); }
 .index { font: 9px var(--font-mono); color: var(--ink-muted); }
