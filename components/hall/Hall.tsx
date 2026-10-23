@@ -1,7 +1,7 @@
 import { useLocale, useTranslations } from 'next-intl';
 import { getFeaturedProjects, getArchivedProjects } from '@/lib/projects';
-import { Link } from '@/i18n/navigation';
 import { ProjectCard } from './ProjectCard';
+import { ProjectArchive } from './ProjectArchive';
 import styles from './Hall.module.css';
 
 export function Hall() {
@@ -20,10 +20,7 @@ export function Hall() {
         <div className={styles.grid}>
           {getFeaturedProjects(locale).map((project) => <ProjectCard key={project.slug} project={project} />)}
         </div>
-        <details className={styles.archive}>
-          <summary>{t('archiveToggle')}</summary>
-          <ul>{getArchivedProjects(locale).map((project) => <li key={project.slug}><Link href={`/projects/${project.slug}`}>{project.title} ↗</Link></li>)}</ul>
-        </details>
+        <ProjectArchive projects={getArchivedProjects(locale)} />
       </div>
     </section>
   );
