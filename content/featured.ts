@@ -1,4 +1,4 @@
-export const featuredSlugs = ['trade-catch', 'dossier', 'sentinelops'] as const;
+export const featuredSlugs = ['dossier', 'trade-catch', 'sentinelops'] as const;
 
 type ProjectNote = { summary: string; contribution: string };
 
@@ -9,7 +9,7 @@ const notes: Record<'en' | 'fr', Record<(typeof featuredSlugs)[number], ProjectN
       contribution: 'Research pipelines · Data quality · Full stack',
     },
     'trade-catch': {
-      summary: 'My business: call handling and follow-up for contractors in Québec.',
+      summary: 'Bilingual call handling and follow-up workflows built with Next.js and Cloudflare.',
       contribution: 'Voice workflows · Automation · Cloud deployment',
     },
     sentinelops: {
@@ -23,7 +23,7 @@ const notes: Record<'en' | 'fr', Record<(typeof featuredSlugs)[number], ProjectN
       contribution: 'Pipelines de recherche · Qualité des données · Full stack',
     },
     'trade-catch': {
-      summary: 'Mon entreprise : gestion des appels et suivi pour les entrepreneurs du Québec.',
+      summary: 'Gestion bilingue des appels et parcours de suivi avec Next.js et Cloudflare.',
       contribution: 'Appels vocaux · Automatisation · Déploiement',
     },
     sentinelops: {

@@ -28,7 +28,6 @@ export default async function ProjectPage({ params }: Props) {
   const project = getProject(locale, slug);
   if (!project) notFound();
   const t = await getTranslations({ locale, namespace: 'caseStudy' });
-  const business = await getTranslations({ locale, namespace: 'tradecatch' });
   const projects = [...getFeaturedProjects(locale), ...getArchivedProjects(locale)];
   const next = projects[(projects.findIndex((item) => item.slug === slug) + 1) % projects.length];
 
@@ -37,7 +36,6 @@ export default async function ProjectPage({ params }: Props) {
       <Nav />
       <main id="main" tabIndex={-1} className={styles.page}>
         <Link href="/#hall" className={styles.back}><span aria-hidden>←</span> {t('back')}</Link>
-        {slug !== 'trade-catch' && <aside className={styles.businessBanner}><span>{business('businessCase')}</span><Link href="/projects/trade-catch">TradeCatch <span aria-hidden>↗</span></Link></aside>}
         <CaseStudyContent project={project} />
         <nav className={styles.projectNav} aria-label={t('projectNav')}>
           <Link href="/#hall" className="text-link">← {t('back')}</Link>

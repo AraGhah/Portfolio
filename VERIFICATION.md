@@ -18,25 +18,20 @@ with the already running development server.
 
 ## Browser review
 
-The TradeCatch revision was reviewed again after the production build and type
-check passed. It uses a capture of the live business website, plain business
-copy, a dedicated primary section, and a founder entry in experience.
+The personal-portfolio revision restores the earlier warm visual design and
+three equal featured project cards. The standalone TradeCatch sales feature,
+cross-project promotional banner and business contact copy have been removed.
+English and French contact sections now address recruiters and internships.
+The Globo-before-Dossier experience ordering is preserved.
 
-Additional checks for this revision:
+After this revision, the Next.js production build passed and generated all 27
+static entries. TypeScript passed. Browser checks confirmed the three featured
+projects at desktop width, recruiter contact copy in both languages, no
+horizontal overflow at 960px desktop and 320px French phone widths, and
+navigation to the French Dossier case study without a business promotion banner.
+Section entrances, reduced-motion support and reading progress remain.
 
-- Select each TradeCatch workflow step; only its associated panel is shown.
-- Navigate the workflow using arrow, Home and End keys in English and French.
-- Switch both home pages and the TradeCatch case study between languages,
-  preserving the current project.
-- Verify the portrait and real product image load at desktop and phone widths.
-- Confirm the reading progress indicator responds to scrolling.
-- Check the rebuilt development preview has no browser console errors.
-- Copy the email address and receive the successful confirmation again.
-
-The development preview now uses `.next-dev/`, separate from production output.
-The animation components preserve visible server-rendered content and respect
-the reduced-motion preference. No Angular application or additional animation
-library was introduced into the existing React application.
+The development preview uses `.next-dev/`, separate from production output.
 
 Reviewed the default desktop layout and explicit 960px, 390px and 320px
 viewports, including French text on the smallest screen. The inspected layouts

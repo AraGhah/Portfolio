@@ -1,14 +1,14 @@
 # A more personal portfolio
 
-The current portfolio puts Ara’s business, TradeCatch, first. The visual system
-uses plain typography, neutral surfaces, a copper accent, and real product
-imagery. Copy describes the work directly. Decorative notes, sparkles and
-placeholder illustrations have been removed.
+The portfolio is a personal introduction for recruiters. It restores the warm
+paper-and-ink palette, personal portrait and project-card layout. Dossier,
+TradeCatch and SentinelOps receive equal treatment as engineering projects.
 
-TradeCatch has the primary feature, an interactive three-stage workflow, a
-founder entry in experience, and a presence across case studies. Other projects
-remain available below it and in the archive. React-powered entrances, scroll
-progress and interface transitions add movement with reduced-motion support.
+TradeCatch is current professional experience, rather than the purpose of the
+site. There is no standalone sales section, business contact invitation or
+promotion across unrelated case studies. Contact copy focuses on internships
+and development opportunities. React entrances and reading progress remain,
+with support for reduced motion.
 
 ## References
 

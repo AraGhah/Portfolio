@@ -1,8 +1,7 @@
 # Ara Ghahramanyan — Portfolio
 
-A bilingual portfolio led by TradeCatch, Ara’s current business. It includes a
-real product preview, an interactive workflow, other development work, a
-filterable archive, and individual case studies.
+A personal, bilingual portfolio for recruiters, with a warm paper-and-ink design,
+three featured software projects, a filterable archive, and individual case studies.
 
 ## Run locally
 
@@ -53,10 +52,9 @@ uses `.next/`, so building the site does not overwrite the running preview.
 | Portrait | `public/ara.jpg` |
 | Design references and direction | `DESIGN.md` |
 
-TradeCatch has its own feature section and appears first in case-study navigation.
-Dossier and SentinelOps appear under other work. The other seven projects remain
-in the expandable archive. The featured slug list controls this division without
-duplicating projects.
+Dossier, TradeCatch and SentinelOps share the selected-work section. TradeCatch
+is presented as engineering experience, without a sales feature or business
+contact section. Seven additional projects remain in the expandable archive.
 
 The existing French project generation script uses
 `scripts/fr-overrides.json`. Update those overrides when maintaining generated
@@ -78,21 +76,18 @@ and email copying are small client-side enhancements.
 
 ## Design and accessibility
 
-System fonts avoid external font requests. The TradeCatch image is a capture of
-the live business website. Decorative notes, paper effects, placeholder diagrams
-and promotional annotations have been removed.
+System fonts avoid external font requests. The warm palette, personal portrait
+and project illustrations restore the earlier visual direction. Illustrations
+are diagrams rather than product screenshots or usage metrics.
 
 React components use the browser’s Web Animations API for section entrances.
-CSS handles the workflow panel, active tabs, links and hover transitions. The
-reading indicator updates once per animation frame. No animation dependency or
-second application framework is required. Motion respects the visitor’s reduced
-motion preference, and content stays available without JavaScript.
+The reading indicator updates once per animation frame. Motion respects reduced
+motion preferences, and content remains visible without JavaScript.
 
 The interface includes visible keyboard focus, a skip link, labelled category
-buttons, live filter counts, email-copy feedback, reduced-motion support,
-responsive layouts, and print styles. The TradeCatch workflow supports arrow,
-Home and End keys. Language switching uses a standard link that preserves the
-current project. Email, phone, GitHub, and LinkedIn are ordinary links.
+buttons, live filter counts, email-copy feedback, responsive layouts and print
+styles. Language switching preserves the current project. The contact section
+addresses recruiters and internship opportunities; all contact details are Ara’s.
 
 ## Verification
 

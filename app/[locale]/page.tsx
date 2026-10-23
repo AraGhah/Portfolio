@@ -1,8 +1,8 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { Reveal } from '@/components/motion/Reveal';
 import { Nav } from '@/components/layout/Nav';
 import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/hero/Hero';
-import { TradeCatchFeature } from '@/components/business/TradeCatchFeature';
 import { Hall } from '@/components/hall/Hall';
 import { About } from '@/components/sections/About';
 import { Skills } from '@/components/sections/Skills';
@@ -29,13 +29,12 @@ export default async function HomePage({ params }: Props) {
       <Nav />
       <div className="main-shell">
         <main id="main" tabIndex={-1}>
-          <Hero />
-          <TradeCatchFeature />
-          <Hall />
-          <About />
-          <Experience />
-          <Skills />
-          <Contact />
+          <Reveal><Hero /></Reveal>
+          <Reveal><Hall /></Reveal>
+          <Reveal><About /></Reveal>
+          <Reveal><Experience /></Reveal>
+          <Reveal><Skills /></Reveal>
+          <Reveal><Contact /></Reveal>
         </main>
         <Footer />
       </div>
