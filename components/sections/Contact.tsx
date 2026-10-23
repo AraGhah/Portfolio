@@ -12,6 +12,7 @@ const EASE = [0.16, 0.84, 0.28, 1] as const;
 
 export function Contact() {
   const t = useTranslations('contact');
+  const tNav = useTranslations('nav');
   const [copied, setCopied] = useState(false);
 
   const rows = [
@@ -40,6 +41,10 @@ export function Contact() {
     <section id="contact" className={`section-block section-block--base ${styles.section}`} aria-labelledby="contact-heading">
       <div aria-hidden className={styles.glow} />
       <div className={styles.inner}>
+        <span className="eyebrow-num">
+          <span className="eyebrow-line" aria-hidden />
+          05. {tNav('contact')}
+        </span>
         <RevealHeading
           id="contact-heading"
           className={styles.title}
@@ -97,7 +102,6 @@ export function Contact() {
         >
           <Magnetic strength={0.35}>
             <a href={`mailto:${profile.email}`} className={styles.ctaPrimary}>
-              <span className={styles.ctaShine} aria-hidden />
               {t('email')}
             </a>
           </Magnetic>

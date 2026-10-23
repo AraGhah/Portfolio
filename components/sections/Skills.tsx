@@ -37,10 +37,15 @@ const chip: Variants = {
 
 export function Skills() {
   const t = useTranslations('skills');
+  const tNav = useTranslations('nav');
 
   return (
     <section id="skills" className="section-block section-block--base" aria-labelledby="skills-heading">
       <div className="container-content">
+        <span className="eyebrow-num">
+          <span className="eyebrow-line" aria-hidden />
+          03. {tNav('skills')}
+        </span>
         <RevealHeading
           id="skills-heading"
           className={styles.title}

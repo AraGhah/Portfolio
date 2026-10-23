@@ -1,30 +1,30 @@
 @import "tailwindcss";
 
 :root {
-  /* Backgrounds — three steps (deep slate) */
-  --bg: #0b1016;
-  --bg-raised: #10161e;
-  --bg-panel: #151c26;
-  --bg-rgb: 11, 16, 22;
+  /* Backgrounds — three steps (warm paper white) */
+  --bg: #faf9f6;
+  --bg-raised: #ffffff;
+  --bg-panel: #f2f0eb;
+  --bg-rgb: 250, 249, 246;
 
-  /* Text — four steps */
-  --ink: #f3f5f7;
-  --ink-body: #dbe1e8;
-  --ink-muted: #b2bcc8;
-  --ink-dim: #96a1af;
-  --ink-label: #7f8a99;
+  /* Text — four steps (near-black ink on paper) */
+  --ink: #1c2027;
+  --ink-body: #363c45;
+  --ink-muted: #5b6270;
+  --ink-dim: #767d8a;
+  --ink-label: #8a909c;
 
   /* RGB triplets, for use inside rgba() */
-  --acc-rgb: 122, 162, 207;
-  --strong-rgb: 47, 93, 143;
-  --steel-rgb: 155, 181, 209;
-  --slate-rgb: 142, 155, 179;
-  --sand-rgb: 200, 171, 125;
-  --success-rgb: 91, 179, 138;
+  --acc-rgb: 47, 93, 143;
+  --strong-rgb: 31, 69, 112;
+  --steel-rgb: 90, 117, 149;
+  --slate-rgb: 107, 114, 128;
+  --sand-rgb: 169, 134, 91;
+  --success-rgb: 47, 143, 93;
 
-  /* Accent — steel blue */
-  --acc: #7aa2cf;
-  --acc-hover: #a3c0e0;
+  /* Accent — deep steel blue, tuned for contrast on light paper */
+  --acc: #2f5d8f;
+  --acc-hover: #1f4570;
   --acc-06: rgba(var(--acc-rgb), 0.06);
   --acc-12: rgba(var(--acc-rgb), 0.12);
   --acc-20: rgba(var(--acc-rgb), 0.2);
@@ -32,29 +32,29 @@
   --acc-75: rgba(var(--acc-rgb), 0.75);
 
   /* Secondary accent — muted sand, used sparingly for detail */
-  --acc-cool: #c8ab7d;
+  --acc-cool: #a9865b;
 
   /* Brand palette: one steel blue, neutral slates, sand for detail, green reserved for availability */
-  --c-blue: #7aa2cf;
-  --c-blue-strong: #2f5d8f;
-  --c-steel: #9bb5d1;
-  --c-slate: #8e9bb3;
-  --c-slate-deep: #4b5b77;
-  --c-sand: #c8ab7d;
-  --c-success: #5bb38a;
-  --grad-brand: linear-gradient(110deg, #e3ebf4, var(--c-blue) 55%, var(--c-slate));
-  --grad-primary: linear-gradient(110deg, var(--c-blue-strong), #3b6c9f 50%, var(--c-blue-strong));
+  --c-blue: #2f5d8f;
+  --c-blue-strong: #1f4570;
+  --c-steel: #5a7595;
+  --c-slate: #6b7280;
+  --c-slate-deep: #37414c;
+  --c-sand: #a9865b;
+  --c-success: #2f8f5d;
+  --grad-brand: linear-gradient(110deg, var(--c-blue-strong), var(--c-blue) 55%, var(--c-steel));
+  --grad-primary: linear-gradient(110deg, var(--c-blue-strong), var(--c-blue) 50%, var(--c-blue-strong));
   --grad-cool: linear-gradient(90deg, var(--c-blue), var(--c-sand));
 
   /* Hairlines */
-  --line-faint: rgba(255, 255, 255, 0.05);
-  --line: rgba(255, 255, 255, 0.09);
-  --line-strong: rgba(255, 255, 255, 0.16);
+  --line-faint: rgba(20, 24, 30, 0.07);
+  --line: rgba(20, 24, 30, 0.11);
+  --line-strong: rgba(20, 24, 30, 0.18);
 
   /* Elevation */
-  --shadow-door: 0 40px 70px -44px #000;
-  --shadow-inner: inset 0 0 70px rgba(0, 0, 0, 0.55);
-  --shadow-heavy: 0 50px 90px -50px #000;
+  --shadow-door: 0 30px 60px -36px rgba(20, 24, 30, 0.16);
+  --shadow-inner: inset 0 0 40px rgba(20, 24, 30, 0.04);
+  --shadow-heavy: 0 40px 80px -40px rgba(20, 24, 30, 0.2);
 
   /* Easing */
   --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
@@ -82,6 +82,7 @@
   --w-case: 1180px;
   --w-hall: 1600px;
   --w-contact: 1000px;
+  --w-sidebar: 280px;
 
   --font-display: var(--font-instrument-serif), "Instrument Serif Local", Georgia, serif;
   --font-body: var(--font-manrope), "Manrope Local", system-ui, sans-serif;
@@ -126,12 +127,41 @@
   border-top: 1px solid var(--line-faint);
 }
 
+.eyebrow-num {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 18px;
+  font-family: var(--font-mono);
+  font-size: var(--t-mono-label);
+  letter-spacing: 0.06em;
+  color: var(--acc);
+}
+
+.eyebrow-num .eyebrow-line {
+  width: 36px;
+  height: 2px;
+  background: var(--acc);
+}
+
 .section-block--raised {
   background: var(--bg-raised);
 }
 
 .section-block--base {
   background: var(--bg);
+}
+
+.main-shell {
+  min-width: 0;
+  padding-top: 65px;
+}
+
+@media (min-width: 961px) {
+  .main-shell {
+    margin-left: var(--w-sidebar);
+    padding-top: 0;
+  }
 }
 
 .container-content {
@@ -152,7 +182,7 @@
 
 .about-photo-frame {
   position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  border: 1px solid var(--line);
   padding: 12px;
   background: var(--bg-panel);
 }
@@ -179,7 +209,7 @@
 }
 
 .about-photo-frame:hover {
-  box-shadow: 0 40px 80px -48px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 40px 80px -48px rgba(20, 24, 30, 0.3);
 }
 
 .about-corner {
@@ -339,7 +369,7 @@ body::after {
   inset: 0;
   z-index: 150;
   pointer-events: none;
-  opacity: 0.022;
+  opacity: 0.012;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 

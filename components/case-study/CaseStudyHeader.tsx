@@ -27,7 +27,7 @@ export function CaseStudyHeader({ project }: CaseStudyHeaderProps) {
           style={{
             fontFamily: 'var(--font-mono)',
             fontSize: 'var(--t-mono-label)',
-            letterSpacing: '0.26em',
+            letterSpacing: '0.08em',
             textTransform: 'uppercase',
             color: 'var(--ink-label)',
           }}
@@ -39,7 +39,7 @@ export function CaseStudyHeader({ project }: CaseStudyHeaderProps) {
             style={{
               fontFamily: 'var(--font-mono)',
               fontSize: 'var(--t-mono-meta)',
-              letterSpacing: '0.22em',
+              letterSpacing: '0.08em',
               textTransform: 'uppercase',
               color: 'var(--ink-label)',
             }}
@@ -109,7 +109,7 @@ export function CaseStudyHeader({ project }: CaseStudyHeaderProps) {
             const chipStyle = {
               fontFamily: 'var(--font-mono)',
               fontSize: 'var(--t-mono-nav)',
-              letterSpacing: '0.18em',
+              letterSpacing: '0.06em',
               textTransform: 'uppercase' as const,
               padding: '10px 18px',
               border: `1px solid ${link.primary ? 'rgba(var(--acc-rgb), .5)' : 'var(--line)'}`,
@@ -161,7 +161,7 @@ export function CaseStudyHeader({ project }: CaseStudyHeaderProps) {
               style={{
                 fontFamily: 'var(--font-mono)',
                 fontSize: 'var(--t-mono-meta)',
-                letterSpacing: '0.22em',
+                letterSpacing: '0.08em',
                 textTransform: 'uppercase',
                 color: 'var(--ink-label)',
                 marginBottom: 6,

@@ -10,7 +10,6 @@ import {
 import { routing } from '@/i18n/routing';
 import { MotionProvider } from '@/components/motion/MotionProvider';
 import { BackToTop } from '@/components/motion/BackToTop';
-import { CursorFollower } from '@/components/motion/CursorFollower';
 import '../globals.css';
 
 const instrumentSerif = Instrument_Serif({
@@ -83,7 +82,6 @@ export default async function LocaleLayout({ children, params }: Props) {
           <MotionProvider>
             {children}
             <BackToTop />
-            <CursorFollower />
           </MotionProvider>
         </NextIntlClientProvider>
       </body>

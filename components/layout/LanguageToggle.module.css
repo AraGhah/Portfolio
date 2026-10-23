@@ -1,7 +1,7 @@
 .toggle {
   font-family: var(--font-mono);
   font-size: var(--t-mono-nav);
-  letter-spacing: 0.2em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ink-label);
   background: transparent;

@@ -1,19 +1,4 @@
-.section {
-  position: relative;
-  padding: clamp(70px, 9vw, 130px) 0 clamp(60px, 7vw, 100px);
-  border-top: 1px solid var(--line-faint);
-  background:
-    radial-gradient(40% 50% at 8% 70%, rgba(var(--strong-rgb), 0.12), transparent 70%),
-    radial-gradient(38% 45% at 92% 60%, rgba(var(--slate-rgb), 0.06), transparent 70%),
-    radial-gradient(30% 30% at 50% 100%, rgba(var(--sand-rgb), 0.04), transparent 70%),
-    linear-gradient(180deg, var(--bg), var(--bg-raised) 40%, var(--bg));
-  overflow: hidden;
-}
-
 .header {
-  max-width: var(--w-hall);
-  margin: 0 auto;
-  padding: 0 clamp(20px, 7vw, 110px);
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
@@ -33,31 +18,10 @@
   max-width: 720px;
 }
 
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 18px;
-  font-family: var(--font-mono);
-  font-size: var(--t-mono-label);
-  letter-spacing: 0.3em;
-  color: var(--acc);
-}
-
-.eyebrowLine {
-  width: 36px;
-  height: 2px;
-  background: var(--acc);
-}
-
 .empty {
-  flex: 0 0 auto;
-  align-self: center;
-  margin: 120px auto;
-  font-family: var(--font-mono);
-  font-size: var(--t-mono-nav);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  margin: 80px auto;
+  text-align: center;
+  font-size: var(--t-body-sm);
   color: var(--ink-label);
 }
 
@@ -78,131 +42,15 @@
   max-width: 54ch;
 }
 
-.corridor {
-  position: relative;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 22px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.ceiling {
-  height: 78px;
-  margin: 0 clamp(20px, 12vw, 180px);
-  perspective: 400px;
-  pointer-events: none;
-  background-image: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.06) 1px,
-    transparent 1px
-  );
-  background-size: 120px 100%;
-  transform: rotateX(-64deg);
-  transform-origin: bottom center;
-  mask-image: linear-gradient(to bottom, transparent, #000);
-  -webkit-mask-image: linear-gradient(to bottom, transparent, #000);
-  opacity: 0.55;
-}
-
-.hall {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  gap: clamp(26px, 3.4vw, 58px);
-  padding: 44px clamp(20px, 12vw, 180px) 20px;
-  overflow-x: auto;
-  scroll-snap-type: x proximity;
-  perspective: 1800px;
-  perspective-origin: 50% 42%;
-  scrollbar-width: none;
-  outline: none;
-  cursor: grab;
-}
-
-.hall:focus-visible {
-  outline: 2px solid var(--acc);
-  outline-offset: 4px;
-}
-
-.hall:active {
-  cursor: grabbing;
-}
-
-.hall::-webkit-scrollbar {
-  display: none;
-}
-
-.doorCol {
-  flex: 0 0 auto;
-  display: flex;
-  flex-direction: column;
-  transform-style: preserve-3d;
-}
-
-.doorCol .doorTitle {
-  transition: color 400ms var(--ease-out);
-}
-
-.doorCol:hover .doorTitle,
-.doorCol:focus-within .doorTitle {
-  color: var(--acc-hover);
-}
-
-.meta {
-  padding: 14px 2px 0;
-}
-
-.metaRow {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: var(--font-mono);
-  font-size: 9.5px;
-  letter-spacing: 0.24em;
-  color: var(--ink-label);
-  text-transform: uppercase;
-}
-
-.doorTitle {
-  font-family: var(--font-display);
-  font-size: 25px;
-  color: var(--ink-body);
-  margin-top: 9px;
-  line-height: 1.15;
-}
-
-.doorStack {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  color: var(--ink-label);
-  margin-top: 7px;
-}
-
-.floor {
-  position: relative;
-  height: clamp(90px, 10vw, 150px);
-  margin-top: -8px;
-  perspective: 520px;
-  pointer-events: none;
-}
-
-.floor::before {
-  content: '';
-  position: absolute;
-  inset: 0 -10%;
-  transform: rotateX(70deg);
-  transform-origin: top center;
-  background-image:
-    linear-gradient(rgba(var(--slate-rgb), 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  background-size: 110px 110px;
-  mask-image: linear-gradient(to bottom, #000, transparent 70%);
-  -webkit-mask-image: linear-gradient(to bottom, #000, transparent 70%);
-}
-
-.hint {
-  text-align: center;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--ink-label);
-  margin: 6px 0 0;
+.grid > li {
+  list-style: none;
 }

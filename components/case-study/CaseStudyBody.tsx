@@ -54,7 +54,7 @@ export function CaseStudyBody({ project }: CaseStudyBodyProps) {
             style={{
               fontFamily: 'var(--font-mono)',
               fontSize: 'var(--t-mono-label)',
-              letterSpacing: '0.26em',
+              letterSpacing: '0.08em',
               textTransform: 'uppercase',
               color: 'var(--acc)',
               margin: '0 0 12px',

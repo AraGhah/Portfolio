@@ -9,15 +9,15 @@ export default function NotFound() {
           minHeight: '100vh',
           display: 'grid',
           placeItems: 'center',
-          background: '#0a0e17',
-          color: '#f8fafc',
+          background: '#faf9f6',
+          color: '#1c2027',
           fontFamily: 'system-ui, sans-serif',
         }}
       >
         <div style={{ textAlign: 'center' }}>
           <h1 style={{ fontWeight: 400, fontSize: 48, margin: '0 0 16px' }}>404</h1>
-          <p style={{ color: '#9aa8bd', margin: '0 0 24px' }}>This door does not exist.</p>
-          <Link href="/" style={{ color: '#60a5fa' }}>
+          <p style={{ color: '#5b6270', margin: '0 0 24px' }}>This door does not exist.</p>
+          <Link href="/" style={{ color: '#2f5d8f' }}>
             Return to the hall
           </Link>
         </div>

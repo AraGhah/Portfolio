@@ -16,6 +16,7 @@ const paragraphs = [
 
 export function About() {
   const t = useTranslations('about');
+  const tNav = useTranslations('nav');
   const photoRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: photoRef,
@@ -80,6 +81,10 @@ export function About() {
         </div>
 
         <div>
+          <span className="eyebrow-num">
+            <span className="eyebrow-line" aria-hidden />
+            04. {tNav('about')}
+          </span>
           <RevealHeading
             id="about-heading"
             segments={[{ text: t('title') }]}

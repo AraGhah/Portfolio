@@ -30,17 +30,19 @@ export default async function HomePage({ params }: Props) {
   return (
     <>
       <Nav />
-      <main id="main">
-        <Hero />
-        <Proof />
-        <WhyHire />
-        <Hall />
-        <Experience />
-        <Skills />
-        <About />
-        <Contact />
-      </main>
-      <Footer />
+      <div className="main-shell">
+        <main id="main">
+          <Hero />
+          <Proof />
+          <WhyHire />
+          <Hall />
+          <Experience />
+          <Skills />
+          <About />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }

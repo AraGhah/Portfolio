@@ -30,7 +30,7 @@
 .index {
   font-family: var(--font-mono);
   font-size: var(--t-mono-meta);
-  letter-spacing: 0.3em;
+  letter-spacing: 0.1em;
   color: rgb(var(--card-rgb));
 }
 

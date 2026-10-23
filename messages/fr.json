@@ -1,11 +1,12 @@
 {
   "nav": {
-    "hall": "Couloir",
+    "hall": "Projets",
     "about": "À propos",
     "skills": "Compétences",
     "experience": "Parcours",
     "contact": "Contact",
-    "skipToHall": "Aller au couloir",
+    "tagline": "Ingénieur logiciel, systèmes backend et produits full-stack.",
+    "skipToHall": "Aller aux projets",
     "languageToggle": "Passer à l’anglais",
     "languageTarget": "English",
     "openMenu": "Ouvrir le menu",
@@ -51,7 +52,7 @@
   "hall": {
     "title": "Le Couloir des projets",
     "intro": "Les projets sont organisés par catégorie et complexité technique. Parcourez les applications, API, systèmes et sites Web que j’ai construits.",
-    "hint": "Glissez ou faites défiler latéralement · Cliquez une porte pour entrer",
+    "hint": "Cliquez un projet pour ouvrir son étude de cas",
     "filterAll": "Tous",
     "categoryLabel": "Filtrer par catégorie",
     "categoryFullstack": "Fullstack",
@@ -102,14 +103,14 @@
     "education": "Formation",
     "work": "Expérience",
     "educationItems": [
-      "Collège de Bois-de-Boulogne : Techniques de l’informatique (DEC), 2024–maintenant. Troisième année.",
-      "École Sourp Hagop"
+      { "role": "Techniques de l’informatique (DEC)", "company": "Collège de Bois-de-Boulogne", "date": "2024–maintenant", "body": "Troisième année." },
+      { "role": "Diplôme d’études secondaires", "company": "École Sourp Hagop", "date": "", "body": "" }
     ],
     "workItems": [
-      "Développeur indépendant, 2025–maintenant. Construction de Dossier, Trade Catch et SentinelOps : architecture backend, API REST, authentification, bases de données, déploiement infonuagique et applications full stack.",
-      "Service à la clientèle et vente, Globo Chaussures, Sep 2026–maintenant. Vente de chaussures en magasin, accueil de la clientèle, réponse à leurs questions et conseils pour trouver la bonne paire.",
-      "Animateur jeunesse, Centre communautaire SCAMA. Animation d’activités récréatives et sociales pour aînés pendant deux étés.",
-      "Commis de salle, Grillade Nostos, Sep–Nov 2025. Débarrassage et remise en place des tables, soutien à l’équipe de service aux heures de pointe."
+      { "role": "Développeur indépendant", "company": "Travailleur autonome", "date": "2025–maintenant", "body": "Construction de Dossier, Trade Catch et SentinelOps : architecture backend, API REST, authentification, bases de données, déploiement infonuagique et applications full stack.", "tags": ["TypeScript", "Next.js", "React", "PostgreSQL", "AWS"] },
+      { "role": "Service à la clientèle et vente", "company": "Globo Chaussures", "date": "Sep 2026–maintenant", "body": "Vente de chaussures en magasin, accueil de la clientèle, réponse à leurs questions et conseils pour trouver la bonne paire." },
+      { "role": "Animateur jeunesse", "company": "Centre communautaire SCAMA", "date": "", "body": "Animation d’activités récréatives et sociales pour aînés pendant deux étés." },
+      { "role": "Commis de salle", "company": "Grillade Nostos", "date": "Sep–Nov 2025", "body": "Débarrassage et remise en place des tables, soutien à l’équipe de service aux heures de pointe." }
     ]
   },
   "contact": {
@@ -131,7 +132,7 @@
   "footer": {
     "copyright": "© {year} Ara Ghahramanyan",
     "backToTop": "Retour en haut",
-    "tagline": "Conçu à Montréal · Next.js sur Cloudflare"
+    "tagline": "Conçu avec Next.js, TypeScript, Tailwind CSS et Framer Motion · déployé sur Cloudflare"
   },
   "Meta": {
     "title": "Ara Ghahramanyan · Ingénieur logiciel",

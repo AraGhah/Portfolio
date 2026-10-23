@@ -1,11 +1,12 @@
 {
   "nav": {
-    "hall": "Hall",
+    "hall": "Projects",
     "about": "About",
     "skills": "Skills",
     "experience": "Experience",
     "contact": "Contact",
-    "skipToHall": "Skip to the hall",
+    "tagline": "Software Engineer building backend systems and full-stack products.",
+    "skipToHall": "Skip to the projects",
     "languageToggle": "Switch to French",
     "languageTarget": "Français",
     "openMenu": "Open menu",
@@ -51,7 +52,7 @@
   "hall": {
     "title": "The Hall of Projects",
     "intro": "Projects are organized by category and technical complexity. Explore the applications, APIs, systems, and websites I have built.",
-    "hint": "Drag or scroll sideways · Click a door to enter",
+    "hint": "Click a project to open its case study",
     "filterAll": "All",
     "categoryLabel": "Filter by category",
     "categoryFullstack": "Fullstack",
@@ -102,14 +103,14 @@
     "education": "Education",
     "work": "Experience",
     "educationItems": [
-      "Collège de Bois-de-Boulogne: Computer Science Technology (DEC), 2024–now. Third year.",
-      "Sourp Hagop High School"
+      { "role": "Computer Science Technology (DEC)", "company": "Collège de Bois-de-Boulogne", "date": "2024–now", "body": "Third year." },
+      { "role": "High School Diploma", "company": "Sourp Hagop High School", "date": "", "body": "" }
     ],
     "workItems": [
-      "Independent Developer, 2025–present. Building Dossier, Trade Catch and SentinelOps: backend architecture, REST APIs, authentication, databases, cloud deployment, and full-stack applications.",
-      "Customer Service & Sales Associate, Globo Shoes, Sep 2026–present. Selling shoes in store, welcoming customers, answering their questions and helping them find the right pair.",
-      "Youth leader, SCAMA Community Centre. Led recreational and social activities for seniors over two summers.",
-      "Busser, Grillade Nostos, Sep–Nov 2025. Cleared and reset tables, supported the serving team through peak service."
+      { "role": "Independent Developer", "company": "Self-employed", "date": "2025–present", "body": "Building Dossier, Trade Catch and SentinelOps: backend architecture, REST APIs, authentication, databases, cloud deployment, and full-stack applications.", "tags": ["TypeScript", "Next.js", "React", "PostgreSQL", "AWS"] },
+      { "role": "Customer Service & Sales Associate", "company": "Globo Shoes", "date": "Sep 2026–present", "body": "Selling shoes in store, welcoming customers, answering their questions and helping them find the right pair." },
+      { "role": "Youth Leader", "company": "SCAMA Community Centre", "date": "", "body": "Led recreational and social activities for seniors over two summers." },
+      { "role": "Busser", "company": "Grillade Nostos", "date": "Sep–Nov 2025", "body": "Cleared and reset tables, supported the serving team through peak service." }
     ]
   },
   "contact": {
@@ -131,7 +132,7 @@
   "footer": {
     "copyright": "© {year} Ara Ghahramanyan",
     "backToTop": "Back to top",
-    "tagline": "Built in Montréal · Next.js on Cloudflare"
+    "tagline": "Built with Next.js, TypeScript, Tailwind CSS & Framer Motion · deployed on Cloudflare"
   },
   "Meta": {
     "title": "Ara Ghahramanyan · Software Engineer",

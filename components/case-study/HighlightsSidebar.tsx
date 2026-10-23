@@ -29,7 +29,7 @@ function Panel({
         style={{
           fontFamily: 'var(--font-mono)',
           fontSize: 'var(--t-mono-label)',
-          letterSpacing: '0.26em',
+          letterSpacing: '0.08em',
           textTransform: 'uppercase',
           color: 'var(--ink-label)',
           margin: '0 0 14px',

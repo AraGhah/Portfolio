@@ -7,13 +7,15 @@ import { RevealHeading } from '@/components/motion/RevealHeading';
 import styles from './Experience.module.css';
 
 const EASE = [0.16, 0.84, 0.28, 1] as const;
-const DOT_COLORS = ['#7aa2cf', '#9bb5d1', '#8e9bb3', '#7aa2cf', '#c8ab7d'];
+const DOT_COLORS = ['#2f5d8f', '#5a7595', '#6b7280', '#2f5d8f', '#a9865b'];
 
-function splitItem(item: string): { head: string; body: string } {
-  const match = item.match(/^(.+?[.:])\s+(.*)$/);
-  if (!match) return { head: item, body: '' };
-  return { head: match[1].replace(/[.:]$/, '').trim(), body: match[2] };
-}
+type ExperienceEntry = {
+  role: string;
+  company: string;
+  date: string;
+  body: string;
+  tags?: string[];
+};
 
 function Timeline({
   title,
@@ -22,7 +24,7 @@ function Timeline({
   colorOffset,
 }: {
   title: string;
-  items: string[];
+  items: ExperienceEntry[];
   delay: number;
   colorOffset: number;
 }) {
@@ -52,40 +54,52 @@ function Timeline({
           aria-hidden
         />
         <ul className={styles.list}>
-          {items.map((item, i) => {
-            const { head, body } = splitItem(item);
-            return (
-              <motion.li
-                key={item}
-                className={styles.item}
-                style={
-                  {
-                    '--dot': DOT_COLORS[(i + colorOffset) % DOT_COLORS.length],
-                  } as React.CSSProperties
-                }
-                initial={{ opacity: 0, x: 24 }}
-                whileInView={{ opacity: 1, x: 0 }}
+          {items.map((entry, i) => (
+            <motion.li
+              key={`${entry.role}-${entry.company}`}
+              className={styles.item}
+              style={
+                {
+                  '--dot': DOT_COLORS[(i + colorOffset) % DOT_COLORS.length],
+                } as React.CSSProperties
+              }
+              initial={{ opacity: 0, x: 24 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: '0px 0px -12% 0px' }}
+              transition={{ duration: 0.8, ease: EASE, delay: delay + i * 0.1 }}
+            >
+              <motion.span
+                className={styles.dot}
+                aria-hidden
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
                 viewport={{ once: true, margin: '0px 0px -12% 0px' }}
-                transition={{ duration: 0.8, ease: EASE, delay: delay + i * 0.1 }}
-              >
-                <motion.span
-                  className={styles.dot}
-                  aria-hidden
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  viewport={{ once: true, margin: '0px 0px -12% 0px' }}
-                  transition={{
-                    type: 'spring',
-                    stiffness: 400,
-                    damping: 14,
-                    delay: delay + i * 0.1 + 0.2,
-                  }}
-                />
-                <p className={styles.head}>{head}</p>
-                {body ? <p className={styles.body}>{body}</p> : null}
-              </motion.li>
-            );
-          })}
+                transition={{
+                  type: 'spring',
+                  stiffness: 400,
+                  damping: 14,
+                  delay: delay + i * 0.1 + 0.2,
+                }}
+              />
+              <p className={styles.head}>
+                {entry.role || entry.company}
+                {entry.role && entry.company ? (
+                  <span className={styles.company}>· {entry.company}</span>
+                ) : null}
+                {entry.date ? <span className={styles.date}>{entry.date}</span> : null}
+              </p>
+              {entry.body ? <p className={styles.body}>{entry.body}</p> : null}
+              {entry.tags?.length ? (
+                <ul className={styles.tags}>
+                  {entry.tags.map((tag) => (
+                    <li key={tag} className={styles.tag}>
+                      {tag}
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
+            </motion.li>
+          ))}
         </ul>
       </div>
     </div>
@@ -94,12 +108,17 @@ function Timeline({
 
 export function Experience() {
   const t = useTranslations('experience');
-  const education = t.raw('educationItems') as string[];
-  const work = t.raw('workItems') as string[];
+  const tNav = useTranslations('nav');
+  const education = t.raw('educationItems') as ExperienceEntry[];
+  const work = t.raw('workItems') as ExperienceEntry[];
 
   return (
     <section id="experience" className="section-block section-block--raised" aria-labelledby="experience-heading">
       <div className="container-content">
+        <span className="eyebrow-num">
+          <span className="eyebrow-line" aria-hidden />
+          02. {tNav('experience')}
+        </span>
         <RevealHeading
           id="experience-heading"
           className={styles.title}

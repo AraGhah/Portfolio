@@ -17,7 +17,7 @@
   font-family: var(--font-mono);
   font-size: var(--t-mono-label);
   font-weight: 400;
-  letter-spacing: 0.26em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   display: inline-block;
   margin: 0 0 28px;
@@ -81,6 +81,10 @@
 
 .head {
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
   font-size: var(--t-body);
   font-weight: 500;
   line-height: 1.45;
@@ -92,9 +96,41 @@
   color: var(--dot, var(--acc-hover));
 }
 
+.company {
+  font-weight: 400;
+  color: var(--ink-muted);
+}
+
+.date {
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  font-weight: 400;
+  color: var(--ink-label);
+  white-space: nowrap;
+}
+
 .body {
   margin: 6px 0 0;
   font-size: var(--t-body-sm);
   line-height: 1.65;
   color: var(--ink-muted);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 4px 9px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  color: var(--ink-muted);
+  background: var(--bg-raised);
 }

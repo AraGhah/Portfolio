@@ -34,9 +34,9 @@ export function BackToTop() {
           <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden>
             <defs>
               <linearGradient id="back-to-top-grad" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="#7aa2cf" />
-                <stop offset="60%" stopColor="#8e9bb3" />
-                <stop offset="100%" stopColor="#c8ab7d" />
+                <stop offset="0%" stopColor="#2f5d8f" />
+                <stop offset="60%" stopColor="#6b7280" />
+                <stop offset="100%" stopColor="#a9865b" />
               </linearGradient>
             </defs>
             <circle cx="24" cy="24" r={RADIUS} className={styles.ringTrack} />
