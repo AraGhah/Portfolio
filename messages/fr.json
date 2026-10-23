@@ -6,42 +6,40 @@
     "skills": "Compétences",
     "experience": "Parcours",
     "contact": "Contact",
-    "tagline": "Ingénieur logiciel, systèmes backend et produits full-stack.",
+    "tagline": "Développeur logiciel et fondateur de TradeCatch.",
     "skipToHall": "Aller au contenu",
     "languageToggle": "Passer à l’anglais",
     "languageTarget": "English",
     "openMenu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu",
-    "cta": "Discutons"
+    "cta": "Discutons",
+    "tradecatch": "TradeCatch"
   },
   "hero": {
-    "available": "Disponible pour un stage",
+    "eyebrow": "MONTRÉAL, QC · FR / EN",
+    "greeting": "Ara Ghahramanyan",
+    "role": "Développeur logiciel et fondateur de TradeCatch.",
+    "paragraph": "Je développe des applications web, des systèmes backend et des outils pour les entreprises. En ce moment, je consacre l’essentiel de mon temps à TradeCatch, mon entreprise pour les entrepreneurs du Québec.",
+    "businessLink": "Voir mon entreprise",
+    "codeLink": "GitHub",
     "location": "Montréal, Québec",
-    "paragraph": "Je construis les API, les bases de données et les systèmes qui font fonctionner des produits utiles. Étudiant en informatique, j’aime comprendre comment les choses marchent — et les améliorer.",
-    "enterHall": "Découvrir mes projets",
-    "hireMe": "Me contacter",
-    "eyebrow": "Développeur logiciel · Montréal",
-    "greeting": "Salut, moi c’est Ara",
-    "current": "Je travaille sur",
-    "currentProject": "Dossier",
-    "currentSuffix": "— de la recherche pour des échanges plus personnels.",
-    "photoNote": "La personne derrière le code"
+    "current": "En cours",
+    "available": "Ouvert aux occasions en développement"
   },
   "hall": {
-    "title": "Quelques projets",
-    "intro": "Ce que j’ai construit et ce que j’ai appris en chemin.",
+    "title": "Autres projets",
+    "intro": "Applications, systèmes et projets d’équipe.",
     "filterAll": "Tous",
     "categoryLabel": "Filtrer par catégorie",
     "categoryFullstack": "Full stack",
     "categorySoftware": "Logiciels et jeux",
     "doorAria": "Ouvrir l’étude de cas : {title}",
     "empty": "Aucun projet dans cette catégorie.",
-    "caseStudy": "Lire l’étude de cas",
-    "archive": "Aussi sur l’établi",
-    "archiveIntro": "D’autres projets, des expériences et des choses qui m’ont appris quelque chose.",
+    "caseStudy": "Voir le projet",
+    "archive": "Tous les projets",
+    "archiveIntro": "Projets scolaires, projets personnels et expérimentations.",
     "projectCount": "{count, plural, one {# projet} other {# projets}}",
-    "reset": "Tout afficher",
-    "annotation": "Construit avec un peu de persévérance. ↙"
+    "reset": "Tout afficher"
   },
   "caseStudy": {
     "door": "Projet",
@@ -66,17 +64,17 @@
     "Public": "Public"
   },
   "about": {
-    "title": "Un peu plus sur moi",
-    "p1": "Je suis Ara Ghahramanyan, étudiant en informatique au Collège de Bois-de-Boulogne, à Montréal. J’aime les aspects moins visibles d’un logiciel : le modèle de données, le contrat d’API, la décision qui rend un système compréhensible.",
-    "p2": "Mes projets sont ma façon d’apprendre. Je construis quelque chose, j’en découvre les limites et je cherche à l’améliorer. Je cherche un stage où apporter cette curiosité à une équipe.",
+    "title": "À propos",
+    "p1": "Je suis étudiant en informatique au Collège de Bois-de-Boulogne et fondateur de TradeCatch. Je travaille sur l’ensemble du produit : conception d’API, bases de données, interface et déploiement.",
+    "p2": "TradeCatch est ma priorité actuelle. J’ai aussi développé des outils de recherche, des systèmes de sécurité et des jeux, seul et en équipe.",
     "p3": "En dehors de la programmation, je m’entraîne en lutte, judo et musculation, suis les marchés financiers, et passe mes étés à organiser des activités pour aînés dans un centre communautaire à Montréal.",
-    "offline": "Quand l’ordinateur se ferme",
+    "offline": "En dehors du travail",
     "interests": [
       "Lutte, judo et musculation",
       "Suivre les marchés financiers",
       "Activités communautaires pour aînés"
     ],
-    "note": "Des intérêts variés. La même curiosité.",
+    "note": "",
     "link": "Me retrouver sur GitHub"
   },
   "skills": {
@@ -111,10 +109,16 @@
     ],
     "workItems": [
       {
+        "role": "Fondateur et développeur",
+        "company": "TradeCatch",
+        "date": "2026–maintenant",
+        "body": "Développement et exploitation d’un service bilingue de récupération d’appels et de suivi pour les entrepreneurs du Québec. Produit, parcours clients, installation et suivi."
+      },
+      {
         "role": "Développeur indépendant",
         "company": "Travailleur autonome",
         "date": "2025–maintenant",
-        "body": "Construction de Dossier, Trade Catch et SentinelOps : architecture backend, API REST, authentification, bases de données, déploiement infonuagique et applications full stack.",
+        "body": "Développement de Dossier et SentinelOps : architecture backend, API REST, authentification, bases de données et déploiement infonuagique.",
         "tags": [
           "TypeScript",
           "Next.js",
@@ -144,34 +148,58 @@
     ]
   },
   "contact": {
-    "body": "Je cherche un stage en développement logiciel à Montréal. Si votre équipe travaille sur un projet intéressant et a besoin d’un développeur curieux, j’aimerais en discuter.",
+    "body": "Pour TradeCatch, une occasion en développement ou un projet à discuter, écrivez-moi directement.",
     "phone": "Téléphone",
     "linkedIn": "LinkedIn",
     "copyEmail": "Copier le courriel",
     "copied": "Copié",
-    "title": "Construisons quelque chose d’utile.",
-    "note": "Tout commence par une conversation.",
+    "title": "Me contacter.",
+    "note": "",
     "copyFailed": "La copie a échoué. Vous pouvez sélectionner le courriel ci-dessus.",
     "github": "GitHub",
-    "intro": "Un projet ou un stage à proposer ?"
+    "intro": "CONTACT"
   },
   "footer": {
     "copyright": "© {year} Ara Ghahramanyan",
     "backToTop": "Retour en haut",
-    "tagline": "Fait avec soin à Montréal."
+    "tagline": "Montréal, Québec"
   },
   "Meta": {
     "title": "Ara Ghahramanyan · Développeur logiciel",
-    "description": "Développeur logiciel et étudiant en informatique à Montréal. Projets en développement backend, API, systèmes infonuagiques et applications full stack."
+    "description": "Ara Ghahramanyan, développeur logiciel à Montréal et fondateur de TradeCatch. Logiciels d’entreprise, systèmes backend et projets full stack."
   },
-  "diagrams": {
-    "dossier": "d / une recherche soignée.",
-    "dossierNote": "Un peu plus personnel.",
-    "pipeline": "recherche → pertinence",
-    "trade": "tc / toujours au bout du fil.",
-    "tradeNote": "Chaque appel est un début.",
-    "sentinel": "so / structurer les événements.",
-    "events": "événements → incidents",
-    "sentinelNote": "Un signal plus clair."
+  "tradecatch": {
+    "label": "MON ENTREPRISE",
+    "title": "TradeCatch",
+    "tagline": "Gestion des appels et suivi des soumissions.",
+    "description": "Je développe et exploite TradeCatch pour les entrepreneurs du Québec. Le service gère les appels manqués, recueille les détails des demandes et relance les soumissions en français et en anglais.",
+    "ownership": "Je m’occupe du produit, du développement, de l’installation et du suivi.",
+    "visit": "Visiter tradecatch.ca",
+    "story": "Le développement du produit",
+    "roleLabel": "Mon rôle",
+    "role": "Fondateur et développeur",
+    "focusLabel": "Clientèle",
+    "focus": "Entrepreneurs du Québec",
+    "tools": "Next.js / React / TypeScript / Cloudflare",
+    "preview": "Site de TradeCatch",
+    "screenshotAlt": "La page d’accueil du site TradeCatch et son service de récupération d’appels",
+    "workflowLabel": "Le fonctionnement du produit",
+    "steps": [
+      {
+        "title": "Appel manqué",
+        "body": "Quand un entrepreneur ne peut pas répondre, TradeCatch envoie un texto dans la langue de l’appelant."
+      },
+      {
+        "title": "Détails du travail",
+        "body": "Le processus recueille le service demandé, les coordonnées et le niveau d’urgence, puis alerte l’entrepreneur."
+      },
+      {
+        "title": "Suivi",
+        "body": "Les rappels de soumission continuent jusqu’à une réponse, une désinscription ou la prise en charge par l’entrepreneur."
+      }
+    ],
+    "businessCase": "Mon entreprise actuelle",
+    "caseIntro": "Je suis le fondateur et développeur de TradeCatch. Je construis le logiciel et m’occupe de l’installation, des tests et du suivi.",
+    "nextLink": "Découvrir le produit"
   }
 }

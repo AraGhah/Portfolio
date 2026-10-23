@@ -9,7 +9,7 @@
 @media (max-width: 600px) { .page { padding-inline: 22px; } .back { margin-bottom: 32px; } .next strong { font-size: 21px; } }
 .eyebrow { font: 10px/1.7 var(--font-mono); color: var(--acc); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 24px; }
 .eyebrow > span { margin-inline: 12px; }
-.title { font: 400 var(--t-project)/1.08 var(--font-display); letter-spacing: -.05em; margin-bottom: 18px; overflow-wrap: anywhere; }
+.title { font: 550 var(--t-project)/1.08 var(--font-display); letter-spacing: -.06em; margin-bottom: 18px; overflow-wrap: anywhere; }
 .title > span { color: var(--acc); }
 .type { font-size: 13px; color: var(--ink-muted); margin-bottom: 24px; }
 .tagline { max-width: 750px; font-size: var(--t-tagline); line-height: 1.8; }
@@ -31,5 +31,15 @@
 .notes ul { padding-left: 16px; margin: 0; }
 .notes li + li { margin-top: 8px; }
 .notes .tools { font: 10px/2.2 var(--font-mono); }
+.businessIntro { margin-bottom: 60px; }
+.businessLabel { color: var(--acc); font: 10px var(--font-mono); text-transform: uppercase; letter-spacing: .06em; }
+.businessIntro > p:not(.businessLabel) { max-width: 720px; font-size: 17px; line-height: 1.8; }
+.productPreview { display: block; overflow: hidden; position: relative; border: 1px solid var(--line); border-radius: 5px; margin-top: 24px; background: #0c1620; }
+.productPreview img { width: 100%; transition: transform .6s cubic-bezier(.16,1,.3,1), filter .3s; }
+.productPreview:hover img { transform: scale(1.02); filter: brightness(.8); }
+.productPreview > span { position: absolute; bottom: 20px; right: 20px; background: white; color: #1c2023; font-size: 13px; padding: 12px 18px; border-radius: 3px; }
+.businessBanner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border: 1px solid var(--line); border-left: 2px solid var(--acc); margin: -20px 0 44px; font-size: 12px; color: var(--ink-muted); }
+.businessBanner a { color: var(--ink); min-height: 32px; display: inline-flex; gap: 22px; align-items: center; }
+.businessBanner a:hover { color: var(--acc); }
 @media (max-width: 800px) { .content { grid-template-columns: minmax(0, 1fr); gap: 32px; } .notes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; } .notes section + section { border: 0; padding: 0; margin: 0; } }
 @media (max-width: 500px) { .notes { grid-template-columns: minmax(0, 1fr); } .body p { font-size: 14px; } }

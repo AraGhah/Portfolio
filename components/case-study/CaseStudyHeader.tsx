@@ -8,7 +8,7 @@ export function CaseStudyHeader({ project }: { project: Project }) {
   return (
     <header className={styles.header}>
       <p className={styles.eyebrow}>{t('door')} {project.doorNumber} <span aria-hidden> / </span> {status(project.status)}</p>
-      <h1 className={styles.title}>{project.title}<span>.</span></h1>
+      <h1 className={styles.title}>{project.title}</h1>
       <p className={styles.type}>{project.type}</p>
       <p className={styles.tagline}>{project.tagline}</p>
       {project.links.length > 0 && (

@@ -2,18 +2,18 @@
 
 :root {
   color-scheme: light;
-  --bg: #f8f7f4;
-  --bg-raised: #fffefa;
-  --bg-panel: #eeede7;
-  --bg-rgb: 248, 247, 244;
-  --ink: #252b26;
-  --ink-body: #434940;
-  --ink-muted: #62685e;
-  --ink-dim: #62685e;
-  --ink-label: #6a7066;
-  --acc: #315d45;
-  --acc-hover: #234b34;
-  --acc-rgb: 49, 93, 69;
+  --bg: #fafaf8;
+  --bg-raised: #ffffff;
+  --bg-panel: #f0f1ef;
+  --bg-rgb: 250, 250, 248;
+  --ink: #1c2023;
+  --ink-body: #41474c;
+  --ink-muted: #62696d;
+  --ink-dim: #62696d;
+  --ink-label: #62696d;
+  --acc: #a84d27;
+  --acc-hover: #853b1c;
+  --acc-rgb: 168, 77, 39;
   --acc-06: rgba(var(--acc-rgb), .06);
   --acc-12: rgba(var(--acc-rgb), .12);
   --acc-20: rgba(var(--acc-rgb), .2);
@@ -26,14 +26,14 @@
   --c-sand: #9c7452;
   --c-success: #315d45;
   --slate-rgb: 116, 119, 109;
-  --line-faint: #e9e8e1;
-  --line: #dddfd5;
-  --line-strong: #b5bbac;
+  --line-faint: #edeede;
+  --line: #e0e2df;
+  --line-strong: #b6bcb9;
   --ease-out: cubic-bezier(.2, .7, .2, 1);
-  --font-display: Georgia, 'Times New Roman', serif;
+  --font-display: var(--font-body);
   --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
-  --t-h2: clamp(30px, 4vw, 40px);
+  --t-h2: clamp(28px, 3.5vw, 36px);
   --t-h2-hall: var(--t-h2);
   --t-project: clamp(38px, 6vw, 72px);
   --t-section: 25px;
@@ -45,8 +45,8 @@
   --t-mono-label: 11px;
   --t-mono-meta: 10px;
   --t-mono-role: 12px;
-  --w-content: 1000px;
-  --w-case: 1000px;
+  --w-content: 1120px;
+  --w-case: 1040px;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -71,14 +71,14 @@ h1, h2, h3, p { margin-top: 0; }
 main:focus { outline: none; }
 h1, h2, h3 { color: var(--ink); }
 :focus-visible { outline: 2px solid var(--acc); outline-offset: 5px; }
-::selection { background: #dce8d0; color: var(--ink); }
+::selection { background: #f2dccd; color: var(--ink); }
 .main-shell { min-width: 0; }
 .container-content { width: 100%; max-width: var(--w-content); margin-inline: auto; }
-.section-block { padding: 0 28px; }
-.section-block > .container-content { padding-block: 52px; }
+.section-block { padding: 0 32px; }
+.section-block > .container-content { padding-block: 62px; }
 .section-block + .section-block > .container-content { border-top: 1px solid var(--line); }
 .section-heading { display: flex; align-items: baseline; gap: 16px; margin-bottom: 28px; }
-.section-heading h2 { font: 400 var(--t-h2)/1.2 var(--font-display); letter-spacing: -.035em; margin: 0; }
+.section-heading h2 { font: 550 var(--t-h2)/1.2 var(--font-display); letter-spacing: -.045em; margin: 0; }
 .section-number { color: var(--acc); font: 11px var(--font-mono); }
 .eyebrow-num { display: flex; gap: 12px; color: var(--acc); font: 11px var(--font-mono); margin-bottom: 16px; }
 .text-link { display: inline-flex; align-items: center; gap: 8px; border-bottom: 1px solid var(--line-strong); padding-block: 5px; transition: color .2s, border-color .2s; }
@@ -88,6 +88,12 @@ h1, h2, h3 { color: var(--ink); }
 .skip-link { position: absolute; top: -80px; left: 20px; z-index: 100; background: var(--ink); color: var(--bg); padding: 12px 18px; border-radius: 4px; }
 .skip-link:focus { top: 12px; }
 .text-gradient { color: var(--acc); }
+.button-primary { display: inline-flex; align-items: center; justify-content: center; gap: 24px; min-height: 46px; padding: 11px 17px; background: var(--ink); color: white; border: 1px solid var(--ink); border-radius: 4px; font-size: 12px; transition: transform .25s, background .25s, box-shadow .25s; }
+.button-primary:hover { background: var(--acc); border-color: var(--acc); transform: translateY(-2px); box-shadow: 0 6px 15px #1c202312; }
+.button-primary span { transition: transform .25s; }
+.button-primary:hover span { transform: translate(2px,-2px); }
+.reading-progress { position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 80; pointer-events: none; }
+.reading-progress span { display: block; width: 100%; height: 100%; background: var(--acc); transform: scaleX(0); transform-origin: left; }
 
 @media (max-width: 600px) {
   .section-block { padding-inline: 22px; }

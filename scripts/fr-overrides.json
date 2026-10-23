@@ -4,23 +4,35 @@
     "tagline": "Analyse et conception d'un système de partage de fichiers avant l'implémentation. Aucun code, et c'était le but : le livrable était une spécification assez précise pour servir de base à la construction.",
     "preview": "Analyse orientée cas d'utilisation d'un système de partage de fichiers multiutilisateur, des diagrammes d'acteurs jusqu'à une spécification écrite qu'une équipe pouvait implémenter.",
     "meta": [
-      ["Rôle", "Analyse et conception"],
-      ["Méthode", "Cas d'utilisation UML"],
-      ["Année", "2026"],
-      ["Statut", "Livré"]
+      [
+        "Rôle",
+        "Analyse et conception"
+      ],
+      [
+        "Méthode",
+        "Cas d'utilisation UML"
+      ],
+      [
+        "Année",
+        "2026"
+      ],
+      [
+        "Statut",
+        "Livré"
+      ]
     ],
     "whyRated": "Modélisation et spécification rigoureuses avec un raisonnement réel sur les acteurs, les permissions et les cas limites, mais sans implémentation, intégration ni comportement à l'exécution susceptibles de mal tourner.",
     "sections": [
       {
-        "heading": "Vue d'ensemble",
+        "heading": "Présentation",
         "body": "Ce projet consistait à analyser et concevoir un système de partage de fichiers avant l'implémentation. L'objectif était de définir ce que le système devait accomplir, d'identifier comment les différents utilisateurs interagiraient avec lui et de documenter son comportement attendu."
       },
       {
-        "heading": "Le problème",
+        "heading": "Besoins",
         "body": "Une plateforme de partage de fichiers devient rapidement difficile à développer si ses acteurs, permissions, fonctionnalités et flux de travail ne sont pas clairement définis avant l'implémentation."
       },
       {
-        "heading": "La solution",
+        "heading": "Implémentation",
         "body": "J'ai analysé les exigences du système, identifié les acteurs principaux et les cas d'utilisation, créé des diagrammes de cas d'utilisation UML et rédigé des spécifications détaillées expliquant le comportement de chaque interaction majeure."
       },
       {
@@ -28,12 +40,12 @@
         "body": "J'ai participé à l'analyse des exigences, à l'identification des cas d'utilisation, à la modélisation UML et à la création de spécifications fonctionnelles détaillées."
       },
       {
-        "heading": "Défi principal",
+        "heading": "Décisions techniques",
         "body": "Transformer une idée de produit large en exigences précises et testables. Chaque cas d'utilisation devait avoir des acteurs clairs, des préconditions, des flux attendus, des scénarios alternatifs et des résultats définis."
       },
       {
-        "heading": "Ce que j'ai appris",
-        "body": "Que l'ingénierie logicielle commence avant l'écriture du code. J'ai approfondi ma compréhension de l'analyse des exigences, de la modélisation de systèmes, de la communication technique et de la façon dont des spécifications claires réduisent l'ambiguïté pendant le développement."
+        "heading": "Bilan",
+        "body": "La spécification décrit les acteurs, les permissions, les préconditions, les scénarios alternatifs et les conflits possibles entre utilisateurs."
       }
     ],
     "highlights": [
@@ -51,23 +63,35 @@
     "tagline": "Une application backend qui gère l'information bancaire par des points de terminaison REST structurés et une logique de base de données relationnelle.",
     "preview": "Une API REST pour un système bancaire, avec des opérations CRUD sur les comptes et les transactions gérées en SQL et PL/SQL plutôt que remontées dans la couche applicative.",
     "meta": [
-      ["Rôle", "API et base de données"],
-      ["Équipe", "En équipe"],
-      ["Année", "2025"],
-      ["Statut", "Livré"]
+      [
+        "Rôle",
+        "API et base de données"
+      ],
+      [
+        "Équipe",
+        "En équipe"
+      ],
+      [
+        "Année",
+        "2025"
+      ],
+      [
+        "Statut",
+        "Livré"
+      ]
     ],
     "whyRated": "Conception relationnelle, CRUD sur toute la surface de l'API et coordination entre la logique des routes, les requêtes SQL et les procédures stockées, dans un domaine où un mauvais résultat, c'est un mauvais solde.",
     "sections": [
       {
-        "heading": "Vue d'ensemble",
+        "heading": "Présentation",
         "body": "L'API du système bancaire est une application backend conçue pour gérer l'information bancaire par des points de terminaison REST structurés et des opérations sur la base de données."
       },
       {
-        "heading": "Le problème",
+        "heading": "Besoins",
         "body": "Le projet exigeait un moyen fiable de créer, lire, mettre à jour et supprimer des dossiers bancaires tout en maintenant un lien clair entre la couche API et la base de données relationnelle."
       },
       {
-        "heading": "La solution",
+        "heading": "Implémentation",
         "body": "Notre équipe a développé des points de terminaison REST pour les opérations principales et les a connectés à la logique SQL et PL/SQL. L'API offrait une interface structurée par laquelle les applications clientes pouvaient interagir avec les données bancaires."
       },
       {
@@ -75,12 +99,12 @@
         "body": "J'ai contribué à la conception et à l'implémentation des routes de l'API et des opérations sur la base de données. J'ai travaillé avec les requêtes GET, POST, PUT et DELETE et aidé à relier chaque opération à la logique CRUD appropriée."
       },
       {
-        "heading": "Défi principal",
+        "heading": "Décisions techniques",
         "body": "Garantir que chaque requête API exécute la bonne opération sur la base de données et retourne un résultat cohérent. Cela exigeait une coordination minutieuse entre la logique des routes, les requêtes SQL et les procédures stockées."
       },
       {
-        "heading": "Ce que j'ai appris",
-        "body": "Ce projet a renforcé ma compréhension du développement backend, des bases de données relationnelles, des conventions REST et du lien entre le code applicatif et la logique de base de données. Il m'a aussi donné plus d'expérience en conception et en tests d'opérations CRUD."
+        "heading": "Bilan",
+        "body": "Les tests de séquences d’appels API permettent de vérifier la cohérence des comptes et des transactions après chaque modification."
       }
     ],
     "highlights": [
@@ -93,30 +117,47 @@
       "Gestion des requêtes et des réponses",
       "Développement en équipe"
     ],
-    "links": [{ "label": "Dépôt non public", "href": "#" }]
+    "links": [
+      {
+        "label": "Dépôt non public",
+        "href": "#"
+      }
+    ]
   },
   "vamp2-survivors": {
     "type": "Jeu de survie 3D · Projet académique",
     "tagline": "Un jeu de survie 3D inspiré de Vampire Survivors. Le travail intéressant n'a jamais été le rendu, c'était le comportement des ennemis capable de grandir sans s'effondrer sous les conditions.",
     "preview": "Un jeu de survie 3D dans Unity où le vrai travail était le comportement des ennemis : une machine à états, un système d'événements Observer et une mécanique de leurre bâtie sur une interface de ciblage commune.",
     "meta": [
-      ["Rôle", "Programmeur gameplay"],
-      ["Moteur", "Unity"],
-      ["Année", "2026"],
-      ["Statut", "Livré"]
+      [
+        "Rôle",
+        "Programmeur gameplay"
+      ],
+      [
+        "Moteur",
+        "Unity"
+      ],
+      [
+        "Année",
+        "2026"
+      ],
+      [
+        "Statut",
+        "Livré"
+      ]
     ],
     "whyRated": "Comportement en temps réel, patrons de conception appliqués délibérément et logique de gameplay testée par unités, mais autonome : pas d'intégrations, pas de persistance, pas de surface de sécurité.",
     "sections": [
       {
-        "heading": "Vue d'ensemble",
+        "heading": "Présentation",
         "body": "VAMP2 Survivors est un jeu de survie 3D inspiré de Vampire Survivors. Le joueur survit à des vagues d'ennemis grâce au déplacement, à la stratégie et aux mécaniques de jeu pour maîtriser des rencontres de plus en plus difficiles."
       },
       {
-        "heading": "Le problème",
+        "heading": "Besoins",
         "body": "Le jeu avait besoin d'ennemis capables de changer de comportement proprement, de réagir aux événements et de choisir entre le joueur et d'autres cibles sans créer de code fortement couplé."
       },
       {
-        "heading": "La solution",
+        "heading": "Implémentation",
         "body": "J'ai implémenté le comportement des ennemis avec une machine à états et utilisé le patron Observer orienté événements pour coordonner les réactions. J'ai aussi créé une mécanique de leurre via l'interface ICibleEnnemi, permettant aux ennemis de viser différents objets selon un contrat commun."
       },
       {
@@ -124,12 +165,12 @@
         "body": "J'ai développé le comportement central des ennemis, implémenté le système de leurre, connecté les réactions orientées événements et écrit des tests unitaires pour la logique de gameplay importante."
       },
       {
-        "heading": "Défi principal",
+        "heading": "Décisions techniques",
         "body": "Empêcher la logique ennemie de devenir une grande collection de conditions. Diviser le comportement en états et programmer contre une interface a rendu le système plus facile à étendre, tester et comprendre."
       },
       {
-        "heading": "Ce que j'ai appris",
-        "body": "Ce projet a amélioré ma compréhension de la conception orientée objet, des patrons de conception, de la gestion d'état en jeu, de la programmation orientée événements et des tests automatisés. Il m'a montré comment une bonne architecture facilite l'expansion des systèmes de gameplay."
+        "heading": "Bilan",
+        "body": "Une interface de ciblage commune permet aux ennemis de réagir au joueur et aux leurres sans systèmes distincts."
       }
     ],
     "highlights": [
@@ -142,30 +183,47 @@
       "Tests unitaires",
       "Composants réutilisables et maintenables"
     ],
-    "links": [{ "label": "Dépôt non public", "href": "#" }]
+    "links": [
+      {
+        "label": "Dépôt non public",
+        "href": "#"
+      }
+    ]
   },
   "travel-express": {
     "type": "Application Web de voyage full stack · Projet d'équipe académique",
     "tagline": "Une plateforme de voyage full stack où les utilisateurs créent des comptes, explorent destinations et forfaits, gèrent des réservations et enregistrent des favoris. J'ai porté le backend.",
     "preview": "Une plateforme de voyage full stack avec comptes, forfaits, réservations et favoris. J'ai porté le backend : routes API, logique serveur en Node et authentification JWT.",
     "meta": [
-      ["Rôle", "Développeur backend"],
-      ["Équipe", "En équipe"],
-      ["Année", "2026"],
-      ["Statut", "Livré"]
+      [
+        "Rôle",
+        "Développeur backend"
+      ],
+      [
+        "Équipe",
+        "En équipe"
+      ],
+      [
+        "Année",
+        "2026"
+      ],
+      [
+        "Statut",
+        "Livré"
+      ]
     ],
     "whyRated": "Portée full stack avec authentification, deux technologies de base de données et un vrai flux de travail d'équipe, mais un seul service sans enjeux distribués ni pipelines automatisés derrière.",
     "sections": [
       {
-        "heading": "Vue d'ensemble",
+        "heading": "Présentation",
         "body": "Travel Express est une plateforme de voyage full stack où les utilisateurs peuvent créer des comptes, explorer des destinations et des forfaits, gérer des réservations, enregistrer des favoris et interagir avec du contenu voyage."
       },
       {
-        "heading": "Le problème",
+        "heading": "Besoins",
         "body": "Le projet exigeait que l'équipe relie une interface réactive, un backend sécurisé et plusieurs opérations sur les bases de données dans une application cohérente. Les renseignements utilisateur et les actions protégées devaient aussi être gérés de façon sécurisée."
       },
       {
-        "heading": "La solution",
+        "heading": "Implémentation",
         "body": "Nous avons développé une application Web complète avec une interface React, un backend Node.js, des routes API REST, de l'authentification et une persistance en base de données. L'application séparait la présentation frontend de la logique backend et de l'accès aux données."
       },
       {
@@ -173,12 +231,12 @@
         "body": "J'étais principalement responsable du développement backend. J'ai créé les routes API, implémenté la logique côté serveur, intégré la base de données et ajouté l'authentification par JWT. J'ai aussi collaboré avec l'équipe frontend pour définir les structures de requêtes et de réponses."
       },
       {
-        "heading": "Défi principal",
+        "heading": "Décisions techniques",
         "body": "Maintenir des données et un comportement d'API cohérents pendant que plusieurs membres de l'équipe travaillaient sur différentes parties de l'application. Des définitions de routes claires et un flux de travail Git nous ont permis d'intégrer les composants de façon fiable."
       },
       {
-        "heading": "Ce que j'ai appris",
-        "body": "Travel Express m'a donné une expérience concrète de construction d'une application Web complète en équipe. J'ai renforcé mes connaissances en architecture backend, authentification, intégration de bases de données, API REST, débogage et développement collaboratif."
+        "heading": "Bilan",
+        "body": "Des formats de requête et de réponse communs facilitent l’intégration du backend avec le travail de l’équipe frontend."
       }
     ],
     "highlights": [
@@ -192,30 +250,47 @@
       "Flux de travail d'équipe avec Git",
       "Opérations sur bases relationnelles et documentaires"
     ],
-    "links": [{ "label": "Dépôt non public", "href": "#" }]
+    "links": [
+      {
+        "label": "Dépôt non public",
+        "href": "#"
+      }
+    ]
   },
   "dossier": {
     "type": "Plateforme B2B de recherche et de personnalisation",
     "tagline": "Un système de recherche et de personnalisation qui aide les équipes de vente sortantes à bâtir des campagnes de courriel à froid pertinentes à grande échelle, sans sacrifier la précision.",
     "preview": "Un pipeline B2B de recherche et de personnalisation : prospects en entrée, recherche et notation, variantes personnalisées en sortie. Un pilote de 100 prospects a atteint un taux de réponse de 9,6 %.",
     "meta": [
-      ["Rôle", "Backend et architecture"],
-      ["Année", "2026"],
-      ["Domaine", "Recherche commerciale B2B"],
-      ["Statut", "En ligne"]
+      [
+        "Rôle",
+        "Backend et architecture"
+      ],
+      [
+        "Année",
+        "2026"
+      ],
+      [
+        "Domaine",
+        "Recherche commerciale B2B"
+      ],
+      [
+        "Statut",
+        "En ligne"
+      ]
     ],
     "whyRated": "Orchestration de flux de travail multiphase, intégrations de données externes, notation de la recherche et garde-fous qualité, état des flux dans PostgreSQL, nouvelles tentatives et gestion des lettres mortes, plus surveillance opérationnelle de livraisons réelles.",
     "sections": [
       {
-        "heading": "Vue d'ensemble",
+        "heading": "Présentation",
         "body": "Dossier est un système de recherche et de personnalisation conçu pour aider les équipes de vente sortantes à créer des campagnes de courriel à froid pertinentes à grande échelle. Il combine recherche automatisée de prospects, validation des données, notation et génération de courriels personnalisés dans un pipeline de livraison structuré."
       },
       {
-        "heading": "Le problème",
+        "heading": "Besoins",
         "body": "La plupart des démarches à froid automatisées s'appuient sur de l'information générique et des modèles répétitifs. Rechercher chaque prospect à la main produit une meilleure personnalisation, mais c'est beaucoup trop lent et coûteux pour des campagnes de milliers de prospects."
       },
       {
-        "heading": "La solution",
+        "heading": "Implémentation",
         "body": "J'ai bâti un flux de travail multiphase qui collecte les données de prospects, recherche des signaux d'affaires pertinents, note la qualité de cette recherche, génère plusieurs variantes de courriel personnalisées et valide le résultat final avant la livraison."
       },
       {
@@ -223,12 +298,12 @@
         "body": "J'ai conçu l'architecture backend, le modèle de base de données, les flux automatisés, la logique de recherche, le système de notation, le processus de personnalisation et les garde-fous de contrôle qualité. J'ai aussi intégré des sources de données externes et bâti la gestion des échecs pour les tâches incomplètes ou non réussies."
       },
       {
-        "heading": "Défi principal",
+        "heading": "Décisions techniques",
         "body": "Les tâches de recherche externes pouvaient échouer ou retourner de l'information incomplète. J'ai introduit la notation, des états de repli, des nouvelles tentatives et le suivi des lettres mortes pour que les résultats faibles soient identifiés au lieu d'atteindre le client en silence."
       },
       {
-        "heading": "Ce que j'ai appris",
-        "body": "Dossier m'a appris à bâtir des flux de travail en plusieurs étapes qui restent mesurables et contrôlables. J'ai acquis de l'expérience en pipelines de données, API externes, assurance qualité, gestion d'état en base de données et analyse des échecs en production."
+        "heading": "Bilan",
+        "body": "La notation de la recherche et le suivi des tâches en échec rendent les résultats incomplets visibles pour la révision et les nouvelles tentatives."
       }
     ],
     "result": "Un pilote externe de 100 prospects recherchés a atteint environ 9,6 % de taux de réponse. Une livraison ultérieure de 500 prospects a révélé des leçons plus exigeantes sur la qualité des données, la stratégie de nouvelles tentatives et la surveillance opérationnelle.",
@@ -245,25 +320,44 @@
       "Rapports et surveillance opérationnels"
     ],
     "links": [
-      { "label": "Site en ligne ↗", "href": "https://rundossier.co", "primary": true },
-      { "label": "Dépôt non public", "href": "#" }
+      {
+        "label": "Site en ligne ↗",
+        "href": "https://rundossier.co",
+        "primary": true
+      },
+      {
+        "label": "Dépôt non public",
+        "href": "#"
+      }
     ]
   },
   "trade-catch": {
-    "type": "Plateforme d'automatisation d'affaires full stack",
-    "tagline": "Récupération de prospects et suivi des ventes pour les entrepreneurs et les entreprises de services locaux. Il répond aux appels manqués et relance les soumissions oubliées.",
-    "preview": "Les entrepreneurs perdent des contrats à cause d'appels manqués et de soumissions oubliées. Cette plateforme engage l'appelant immédiatement, le qualifie, alerte l'entrepreneur et fait le suivi jusqu'à obtenir une réponse.",
+    "type": "Entreprise actuelle · Fondateur et développeur",
+    "tagline": "Un service bilingue de gestion des appels et de suivi que je développe et exploite pour les entrepreneurs du Québec.",
+    "preview": "Mon entreprise actuelle : récupération d’appels manqués, qualification des demandes et suivi des soumissions.",
     "meta": [
-      ["Rôle", "Concept, produit et automatisation"],
-      ["Année", "2026"],
-      ["Domaine", "Métiers et services à domicile"],
-      ["Statut", "En développement"]
+      [
+        "Rôle",
+        "Fondateur et développeur"
+      ],
+      [
+        "Année",
+        "2026"
+      ],
+      [
+        "Marché",
+        "Entrepreneurs du Québec"
+      ],
+      [
+        "Statut",
+        "Live"
+      ]
     ],
     "whyRated": "Authentification, intégrations téléphonie et paiement, moteur de flux automatisés, déploiement en périphérie, communication client bilingue et frontière nette entre la messagerie et les règles d'affaires déterministes.",
-    "statusNote": "La plateforme et l'expérience de démonstration sont en développement actif. Les prochaines étapes visent les intégrations de production, la surveillance, l'analytique et l'intégration d'entreprises réelles.",
+    "statusNote": "TradeCatch est en ligne et accueille ses premiers projets pilotes. Je m’occupe de l’implémentation, des tests et du suivi. La priorité est d’intégrer des entreprises et d’adapter le service à leurs processus d’appels et de soumissions.",
     "sections": [
       {
-        "heading": "Vue d'ensemble",
+        "heading": "Présentation",
         "body": "Trade Catch est une plateforme de récupération de prospects et de suivi des ventes pour les entrepreneurs et les entreprises de services locaux. Elle les aide à répondre aux appels manqués, qualifier les clients potentiels, planifier des rendez-vous, relancer les soumissions et suivre les occasions depuis un tableau de bord."
       },
       {
@@ -271,20 +365,24 @@
         "body": "Les entrepreneurs perdent des contrats précieux parce qu'ils ne peuvent pas répondre aux appels pendant qu'ils travaillent, oublient de relancer les soumissions ou répondent trop lentement. Le client contacte simplement la prochaine entreprise disponible, et l'entrepreneur perd un revenu sur un prospect qu'il avait déjà généré."
       },
       {
-        "heading": "La solution",
+        "heading": "Le processus",
         "body": "J'ai conçu Trade Catch comme un flux automatisé qui engage immédiatement les appelants manqués, recueille l'information sur le service demandé, alerte l'entrepreneur et oriente les clients qualifiés vers la prise de rendez-vous. Il relance aussi les soumissions jusqu'à ce que le client réponde, réserve le service ou se désinscrive."
       },
       {
-        "heading": "Ma contribution",
+        "heading": "Réception des appels",
+        "body": "TradeCatch peut maintenant décrocher le téléphone lui-même. La réceptionniste IA répond aux appels entrants 24 h sur 24, 7 jours sur 7, comme une vraie réception, en français et en anglais : elle accueille l'appelant, comprend son besoin, recueille ses coordonnées et l'urgence, puis transmet une fiche de travail complète au bon technicien. Le diagnostic, les rabais et les urgences restent entre les mains de l'équipe de l'entrepreneur."
+      },
+      {
+        "heading": "Mon travail",
         "body": "J'ai développé le concept produit, le parcours client, l'expérience du site Web et la logique d'automatisation. J'ai conçu la circulation de l'information entre les interactions client, les flux de qualification, les alertes entrepreneur, la planification et les rapports. J'ai aussi géré le déploiement et la configuration Cloudflare."
       },
       {
-        "heading": "Défi principal",
+        "heading": "Règles d’affaires",
         "body": "Concevoir une automatisation qui paraît immédiate et utile sans devenir imprévisible. J'ai séparé la messagerie et la classification des prospects des règles strictes qui régissent la planification, la tarification, les désinscriptions, la sécurité et l'escalade. Le texte peut varier. Les décisions de facturation et de réservation, non."
       },
       {
-        "heading": "Ce que j'ai appris",
-        "body": "Ce projet a renforcé ma capacité à traduire un problème d'affaires réel en produit technique complet. J'ai appris la conception de flux de travail, les intégrations externes, le déploiement, la gestion des erreurs, l'UX orientée conversion et l'importance de garder l'automatisation critique déterministe."
+        "heading": "Prévisibilité des décisions",
+        "body": "La planification, les paiements, les désinscriptions et l’escalade suivent des règles explicites. La génération des messages reste séparée de ces décisions."
       }
     ],
     "highlights": [
@@ -297,31 +395,50 @@
       "Tableau de bord pour suivre prospects et résultats",
       "Séparation claire entre messagerie et règles déterministes"
     ],
-    "links": [{ "label": "Dépôt non public", "href": "#" }]
+    "links": [
+      {
+        "label": "Dépôt non public",
+        "href": "#"
+      }
+    ],
+    "title": "TradeCatch",
+    "status": "Live"
   },
   "sentinelops": {
     "type": "Plateforme infonuagique de sécurité et de gestion d'incidents",
     "tagline": "Une plateforme pour collecter, analyser et gérer les événements de sécurité, offrant aux analystes un endroit unique pour examiner les alertes, prioriser les incidents et coordonner une réponse.",
     "preview": "Les événements de sécurité arrivent de nombreux systèmes sous de nombreux formats. SentinelOps les normalise en un seul modèle et les fait traverser un flux de gestion d'incidents structuré, pour que les analystes traitent une file priorisée plutôt qu'un torrent.",
     "meta": [
-      ["Rôle", "Architecture et full stack"],
-      ["Année", "2026"],
-      ["Domaine", "Opérations de sécurité"],
-      ["Statut", "En développement"]
+      [
+        "Rôle",
+        "Architecture et full stack"
+      ],
+      [
+        "Année",
+        "2026"
+      ],
+      [
+        "Domaine",
+        "Opérations de sécurité"
+      ],
+      [
+        "Statut",
+        "En développement"
+      ]
     ],
     "whyRated": "Ingestion d'événements infonuagiques, schéma normalisé d'événements de sécurité, flux d'incidents structuré, API authentifiée, persistance relationnelle, journalisation et gestion des échecs, dans un domaine où un bogue a de vraies conséquences. Évalué sur l'architecture et le risque, pas les heures passées.",
     "statusNote": "SentinelOps est un projet de portfolio en évolution. Les phases à venir incluent des intégrations AWS plus poussées, un enrichissement automatisé, des flux de notification, l'automatisation de l'infrastructure et de l'analytique de sécurité avancée.",
     "sections": [
       {
-        "heading": "Vue d'ensemble",
+        "heading": "Présentation",
         "body": "SentinelOps est une plateforme infonuagique pour collecter, analyser et gérer les événements de sécurité. Elle offre aux équipes de sécurité une interface centralisée pour examiner les alertes, prioriser les incidents, suivre les enquêtes et coordonner les réponses."
       },
       {
-        "heading": "Le problème",
+        "heading": "Besoins",
         "body": "Les événements de sécurité proviennent de nombreux systèmes et arrivent sous des formats différents. Sans normalisation ni priorisation, les équipes peinent à repérer les menaces qui comptent, en comprendre le contexte et répondre de façon cohérente."
       },
       {
-        "heading": "La solution",
+        "heading": "Implémentation",
         "body": "SentinelOps transforme les événements entrants en un modèle normalisé d'événements de sécurité et les fait traverser un flux structuré de gestion d'incidents. La plateforme relie le traitement d'événements infonuagique à une API backend, un stockage persistant et un tableau de bord analyste réactif."
       },
       {
@@ -329,12 +446,12 @@
         "body": "J'ai conçu l'architecture de la plateforme, le schéma d'événements de sécurité, la structure backend, le flux de traitement infonuagique et l'expérience frontend. Je me suis concentré sur des frontières claires entre ingestion, validation, stockage, analyse et réponse aux incidents."
       },
       {
-        "heading": "Défi principal",
+        "heading": "Décisions techniques",
         "body": "Concevoir un système qui traite les événements de façon fiable tout en conservant une traçabilité complète. Chaque événement doit être validé, normalisé et relié à un incident sans perdre l'information dont un analyste a besoin pour enquêter."
       },
       {
-        "heading": "Ce que j'ai appris",
-        "body": "SentinelOps a élargi ma compréhension de l'architecture infonuagique, de la conception d'API sécurisées, des systèmes orientés événements, de la journalisation structurée, de la gestion des échecs et des flux de gestion d'incidents. Cela m'a aussi appris à regarder un système sous l'angle de l'ingénierie et des opérations de sécurité."
+        "heading": "Bilan",
+        "body": "Le processus conserve le lien entre chaque alerte et l’événement brut nécessaire à son investigation."
       }
     ],
     "highlights": [
@@ -348,6 +465,11 @@
       "Journalisation, gestion des erreurs et documentation API",
       "Infrastructure conçue pour la montée en charge et l'automatisation future"
     ],
-    "links": [{ "label": "Dépôt non public", "href": "#" }]
+    "links": [
+      {
+        "label": "Dépôt non public",
+        "href": "#"
+      }
+    ]
   }
 }

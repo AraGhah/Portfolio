@@ -1,7 +1,8 @@
 # Ara Ghahramanyan — Portfolio
 
-A personal, bilingual portfolio with a paper-and-ink design, three featured
-project stories, a filterable archive, and individual case studies.
+A bilingual portfolio led by TradeCatch, Ara’s current business. It includes a
+real product preview, an interactive workflow, other development work, a
+filterable archive, and individual case studies.
 
 ## Run locally
 
@@ -36,7 +37,8 @@ npm run next:build
 Remove-Item Env:PORTFOLIO_BUILD_DIR
 ```
 
-`.next-verify/` is ignored by Git. The regular build directory remains `.next/`.
+`.next-verify/` is ignored by Git. Development uses `.next-dev/` and production
+uses `.next/`, so building the site does not overwrite the running preview.
 
 ## Edit content
 
@@ -51,9 +53,10 @@ Remove-Item Env:PORTFOLIO_BUILD_DIR
 | Portrait | `public/ara.jpg` |
 | Design references and direction | `DESIGN.md` |
 
-The selected projects are Dossier, Trade Catch, and SentinelOps. The other seven
-projects remain in the expandable archive. Changing the featured slug list
-automatically updates the archive without duplicating projects.
+TradeCatch has its own feature section and appears first in case-study navigation.
+Dossier and SentinelOps appear under other work. The other seven projects remain
+in the expandable archive. The featured slug list controls this division without
+duplicating projects.
 
 The existing French project generation script uses
 `scripts/fr-overrides.json`. Update those overrides when maintaining generated
@@ -75,15 +78,21 @@ and email copying are small client-side enhancements.
 
 ## Design and accessibility
 
-System fonts avoid external font requests. The project visuals are illustrative
-diagrams made in HTML and CSS, not product screenshots or usage metrics.
-The portrait and a few small annotations add personality without hiding content
-behind scroll animations.
+System fonts avoid external font requests. The TradeCatch image is a capture of
+the live business website. Decorative notes, paper effects, placeholder diagrams
+and promotional annotations have been removed.
+
+React components use the browser’s Web Animations API for section entrances.
+CSS handles the workflow panel, active tabs, links and hover transitions. The
+reading indicator updates once per animation frame. No animation dependency or
+second application framework is required. Motion respects the visitor’s reduced
+motion preference, and content stays available without JavaScript.
 
 The interface includes visible keyboard focus, a skip link, labelled category
 buttons, live filter counts, email-copy feedback, reduced-motion support,
-responsive layouts, and print styles. Email, phone, GitHub, and LinkedIn are
-ordinary links.
+responsive layouts, and print styles. The TradeCatch workflow supports arrow,
+Home and End keys. Language switching uses a standard link that preserves the
+current project. Email, phone, GitHub, and LinkedIn are ordinary links.
 
 ## Verification
 

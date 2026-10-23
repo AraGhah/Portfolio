@@ -1,8 +1,14 @@
 # A more personal portfolio
 
-The portfolio should read like Ara's working notebook: straightforward, specific,
-and a little playful. Warm paper, forest-green ink, readable type, fine rules,
-and small annotations give the work room to speak.
+The current portfolio puts Ara’s business, TradeCatch, first. The visual system
+uses plain typography, neutral surfaces, a copper accent, and real product
+imagery. Copy describes the work directly. Decorative notes, sparkles and
+placeholder illustrations have been removed.
+
+TradeCatch has the primary feature, an interactive three-stage workflow, a
+founder entry in experience, and a presence across case studies. Other projects
+remain available below it and in the archive. React-powered entrances, scroll
+progress and interface transitions add movement with reduced-motion support.
 
 ## References
 
@@ -13,7 +19,7 @@ and small annotations give the work room to speak.
 - [Brittany Chiang](https://brittanychiang.com/): meaningful project context
   and a readable account of experience.
 
-## Commit-sized work
+## Original commit-sized work
 
 1. Preserve the existing working design.
 2. Record the design direction.

@@ -1,33 +1,33 @@
-export const featuredSlugs = ['dossier', 'trade-catch', 'sentinelops'] as const;
+export const featuredSlugs = ['trade-catch', 'dossier', 'sentinelops'] as const;
 
 type ProjectNote = { summary: string; contribution: string };
 
 const notes: Record<'en' | 'fr', Record<(typeof featuredSlugs)[number], ProjectNote>> = {
   en: {
     dossier: {
-      summary: 'From a list of prospects to research worth reading. A pipeline for more relevant, personal outreach.',
+      summary: 'Research, scoring and email personalization for outbound sales teams.',
       contribution: 'Research pipelines · Data quality · Full stack',
     },
     'trade-catch': {
-      summary: 'A missed call shouldn’t mean a missed job. A bilingual receptionist and follow-up platform for contractors.',
+      summary: 'My business: call handling and follow-up for contractors in Québec.',
       contribution: 'Voice workflows · Automation · Cloud deployment',
     },
     sentinelops: {
-      summary: 'Making sense of the noise. Security events become a structured, prioritised incident workflow.',
+      summary: 'Security event processing and incident management with ASP.NET Core and AWS.',
       contribution: 'Backend architecture · Event processing · AWS',
     },
   },
   fr: {
     dossier: {
-      summary: 'D’une liste de prospects à une recherche utile. Un pipeline pour des échanges plus pertinents et personnels.',
+      summary: 'Recherche, notation et personnalisation de courriels pour les équipes de vente.',
       contribution: 'Pipelines de recherche · Qualité des données · Full stack',
     },
     'trade-catch': {
-      summary: 'Un appel manqué ne devrait pas coûter un contrat. Une réceptionniste bilingue et un suivi pour les entrepreneurs.',
+      summary: 'Mon entreprise : gestion des appels et suivi pour les entrepreneurs du Québec.',
       contribution: 'Appels vocaux · Automatisation · Déploiement',
     },
     sentinelops: {
-      summary: 'Donner du sens au bruit. Les événements de sécurité deviennent un processus de gestion des incidents structuré.',
+      summary: 'Traitement d’événements de sécurité et gestion des incidents avec ASP.NET Core et AWS.',
       contribution: 'Architecture backend · Traitement d’événements · AWS',
     },
   },

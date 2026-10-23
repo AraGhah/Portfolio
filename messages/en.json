@@ -1,47 +1,45 @@
 {
   "nav": {
     "primary": "Main navigation",
-    "hall": "Projects",
+    "hall": "Work",
     "about": "About",
     "skills": "Skills",
     "experience": "Experience",
     "contact": "Contact",
-    "tagline": "Software Engineer building backend systems and full-stack products.",
+    "tagline": "Software developer and founder of TradeCatch.",
     "skipToHall": "Skip to content",
     "languageToggle": "Switch to French",
     "languageTarget": "Français",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "cta": "Let’s talk"
+    "cta": "Let’s talk",
+    "tradecatch": "TradeCatch"
   },
   "hero": {
-    "available": "Open to internships",
+    "eyebrow": "MONTRÉAL, QC · EN / FR",
+    "greeting": "Ara Ghahramanyan",
+    "role": "Software developer & founder of TradeCatch.",
+    "paragraph": "I build web applications, backend systems and business tools. Right now, most of my time goes into TradeCatch, my business for contractors in Québec.",
+    "businessLink": "See what I’m building",
+    "codeLink": "GitHub",
     "location": "Montréal, Québec",
-    "paragraph": "I build the APIs, databases and cloud systems behind useful products. A computer science student who likes understanding how things work — and making them work better.",
-    "enterHall": "Explore my work",
-    "hireMe": "Get in touch",
-    "eyebrow": "Software developer · Montréal",
-    "greeting": "Hi, I’m Ara",
     "current": "Currently building",
-    "currentProject": "Dossier",
-    "currentSuffix": "— research that makes outreach more personal.",
-    "photoNote": "The person behind the code"
+    "available": "Open to development opportunities"
   },
   "hall": {
-    "title": "Selected work",
-    "intro": "A few things I’ve built, and what I learned along the way.",
+    "title": "Other work",
+    "intro": "Applications, systems and team projects.",
     "filterAll": "All",
     "categoryLabel": "Filter by category",
     "categoryFullstack": "Full stack",
     "categorySoftware": "Software & games",
     "doorAria": "Open case study: {title}",
     "empty": "No projects in this category.",
-    "caseStudy": "Read the story",
-    "archive": "More from the workbench",
-    "archiveIntro": "Other projects, experiments and things that taught me something.",
+    "caseStudy": "View project",
+    "archive": "All projects",
+    "archiveIntro": "Coursework, independent projects and experiments.",
     "projectCount": "{count, plural, one {# project} other {# projects}}",
-    "reset": "Show all",
-    "annotation": "Made with a little persistence. ↙"
+    "reset": "Show all"
   },
   "caseStudy": {
     "door": "Project",
@@ -66,17 +64,17 @@
     "Public": "Public"
   },
   "about": {
-    "title": "A little about me",
-    "p1": "I’m Ara Ghahramanyan, a computer science student at Collège de Bois-de-Boulogne in Montréal. I’m drawn to the parts of software you don’t always see: the data model, the API contract, the decision that keeps a system understandable.",
-    "p2": "My projects are how I learn. I build something, find the rough edges, and work out how to make it better. I’m looking for an internship where I can bring that curiosity to a team.",
+    "title": "About",
+    "p1": "I’m a computer science student at Collège de Bois-de-Boulogne and the founder of TradeCatch. I work across the product: API design, databases, the interface and deployment.",
+    "p2": "TradeCatch is my current focus. Alongside it, I’ve built research tools, security systems and games, both independently and as part of a team.",
     "p3": "Outside programming, I train in wrestling, judo and weightlifting, follow financial markets, and spend my summers organizing activities for seniors at a community centre in Montréal.",
-    "offline": "When the laptop closes",
+    "offline": "Outside of work",
     "interests": [
       "Wrestling, judo & weightlifting",
       "Following the financial markets",
       "Community activities for seniors"
     ],
-    "note": "Different interests. The same curiosity.",
+    "note": "",
     "link": "Find me on GitHub"
   },
   "skills": {
@@ -111,10 +109,16 @@
     ],
     "workItems": [
       {
+        "role": "Founder & Developer",
+        "company": "TradeCatch",
+        "date": "2026–present",
+        "body": "Building and running a bilingual call recovery and follow-up service for contractors in Québec. Product development, customer workflows, setup and monitoring."
+      },
+      {
         "role": "Independent Developer",
         "company": "Self-employed",
         "date": "2025–present",
-        "body": "Building Dossier, Trade Catch and SentinelOps: backend architecture, REST APIs, authentication, databases, cloud deployment, and full-stack applications.",
+        "body": "Built Dossier and SentinelOps, with work on backend architecture, REST APIs, authentication, databases and cloud deployment.",
         "tags": [
           "TypeScript",
           "Next.js",
@@ -144,34 +148,58 @@
     ]
   },
   "contact": {
-    "body": "I’m looking for a software development internship in Montréal. If you’re working on something interesting and could use another curious developer, I’d like to hear about it.",
+    "body": "For TradeCatch, development opportunities or a project you’d like to discuss, email me directly.",
     "phone": "Phone",
     "linkedIn": "LinkedIn",
     "copyEmail": "Copy email",
     "copied": "Copied",
-    "title": "Let’s build something useful.",
-    "note": "A conversation is a good place to start.",
+    "title": "Get in touch.",
+    "note": "",
     "copyFailed": "Couldn’t copy. You can select the email address above.",
     "github": "GitHub",
-    "intro": "Have a project or an internship in mind?"
+    "intro": "CONTACT"
   },
   "footer": {
     "copyright": "© {year} Ara Ghahramanyan",
     "backToTop": "Back to top",
-    "tagline": "Made with care in Montréal."
+    "tagline": "Montréal, Québec"
   },
   "Meta": {
     "title": "Ara Ghahramanyan · Software Developer",
-    "description": "Software developer and computer science student in Montréal. Selected projects in backend development, APIs, cloud systems and full stack applications."
+    "description": "Ara Ghahramanyan, software developer in Montréal and founder of TradeCatch. Business software, backend systems and full stack projects."
   },
-  "diagrams": {
-    "dossier": "d / research, refined.",
-    "dossierNote": "A little more personal.",
-    "pipeline": "research → relevance",
-    "trade": "tc / always on the line.",
-    "tradeNote": "Every call is a beginning.",
-    "sentinel": "so / order from the noise.",
-    "events": "events → incidents",
-    "sentinelNote": "A clearer signal."
+  "tradecatch": {
+    "label": "CURRENT BUSINESS",
+    "title": "TradeCatch",
+    "tagline": "Call handling and follow-up for contractors.",
+    "description": "I’m building and running TradeCatch for contractors in Québec. It handles missed calls, collects job details and follows up on estimates in French and English.",
+    "ownership": "I handle the product, development, setup and monitoring.",
+    "visit": "Visit tradecatch.ca",
+    "story": "How I built it",
+    "roleLabel": "My role",
+    "role": "Founder & developer",
+    "focusLabel": "Built for",
+    "focus": "Contractors in Québec",
+    "tools": "Next.js / React / TypeScript / Cloudflare",
+    "preview": "TradeCatch website",
+    "screenshotAlt": "The live TradeCatch homepage, showing its call recovery service",
+    "workflowLabel": "How the product works",
+    "steps": [
+      {
+        "title": "Missed call",
+        "body": "When a contractor can’t answer, TradeCatch starts the follow-up with a text in the caller’s language."
+      },
+      {
+        "title": "Job details",
+        "body": "The workflow collects the service needed, contact details and urgency, then alerts the contractor."
+      },
+      {
+        "title": "Follow-up",
+        "body": "Estimate reminders continue until the customer replies, opts out or the contractor takes over."
+      }
+    ],
+    "businessCase": "My current business",
+    "caseIntro": "I’m the founder and developer of TradeCatch. I build the software and work directly on setup, testing and monitoring.",
+    "nextLink": "Explore the product"
   }
 }

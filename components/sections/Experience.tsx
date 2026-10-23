@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import { Reveal } from '@/components/motion/Reveal';
 import styles from './Experience.module.css';
 
 type Entry = { role: string; company: string; date: string; body: string; tags?: string[] };
@@ -26,11 +27,11 @@ export function Experience() {
   return (
     <section id="experience" className="section-block" aria-labelledby="experience-heading">
       <div className="container-content">
-        <div className="section-heading"><span className="section-number">03 /</span><h2 id="experience-heading">{t('title')}</h2></div>
-        <div className={styles.columns}>
+        <div className="section-heading"><h2 id="experience-heading">{t('title')}</h2></div>
+        <Reveal className={styles.columns}>
           <Entries title={t('work')} items={t.raw('workItems') as Entry[]} />
           <Entries title={t('education')} items={t.raw('educationItems') as Entry[]} />
-        </div>
+        </Reveal>
       </div>
     </section>
   );
