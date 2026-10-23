@@ -110,64 +110,221 @@ export const projectsEn: Project[] = [
     stack: ["React","Vite","Bootstrap","Node.js","Express","MongoDB","Oracle","SQL","PL/SQL","JWT"],
   },
   {
-    slug: 'dossier',
-    doorNumber: '05',
-    order: 5,
-    complexity: 4,
-    category: 'fullstack',
-    doorKind: 'lab',
-    title: 'Dossier',
-    type: 'B2B research and personalization platform',
-    tagline: `A research and personalization system that helps outbound sales teams build relevant cold email campaigns at scale, without giving up on accuracy.`,
-    preview: `A B2B research and personalization pipeline: prospects in, researched and scored, personalized variants out.`,
-    previewStack: 'TypeScript · PostgreSQL · Supabase',
-    status: 'Live',
-    links: [{ label: 'Live site', href: 'https://rundossier.co', primary: true }, { label: 'Repository not public', href: '#' }],
-    meta: [['Role', 'Backend and architecture'], ['Year', '2026'], ['Domain', 'B2B sales research'], ['Status', 'Live']],
-    whyRated: `Multi stage workflow orchestration, external data integrations, research scoring and quality gates, workflow state in PostgreSQL, retries and dead letter handling, plus operational monitoring of real deliveries.`,
-    sections: [
-      { heading: "Overview", body: `Dossier is a research and personalization system designed to help outbound sales teams create relevant cold email campaigns at scale. It combines automated prospect research, data validation, scoring and personalized email generation into a structured delivery pipeline.` },
-      { heading: "Requirements", body: `Most automated cold outreach relies on generic information and repetitive templates. Researching every prospect by hand produces better personalization, but it is far too slow and expensive for campaigns of thousands of prospects.` },
-      { heading: "Implementation", body: `I built a multi stage workflow that collects prospect data, researches relevant business signals, scores the quality of that research, generates several personalized email variants and validates the final output before delivery.` },
-      { heading: "My contribution", body: `I designed the backend architecture, database model, automated workflows, research logic, scoring system, personalization process and quality control gates. I also integrated external data sources and built failure handling for incomplete or unsuccessful jobs.` },
-      { heading: "Technical decisions", body: `External research jobs could fail or return incomplete information. I introduced scoring, fallback states, retries and dead letter tracking so weak results could be identified instead of silently reaching the customer.` },
-      { heading: "What I learned", body: "Research scoring and dead-letter tracking made incomplete results and failed jobs visible for review and retries." },
+    "slug": "dossier",
+    "doorNumber": "05",
+    "order": 5,
+    "complexity": 4,
+    "category": "fullstack",
+    "doorKind": "lab",
+    "title": "Dossier",
+    "type": "B2B research and personalization platform",
+    "tagline": "A research and personalization system that helps outbound sales teams build relevant cold email campaigns at scale, without giving up on accuracy.",
+    "preview": "A B2B research and personalization pipeline: prospects in, researched and scored, personalized variants out.",
+    "previewStack": "TypeScript · PostgreSQL · Supabase",
+    "status": "Live",
+    "links": [
+      {
+        "label": "Live site",
+        "href": "https://rundossier.co",
+        "primary": true
+      },
+      {
+        "label": "Repository not public",
+        "href": "#"
+      }
     ],
-    result: `An external pilot was run with 100 researched prospects. A later 500 prospect delivery surfaced harder lessons about data quality, retry strategy and operational monitoring.`,
-    highlights: ["Prospect ingestion and deduplication","Automated company and prospect research","Research quality scoring","Personalized email variants","Quality control and validation gates","PostgreSQL based workflow state","Retry and dead letter handling","Automated CSV delivery","External API and data provider integrations","Operational reporting and monitoring"],
-    stack: ["TypeScript","Node.js","Express","React","PostgreSQL","Supabase","n8n","Apify"],
+    "meta": [
+      [
+        "Role",
+        "Backend and architecture"
+      ],
+      [
+        "Year",
+        "2026"
+      ],
+      [
+        "Domain",
+        "B2B sales research"
+      ],
+      [
+        "Status",
+        "Live"
+      ]
+    ],
+    "whyRated": "Multi-stage workflow orchestration, PostgreSQL-based state management, external API integrations, research quality scoring, validation gates, partial failure recovery, retry mechanisms, dead-letter tracking, and operational monitoring.",
+    "sections": [
+      {
+        "heading": "Overview",
+        "body": "Dossier is a B2B research and personalization platform designed to help outbound sales teams create relevant cold email campaigns at scale. It automates prospect research, evaluates data quality, generates personalized email variants, and validates results before delivery."
+      },
+      {
+        "heading": "Requirements",
+        "body": "Personalizing cold emails manually takes significant time, especially when working with hundreds of prospects. Existing automation often produces generic messages or relies on incomplete information. The challenge was building a system that could automate research and personalization while maintaining data quality, reliability, and consistency."
+      },
+      {
+        "heading": "Implementation",
+        "body": "I developed a multi-stage backend pipeline that handles prospect ingestion, automated research, quality scoring, email generation, and validation. Each prospect moves through a series of tracked states, allowing the system to identify failures, retry unsuccessful operations, and prevent incomplete results from reaching the final delivery."
+      },
+      {
+        "heading": "My Contribution",
+        "body": "I was responsible for the backend architecture, database design, workflow orchestration, external API integrations, and research logic. I implemented research scoring, failure handling, retry mechanisms, and quality control checks. I also worked on monitoring and improving the pipeline based on issues discovered during real deliveries."
+      },
+      {
+        "heading": "Technical Decisions",
+        "body": "I used PostgreSQL to persist workflow states and track each prospect throughout the pipeline. Research scoring helped distinguish useful information from incomplete results, while validation gates prevented low-quality outputs from progressing. Retry mechanisms and dead-letter tracking made failures easier to investigate and recover from without losing completed work."
+      },
+      {
+        "heading": "Challenges",
+        "body": "One of the biggest challenges was handling unpredictable responses from external research providers. Some requests failed, while others returned incomplete or inconsistent information. Another challenge was managing partial failures across multiple workflow stages, especially when processing larger batches of prospects."
+      },
+      {
+        "heading": "What I Learned",
+        "body": "Moving from a 100-prospect pilot to a 500-prospect delivery showed me how quickly small reliability issues become more noticeable at scale. I learned the importance of tracking individual workflow states, validating data before using it, and designing recovery mechanisms for partial failures. I also learned that successful API requests don't necessarily mean successful results, and that monitoring data quality is just as important as monitoring execution."
+      },
+      {
+        "heading": "Result",
+        "body": "Dossier was tested through an external pilot involving 100 researched prospects, followed by a larger 500-prospect delivery. The second delivery exposed challenges related to data consistency, retry behavior, and operational visibility. These experiences helped identify areas for improving reliability and handling larger workloads."
+      },
+      {
+        "heading": "What I'd Improve",
+        "body": "I'd improve operational visibility by introducing a centralized dashboard for tracking prospect states, failure reasons, and processing times. I'd also explore more adaptive retry strategies, stronger research quality metrics, and better cost tracking for external API usage. These improvements would make the system easier to maintain and more predictable during larger deliveries."
+      }
+    ],
+    "highlights": [
+      "Multi-stage asynchronous workflow orchestration",
+      "Prospect ingestion and deduplication",
+      "Automated company and prospect research",
+      "External API and data provider integrations",
+      "Research quality scoring",
+      "AI-powered email personalization",
+      "Multiple personalized email variants",
+      "Data validation and quality control gates",
+      "PostgreSQL-based workflow state management",
+      "Retry mechanisms and dead-letter tracking",
+      "Automated CSV delivery",
+      "Operational monitoring and failure investigation"
+    ],
+    "stack": [
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "React",
+      "PostgreSQL",
+      "Supabase",
+      "n8n",
+      "Apify"
+    ]
   },
   {
-    slug: 'trade-catch',
-    doorNumber: '06',
-    order: 6,
-    complexity: 4,
-    category: 'fullstack',
-    doorKind: 'slat',
-    title: "TradeCatch",
-    type: "Current business · Founder & developer",
-    tagline: "A bilingual call-handling and follow-up service I’m building and running for contractors in Québec.",
-    preview: "My current business: missed-call recovery, job qualification and estimate follow-up for contractors.",
-    previewStack: 'Next.js · Cloudflare Workers · Twilio',
-    status: "Live",
-    statusNote: "TradeCatch is live and taking founding pilots. I work directly on implementation, testing and monitoring. The current focus is onboarding businesses and improving the service around their call and quote workflows.",
-    links: [
-      { label: 'Live site', href: 'https://tradecatch.ca/', primary: true },
-      { label: 'Repository', href: 'https://github.com/AraGhah/TradeCatch' },
+    "slug": "trade-catch",
+    "doorNumber": "06",
+    "order": 6,
+    "complexity": 4,
+    "category": "fullstack",
+    "doorKind": "slat",
+    "title": "TradeCatch",
+    "type": "Current business · Founder & Developer",
+    "tagline": "A bilingual AI-powered call-handling and lead follow-up platform I'm building for contractors in Québec.",
+    "preview": "My current business: missed-call recovery, job qualification and estimate follow-up for contractors.",
+    "previewStack": "Next.js · Cloudflare Workers · Twilio",
+    "status": "Live",
+    "links": [
+      {
+        "label": "Live site",
+        "href": "https://tradecatch.ca/",
+        "primary": true
+      },
+      {
+        "label": "Repository",
+        "href": "https://github.com/AraGhah/TradeCatch"
+      }
     ],
-    meta: [["Role","Founder & developer"],["Year","2026"],["Market","Contractors in Québec"],["Status","Live"]],
-    whyRated: `An AI receptionist on live phone calls, authentication, telephony and payment integrations, an automated workflow engine, edge deployment, bilingual customer communication and a clear boundary between messaging and deterministic business rules.`,
-    sections: [
-      { heading: "Overview", body: `Trade Catch is a lead recovery and sales follow up platform for contractors and local service businesses. It helps them respond to missed calls, qualify potential customers, schedule appointments, follow up on estimates and track opportunities from one dashboard.` },
-      { heading: "The problem", body: `Contractors lose valuable jobs because they cannot answer calls while working, forget to follow up on estimates, or respond too slowly. The customer simply contacts the next available company, and the contractor loses revenue on a lead they already generated.` },
-      { heading: "The workflow", body: `I designed Trade Catch as an automated workflow that engages missed callers immediately, collects information about the requested service, alerts the contractor and guides qualified customers toward booking. It also follows up on estimates until the customer responds, books the service or opts out.` },
-      { heading: "Phone answering", body: `TradeCatch can now pick up the phone itself. The AI receptionist answers incoming calls 24/7 like a real front desk, in French and English: it greets the caller, understands what they need, collects their details and urgency, and passes a complete job card to the right technician. Diagnosis, discounts and emergencies still stay with the contractor's team.` },
-      { heading: "My work", body: `I developed the product concept, customer journey, website experience and automation logic. I designed how information moves between customer interactions, qualification workflows, contractor alerts, scheduling and reporting. I also handled deployment and Cloudflare configuration.` },
-      { heading: "Business rules", body: `Designing automation that feels immediate and helpful without becoming unpredictable. I kept messaging and lead classification separate from strict rules governing scheduling, pricing, opt outs, safety and escalation. Soft copy can vary. Billing and booking decisions cannot.` },
-      { heading: "Keeping decisions predictable", body: "Scheduling, payments, opt-outs and escalation use explicit business rules. Message generation remains separate from those decisions." },
+    "meta": [
+      [
+        "Role",
+        "Founder & developer"
+      ],
+      [
+        "Year",
+        "2026"
+      ],
+      [
+        "Market",
+        "Contractors in Québec"
+      ],
+      [
+        "Status",
+        "Live"
+      ]
     ],
-    highlights: ["AI receptionist answering calls 24/7 in French and English","Responsive full stack web experience","Bilingual customer communication","Missed call recovery and automated follow up","Lead qualification and contractor alerts","Appointment booking workflow","Estimate follow up sequences","Dashboard for monitoring leads and outcomes","Clear separation between messaging and deterministic rules"],
-    stack: ["Next.js","React","TypeScript","Cloudflare Workers","OpenNext","Twilio","Stripe"],
+    "whyRated": "Bilingual call handling, lead qualification, appointment and estimate workflows, rule-based escalation, customer opt-out management, Cloudflare deployment, and operational monitoring. Conversational AI remains separate from critical business decisions.",
+    "sections": [
+      {
+        "heading": "Overview",
+        "body": "TradeCatch is a bilingual lead management and automation platform designed for contractors and local service businesses. It helps businesses capture missed opportunities, answer incoming calls, qualify leads, schedule appointments, follow up on estimates, and manage customer interactions from one dashboard."
+      },
+      {
+        "heading": "The Problem",
+        "body": "Contractors often miss calls while working on job sites, respond too late to potential customers, or forget to follow up on estimates. These small delays can result in lost jobs and revenue. The challenge was creating a system that could handle customer communication automatically while remaining reliable, professional, and easy for contractors to use."
+      },
+      {
+        "heading": "Implementation",
+        "body": "I designed an automated workflow that connects phone answering, missed-call recovery, lead qualification, appointment scheduling, and estimate follow-ups. Customer information moves through structured workflows that help contractors identify opportunities, prioritize requests, and respond without manually managing every interaction."
+      },
+      {
+        "heading": "AI Phone Receptionist",
+        "body": "TradeCatch includes a bilingual AI receptionist that answers incoming calls 24/7 in French and English. It identifies the caller's needs, collects contact information, determines urgency, and prepares structured job details for the contractor.\n\nI designed the system to separate AI-generated conversations from critical business decisions. Pricing, scheduling restrictions, emergency handling, and escalation follow defined rules rather than relying entirely on AI responses."
+      },
+      {
+        "heading": "My Contribution",
+        "body": "As the founder and developer, I'm responsible for both the technical development and business direction of TradeCatch. I designed the product architecture, customer experience, automation workflows, lead qualification logic, and website. I also manage deployment, Cloudflare configuration, testing, and ongoing improvements.\n\nBeyond development, I work on understanding contractors' needs, defining the service offering, and preparing the platform for real customer operations."
+      },
+      {
+        "heading": "Technical Decisions",
+        "body": "One of the most important decisions was separating conversational AI from business logic. While AI handles natural conversations and information collection, critical operations such as scheduling, opt-outs, pricing restrictions, and escalation follow explicit rules.\n\nI also structured the workflows around individual customer interactions so information collected during a call could be used for contractor notifications, lead qualification, and follow-up processes."
+      },
+      {
+        "heading": "Challenges",
+        "body": "The main challenge was designing automation that feels natural to customers while remaining predictable for businesses.\n\nHandling conversations in both French and English introduced additional considerations around communication, consistency, and customer expectations.\n\nAnother challenge was deciding which actions could be automated and which required human involvement, particularly when dealing with emergencies, uncertain requests, and business-specific scheduling rules."
+      },
+      {
+        "heading": "What I Learned",
+        "body": "Building TradeCatch taught me that conversational AI needs more than a good prompt to work as a business service. I learned the importance of separating flexible conversations from strict operational rules, especially when handling bookings, pricing, and customer requests.\n\nI also gained experience designing workflows around real business processes rather than individual features. Building the product as both a developer and founder helped me understand how technical decisions affect onboarding, reliability, customer experience, and the overall service."
+      },
+      {
+        "heading": "Current Status",
+        "body": "TradeCatch is live and accepting founding pilot businesses in Québec. I'm actively working on onboarding, testing, monitoring, and refining the platform around real contractor workflows.\n\nThe current priority is improving the experience for both contractors and their customers while validating how the service performs in everyday business operations."
+      },
+      {
+        "heading": "What I'd Improve",
+        "body": "My next focus is making the platform more adaptable to different contractor workflows. This includes improving business-specific configuration, refining lead qualification, and making appointment and estimate follow-ups easier to manage.\n\nI'd also like to expand operational reporting so contractors can better understand missed-call recovery, lead activity, appointment conversion, and follow-up performance."
+      }
+    ],
+    "highlights": [
+      "Bilingual AI phone receptionist (French and English)",
+      "24/7 automated incoming call handling",
+      "Missed-call recovery workflows",
+      "Automated lead qualification",
+      "Structured customer and job information collection",
+      "Contractor notifications and lead routing",
+      "Appointment scheduling workflows",
+      "Automated estimate follow-ups",
+      "Rule-based escalation and safety handling",
+      "Separation of conversational AI and business logic",
+      "Customer opt-out management",
+      "Centralized lead management dashboard",
+      "Cloudflare configuration and deployment",
+      "Workflow testing and operational monitoring"
+    ],
+    "stack": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Cloudflare Workers",
+      "OpenNext",
+      "Twilio",
+      "Stripe"
+    ]
   },
   {
     slug: 'internship-desk',
@@ -251,32 +408,101 @@ export const projectsEn: Project[] = [
     stack: ["C#","Unity","AI decision-making","Event driven systems","Gameplay systems"],
   },
   {
-    slug: 'sentinelops',
-    doorNumber: '10',
-    order: 10,
-    complexity: 5,
-    category: 'software',
-    doorKind: 'secure',
-    title: 'SentinelOps',
-    type: 'Cloud native security and incident management platform',
-    tagline: `A platform for collecting, analyzing and managing security events, giving analysts one place to review alerts, prioritize incidents and coordinate a response.`,
-    preview: `Security events arrive from many systems in many formats. SentinelOps normalises them into one model and moves them through a structured incident workflow, so analysts work a ranked queue instead of a firehose.`,
-    previewStack: 'AWS · ASP.NET Core · Incident response',
-    status: 'Public',
-    statusNote: `SentinelOps is an evolving portfolio project. Future phases include deeper AWS integrations, automated enrichment, notification workflows, infrastructure automation and advanced security analytics.`,
-    links: [],
-    meta: [['Role', 'Architecture and full stack'], ['Year', '2026'], ['Domain', 'Security operations'], ['Status', 'Public']],
-    whyRated: `Cloud event ingestion, a normalized security event schema, structured incident workflow, authenticated API, relational persistence, logging and failure handling, in a domain where a bug has real consequences. Scored on architecture and risk, not hours spent.`,
-    sections: [
-      { heading: "Overview", body: `SentinelOps is a cloud native platform for collecting, analyzing and managing security events. It gives security teams a centralized interface for reviewing alerts, prioritizing incidents, tracking investigations and coordinating responses.` },
-      { heading: "Requirements", body: `Security events originate from many systems and arrive in different formats. Without normalization and prioritization, teams struggle to identify the threats that matter, understand their context and respond consistently.` },
-      { heading: "Implementation", body: `SentinelOps transforms incoming events into a standardized security event model and moves them through a structured incident management workflow. The platform connects cloud event processing to a backend API, persistent storage and a responsive analyst dashboard.` },
-      { heading: "My contribution", body: `I designed the platform architecture, security event schema, backend structure, cloud processing workflow and frontend experience. I focused on drawing clear boundaries between event ingestion, validation, storage, analysis and incident response.` },
-      { heading: "Technical decisions", body: `Designing a system that processes events reliably while keeping full traceability. Every event has to be validated, normalized and connected to an incident without losing the information an analyst needs to investigate it.` },
-      { heading: "What I learned", body: "The incident workflow preserves the relationship between each alert and the raw event used to investigate it." },
+    "slug": "sentinelops",
+    "doorNumber": "10",
+    "order": 10,
+    "complexity": 5,
+    "category": "software",
+    "doorKind": "secure",
+    "title": "SentinelOps",
+    "type": "Cloud-Native Security & Incident Management Platform",
+    "tagline": "A security operations platform designed to collect, normalize, and analyze cloud security events while helping analysts investigate threats and manage incidents.",
+    "preview": "Security events arrive from many systems in many formats. SentinelOps normalises them into one model and moves them through a structured incident workflow, so analysts work a ranked queue instead of a firehose.",
+    "previewStack": "AWS · ASP.NET Core · Incident response",
+    "status": "Public",
+    "links": [],
+    "meta": [
+      [
+        "Role",
+        "Architecture and full stack"
+      ],
+      [
+        "Year",
+        "2026"
+      ],
+      [
+        "Domain",
+        "Security operations"
+      ],
+      [
+        "Status",
+        "Public"
+      ]
     ],
-    highlights: ["Standardized security event schema","Cloud based event ingestion and processing","Incident creation, prioritization and status tracking","Structured backend API","Analyst facing React dashboard","PostgreSQL persistence","Authentication, validation and standardized responses","Logging, error handling and API documentation","Infrastructure designed for scale and future automation"],
-    stack: ["AWS","ASP.NET Core","C#","React","PostgreSQL","REST APIs"],
+    "whyRated": "Cloud-based security event ingestion, normalized event schemas, ASP.NET Core API architecture, relational data modeling, incident lifecycle management, authentication, input validation, structured logging, error handling, and separation of responsibilities across the system.",
+    "sections": [
+      {
+        "heading": "Overview",
+        "body": "SentinelOps is a cloud-native security operations platform that centralizes security event monitoring and incident management. It transforms incoming events into structured records, allowing analysts to review alerts, investigate suspicious activity, prioritize potential threats, and track incidents through a centralized dashboard."
+      },
+      {
+        "heading": "The Problem",
+        "body": "Security events come from different systems, each producing logs with different structures and levels of detail. Without a consistent way to process this information, identifying meaningful threats becomes difficult.\n\nThe challenge was designing a system that could standardize incoming security data, preserve important investigation details, and connect events to a structured incident response workflow."
+      },
+      {
+        "heading": "Implementation",
+        "body": "I designed a full-stack architecture connecting cloud-based event processing with an ASP.NET Core backend, PostgreSQL database, and React dashboard.\n\nThe platform processes incoming security events through validation and normalization before storing them in a consistent format. Events can then be associated with incidents, allowing analysts to investigate activity, manage priorities, and track incident status."
+      },
+      {
+        "heading": "My Contribution",
+        "body": "I designed the overall system architecture, security event schema, backend API structure, database model, and frontend experience.\n\nI focused on separating event ingestion, validation, normalization, storage, and incident management into distinct responsibilities.\n\nI also worked on authentication, API response consistency, logging, error handling, and the structure needed to support future cloud integrations."
+      },
+      {
+        "heading": "Technical Decisions",
+        "body": "One of my main architectural decisions was introducing a standardized security event model instead of allowing each data source to define its own structure throughout the application.\n\nThis makes it easier to process events from different sources without constantly changing the backend or dashboard.\n\nI also separated raw event information from incident management data to preserve investigation context while allowing incidents to evolve independently.\n\nAnother important decision was using a relational database to maintain clear relationships between security events, alerts, and incidents."
+      },
+      {
+        "heading": "Challenges",
+        "body": "One of the main challenges was designing a flexible event schema that could represent different types of security activity without losing important details.\n\nAnother challenge was maintaining traceability between an incident and the original events that triggered it.\n\nI also had to consider how the platform should handle invalid event data, processing failures, and inconsistent information without compromising the reliability of the incident management workflow."
+      },
+      {
+        "heading": "What I Learned",
+        "body": "Building SentinelOps taught me that security systems require a different approach to data integrity and error handling. I learned how important it is to preserve original event information while transforming data into a standardized format.\n\nI also gained a better understanding of designing backend systems around clear responsibilities, particularly when separating event processing from incident management.\n\nOne of the most important lessons was that an alert is only useful if an analyst can understand where it came from, what triggered it, and how it relates to other security activity."
+      },
+      {
+        "heading": "Current Status",
+        "body": "SentinelOps is an evolving portfolio project focused on security operations architecture and full-stack development.\n\nThe current foundation covers structured security event processing, incident management, backend APIs, persistent storage, and an analyst-facing dashboard.\n\nFuture development will focus on expanding AWS integrations, introducing automated event enrichment, improving detection capabilities, and strengthening infrastructure automation."
+      },
+      {
+        "heading": "What I'd Improve",
+        "body": "I'd expand the event ingestion system to support additional AWS security services and introduce automated enrichment to provide more context around suspicious activity.\n\nI'd also explore event correlation to identify relationships between alerts that might otherwise appear unrelated.\n\nOther improvements would include real-time notifications, infrastructure as code, more detailed audit logging, and automated testing for security-sensitive workflows."
+      }
+    ],
+    "highlights": [
+      "Cloud-native security operations architecture",
+      "Standardized security event schema",
+      "Cloud-based event ingestion and processing",
+      "Event validation and normalization",
+      "Raw event traceability",
+      "Security alert and incident relationships",
+      "Incident creation and prioritization",
+      "Incident status and lifecycle management",
+      "ASP.NET Core REST API",
+      "PostgreSQL relational data modeling",
+      "React analyst dashboard",
+      "API authentication and input validation",
+      "Structured error handling and logging",
+      "API documentation",
+      "Modular architecture for future integrations"
+    ],
+    "stack": [
+      "AWS",
+      "ASP.NET Core",
+      "C#",
+      "React",
+      "PostgreSQL",
+      "REST APIs"
+    ]
   },
 ];
 

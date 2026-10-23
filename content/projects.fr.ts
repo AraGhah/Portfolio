@@ -23,7 +23,7 @@ export const projectsFr: Project[] = [
       { heading: "Implémentation", body: `J'ai analysé les exigences du système, identifié les acteurs principaux et les cas d'utilisation, créé des diagrammes de cas d'utilisation UML et rédigé des spécifications détaillées expliquant le comportement de chaque interaction majeure.` },
       { heading: "Ma contribution", body: `J'ai participé à l'analyse des exigences, à l'identification des cas d'utilisation, à la modélisation UML et à la création de spécifications fonctionnelles détaillées.` },
       { heading: "Décisions techniques", body: `Transformer une idée de produit large en exigences précises et testables. Chaque cas d'utilisation devait avoir des acteurs clairs, des préconditions, des flux attendus, des scénarios alternatifs et des résultats définis.` },
-      { heading: "Bilan", body: "La spécification décrit les acteurs, les permissions, les préconditions, les scénarios alternatifs et les conflits possibles entre utilisateurs." },
+      { heading: "Bilan", body: `La spécification décrit les acteurs, les permissions, les préconditions, les scénarios alternatifs et les conflits possibles entre utilisateurs.` },
     ],
     highlights: ["Identification des acteurs du système","Analyse des exigences fonctionnelles","Diagrammes de cas d'utilisation UML","Descriptions détaillées des cas d'utilisation","Définition des interactions utilisateur","Frontières et responsabilités du système","Documentation préparée pour l'implémentation"],
     stack: ["UML","Use case diagrams","Requirements engineering","System analysis","Technical documentation"],
@@ -33,7 +33,7 @@ export const projectsFr: Project[] = [
     doorNumber: "02",
     order: 2,
     complexity: 3,
-    category: 'api',
+    category: "api",
     doorKind: "vault",
     title: "Banking System API",
     type: "Application backend et base de données · Projet d'équipe académique",
@@ -50,7 +50,7 @@ export const projectsFr: Project[] = [
       { heading: "Implémentation", body: `Notre équipe a développé des points de terminaison REST pour les opérations principales et les a connectés à la logique SQL et PL/SQL. L'API offrait une interface structurée par laquelle les applications clientes pouvaient interagir avec les données bancaires.` },
       { heading: "Ma contribution", body: `J'ai contribué à la conception et à l'implémentation des routes de l'API et des opérations sur la base de données. J'ai travaillé avec les requêtes GET, POST, PUT et DELETE et aidé à relier chaque opération à la logique CRUD appropriée.` },
       { heading: "Décisions techniques", body: `Garantir que chaque requête API exécute la bonne opération sur la base de données et retourne un résultat cohérent. Cela exigeait une coordination minutieuse entre la logique des routes, les requêtes SQL et les procédures stockées.` },
-      { heading: "Bilan", body: "Les tests de séquences d’appels API permettent de vérifier la cohérence des comptes et des transactions après chaque modification." },
+      { heading: "Bilan", body: `Les tests de séquences d’appels API permettent de vérifier la cohérence des comptes et des transactions après chaque modification.` },
     ],
     highlights: ["Structure d'API REST","Points de terminaison GET, POST, PUT et DELETE","Opérations sur base de données relationnelle","Requêtes SQL","Procédures et logique PL/SQL","Fonctionnalité CRUD","Gestion des requêtes et des réponses","Développement en équipe"],
     stack: ["JavaScript","SQL","PL/SQL","Oracle Database","REST APIs"],
@@ -77,7 +77,7 @@ export const projectsFr: Project[] = [
       { heading: "Implémentation", body: `J'ai implémenté le comportement des ennemis avec une machine à états et utilisé le patron Observer orienté événements pour coordonner les réactions. J'ai aussi créé une mécanique de leurre via l'interface ICibleEnnemi, permettant aux ennemis de viser différents objets selon un contrat commun.` },
       { heading: "Ma contribution", body: `J'ai développé le comportement central des ennemis, implémenté le système de leurre, connecté les réactions orientées événements et écrit des tests unitaires pour la logique de gameplay importante.` },
       { heading: "Décisions techniques", body: `Empêcher la logique ennemie de devenir une grande collection de conditions. Diviser le comportement en états et programmer contre une interface a rendu le système plus facile à étendre, tester et comprendre.` },
-      { heading: "Bilan", body: "Une interface de ciblage commune permet aux ennemis de réagir au joueur et aux leurres sans systèmes distincts." },
+      { heading: "Bilan", body: `Une interface de ciblage commune permet aux ennemis de réagir au joueur et aux leurres sans systèmes distincts.` },
     ],
     highlights: ["Comportement ennemi par machine à états","Comportement de gameplay orienté événements","Patron de conception Observer","Sélection de cible basée sur les interfaces","Mécanique de gameplay leurre","Architecture orientée objet","Tests unitaires","Composants réutilisables et maintenables"],
     stack: ["C#","Unity","State machines","Observer pattern","Interfaces","Unit testing"],
@@ -104,7 +104,7 @@ export const projectsFr: Project[] = [
       { heading: "Implémentation", body: `Nous avons développé une application Web complète avec une interface React, un backend Node.js, des routes API REST, de l'authentification et une persistance en base de données. L'application séparait la présentation frontend de la logique backend et de l'accès aux données.` },
       { heading: "Ma contribution", body: `J'étais principalement responsable du développement backend. J'ai créé les routes API, implémenté la logique côté serveur, intégré la base de données et ajouté l'authentification par JWT. J'ai aussi collaboré avec l'équipe frontend pour définir les structures de requêtes et de réponses.` },
       { heading: "Décisions techniques", body: `Maintenir des données et un comportement d'API cohérents pendant que plusieurs membres de l'équipe travaillaient sur différentes parties de l'application. Des définitions de routes claires et un flux de travail Git nous ont permis d'intégrer les composants de façon fiable.` },
-      { heading: "Bilan", body: "Des formats de requête et de réponse communs facilitent l’intégration du backend avec le travail de l’équipe frontend." },
+      { heading: "Bilan", body: `Des formats de requête et de réponse communs facilitent l’intégration du backend avec le travail de l’équipe frontend.` },
     ],
     highlights: ["Inscription et authentification des utilisateurs","Routes protégées par JWT","Gestion des forfaits et des destinations","Fonctionnalité de réservation","Favoris et commentaires","Opérations CRUD RESTful","Intégration frontend et backend","Flux de travail d'équipe avec Git","Opérations sur bases relationnelles et documentaires"],
     stack: ["React","Vite","Bootstrap","Node.js","Express","MongoDB","Oracle","SQL","PL/SQL","JWT"],
@@ -119,22 +119,24 @@ export const projectsFr: Project[] = [
     title: "Dossier",
     type: "Plateforme B2B de recherche et de personnalisation",
     tagline: `Un système de recherche et de personnalisation qui aide les équipes de vente sortantes à bâtir des campagnes de courriel à froid pertinentes à grande échelle, sans sacrifier la précision.`,
-    preview: `Un pipeline B2B de recherche et de personnalisation : prospects en entrée, recherche et notation, variantes personnalisées en sortie.`,
+    preview: `Un pipeline B2B de recherche et de personnalisation : prospects en entrée, recherche et notation, variantes personnalisées en sortie. Un pilote de 100 prospects a atteint un taux de réponse de 9,6 %.`,
     previewStack: "TypeScript · PostgreSQL · Supabase",
     status: "Live",
-    links: [{ label: "Site en ligne", href: "https://rundossier.co", primary: true }, { label: "Dépôt non public", href: "#" }],
+    links: [{ label: "Site en ligne ↗", href: "https://rundossier.co", primary: true }, { label: "Dépôt non public", href: "#" }],
     meta: [["Rôle", "Backend et architecture"], ["Année", "2026"], ["Domaine", "Recherche commerciale B2B"], ["Statut", "En ligne"]],
-    whyRated: `Orchestration de flux de travail multiphase, intégrations de données externes, notation de la recherche et garde-fous qualité, état des flux dans PostgreSQL, nouvelles tentatives et gestion des lettres mortes, plus surveillance opérationnelle de livraisons réelles.`,
+    whyRated: `Orchestration de workflows en plusieurs étapes, gestion des états dans PostgreSQL, intégrations d’API externes, notation de la qualité des recherches, contrôles de validation, récupération après échecs partiels, mécanismes de reprise, suivi des tâches en échec définitif et surveillance opérationnelle.`,
     sections: [
-      { heading: "Présentation", body: `Dossier est un système de recherche et de personnalisation conçu pour aider les équipes de vente sortantes à créer des campagnes de courriel à froid pertinentes à grande échelle. Il combine recherche automatisée de prospects, validation des données, notation et génération de courriels personnalisés dans un pipeline de livraison structuré.` },
-      { heading: "Besoins", body: `La plupart des démarches à froid automatisées s'appuient sur de l'information générique et des modèles répétitifs. Rechercher chaque prospect à la main produit une meilleure personnalisation, mais c'est beaucoup trop lent et coûteux pour des campagnes de milliers de prospects.` },
-      { heading: "Implémentation", body: `J'ai bâti un flux de travail multiphase qui collecte les données de prospects, recherche des signaux d'affaires pertinents, note la qualité de cette recherche, génère plusieurs variantes de courriel personnalisées et valide le résultat final avant la livraison.` },
-      { heading: "Ma contribution", body: `J'ai conçu l'architecture backend, le modèle de base de données, les flux automatisés, la logique de recherche, le système de notation, le processus de personnalisation et les garde-fous de contrôle qualité. J'ai aussi intégré des sources de données externes et bâti la gestion des échecs pour les tâches incomplètes ou non réussies.` },
-      { heading: "Décisions techniques", body: `Les tâches de recherche externes pouvaient échouer ou retourner de l'information incomplète. J'ai introduit la notation, des états de repli, des nouvelles tentatives et le suivi des lettres mortes pour que les résultats faibles soient identifiés au lieu d'atteindre le client en silence.` },
-      { heading: "Bilan", body: "La notation de la recherche et le suivi des tâches en échec rendent les résultats incomplets visibles pour la révision et les nouvelles tentatives." },
+      { heading: "Vue d’ensemble", body: `Dossier est une plateforme B2B de recherche et de personnalisation conçue pour aider les équipes de prospection commerciale à créer des campagnes de courriels à froid pertinentes à grande échelle. Elle automatise la recherche sur les prospects, évalue la qualité des données, génère des variantes de courriels personnalisés et valide les résultats avant la livraison.` },
+      { heading: "Exigences", body: `Personnaliser manuellement des courriels à froid prend beaucoup de temps, surtout lorsqu’il faut traiter des centaines de prospects. Les automatisations existantes produisent souvent des messages génériques ou s’appuient sur des informations incomplètes. Le défi était de construire un système capable d’automatiser la recherche et la personnalisation tout en maintenant la qualité des données, la fiabilité et la cohérence.` },
+      { heading: "Implémentation", body: `J’ai développé un pipeline backend en plusieurs étapes qui prend en charge l’ingestion des prospects, la recherche automatisée, la notation de la qualité, la génération de courriels et la validation. Chaque prospect passe par une série d’états suivis, ce qui permet au système de repérer les échecs, de relancer les opérations infructueuses et d’empêcher la livraison de résultats incomplets.` },
+      { heading: "Ma contribution", body: `J’étais responsable de l’architecture backend, de la conception de la base de données, de l’orchestration des workflows, des intégrations d’API externes et de la logique de recherche. J’ai mis en place la notation des recherches, la gestion des échecs, les mécanismes de reprise et les contrôles de qualité. J’ai également travaillé sur la surveillance et l’amélioration du pipeline à partir des problèmes découverts lors de livraisons réelles.` },
+      { heading: "Décisions techniques", body: `J’ai utilisé PostgreSQL pour persister les états des workflows et suivre chaque prospect tout au long du pipeline. La notation des recherches aidait à distinguer les informations utiles des résultats incomplets, tandis que les contrôles de validation empêchaient les sorties de faible qualité de progresser. Les mécanismes de reprise et le suivi des tâches en échec définitif facilitaient l’analyse et la récupération sans perdre le travail déjà terminé.` },
+      { heading: "Défis", body: `L’un des principaux défis était de gérer les réponses imprévisibles des fournisseurs de recherche externes. Certaines requêtes échouaient, tandis que d’autres renvoyaient des informations incomplètes ou incohérentes. Un autre défi était la gestion des échecs partiels entre plusieurs étapes du workflow, particulièrement lors du traitement de lots plus importants.` },
+      { heading: "Ce que j’ai appris", body: `Passer d’un pilote de 100 prospects à une livraison de 500 prospects m’a montré à quel point les petits problèmes de fiabilité deviennent rapidement plus visibles à grande échelle. J’ai appris l’importance de suivre les états de chaque workflow, de valider les données avant de les utiliser et de concevoir des mécanismes de récupération pour les échecs partiels. J’ai aussi appris qu’une requête API réussie ne signifie pas nécessairement un résultat réussi, et que surveiller la qualité des données est aussi important que surveiller l’exécution.` },
+      { heading: "Résultat", body: `Dossier a été testé lors d’un pilote externe portant sur 100 prospects documentés, suivi d’une livraison plus importante de 500 prospects. La deuxième livraison a révélé des difficultés liées à la cohérence des données, au comportement des reprises et à la visibilité opérationnelle. Ces expériences ont permis de repérer les améliorations nécessaires à la fiabilité et au traitement de volumes plus importants.` },
+      { heading: "Ce que j’améliorerais", body: `J’améliorerais la visibilité opérationnelle en ajoutant un tableau de bord centralisé pour suivre les états des prospects, les raisons des échecs et les temps de traitement. J’explorerais aussi des stratégies de reprise plus adaptatives, des mesures plus solides de la qualité des recherches et un meilleur suivi des coûts des API externes. Ces améliorations rendraient le système plus facile à maintenir et plus prévisible lors de livraisons importantes.` },
     ],
-    result: `Un pilote externe a été mené avec 100 prospects recherchés. Une livraison ultérieure de 500 prospects a révélé des leçons plus exigeantes sur la qualité des données, la stratégie de nouvelles tentatives et la surveillance opérationnelle.`,
-    highlights: ["Ingestion et déduplication de prospects","Recherche automatisée d'entreprises et de prospects","Notation de la qualité de la recherche","Variantes de courriel personnalisées","Garde-fous de contrôle qualité et de validation","État des flux de travail basé sur PostgreSQL","Nouvelles tentatives et gestion des lettres mortes","Livraison automatisée en CSV","Intégrations d'API externes et de fournisseurs de données","Rapports et surveillance opérationnels"],
+    highlights: ["Orchestration asynchrone de workflows en plusieurs étapes","Ingestion et déduplication des prospects","Recherche automatisée sur les entreprises et les prospects","Intégrations d’API et de fournisseurs de données externes","Notation de la qualité des recherches","Personnalisation de courriels assistée par IA","Plusieurs variantes de courriels personnalisés","Validation des données et contrôles de qualité","Gestion des états des workflows dans PostgreSQL","Mécanismes de reprise et suivi des tâches en échec définitif","Livraison automatisée de fichiers CSV","Surveillance opérationnelle et analyse des échecs"],
     stack: ["TypeScript","Node.js","Express","React","PostgreSQL","Supabase","n8n","Apify"],
   },
   {
@@ -146,27 +148,42 @@ export const projectsFr: Project[] = [
     doorKind: "slat",
     title: "TradeCatch",
     type: "Entreprise actuelle · Fondateur et développeur",
-    tagline: "Un service bilingue de gestion des appels et de suivi que je développe et exploite pour les entrepreneurs du Québec.",
-    preview: "Mon entreprise actuelle : récupération d’appels manqués, qualification des demandes et suivi des soumissions.",
+    tagline: `Une plateforme bilingue de gestion des appels et de suivi des prospects assistée par IA que je construis pour les entrepreneurs du Québec.`,
+    preview: `Mon entreprise actuelle : récupération d’appels manqués, qualification des demandes et suivi des soumissions.`,
     previewStack: "Next.js · Cloudflare Workers · Twilio",
     status: "Live",
-    statusNote: "TradeCatch est en ligne et accueille ses premiers projets pilotes. Je m’occupe de l’implémentation, des tests et du suivi. La priorité est d’intégrer des entreprises et d’adapter le service à leurs processus d’appels et de soumissions.",
-    links: [
-      { label: "Site en ligne", href: "https://tradecatch.ca/", primary: true },
-      { label: "Dépôt", href: "https://github.com/AraGhah/TradeCatch" },
-    ],
-    meta: [["Rôle","Fondateur et développeur"],["Année","2026"],["Marché","Entrepreneurs du Québec"],["Statut","Live"]],
-    whyRated: `Une réceptionniste IA sur de vrais appels téléphoniques, authentification, intégrations téléphonie et paiement, moteur de flux automatisés, déploiement en périphérie, communication client bilingue et frontière nette entre la messagerie et les règles d'affaires déterministes.`,
+    links: [{ label: "Dépôt non public", href: "#" }],
+    meta: [["Rôle", "Fondateur et développeur"], ["Année", "2026"], ["Marché", "Entrepreneurs du Québec"], ["Statut", "Live"]],
+    whyRated: `Gestion bilingue des appels, qualification des prospects, parcours de rendez-vous et de relance de soumissions, escalades fondées sur des règles, gestion des désabonnements, déploiement Cloudflare et surveillance opérationnelle. L’IA conversationnelle reste séparée des décisions commerciales critiques.`,
     sections: [
-      { heading: "Présentation", body: `Trade Catch est une plateforme de récupération de prospects et de suivi des ventes pour les entrepreneurs et les entreprises de services locaux. Elle les aide à répondre aux appels manqués, qualifier les clients potentiels, planifier des rendez-vous, relancer les soumissions et suivre les occasions depuis un tableau de bord.` },
-      { heading: "Le problème", body: `Les entrepreneurs perdent des contrats précieux parce qu'ils ne peuvent pas répondre aux appels pendant qu'ils travaillent, oublient de relancer les soumissions ou répondent trop lentement. Le client contacte simplement la prochaine entreprise disponible, et l'entrepreneur perd un revenu sur un prospect qu'il avait déjà généré.` },
-      { heading: "Le processus", body: `J'ai conçu Trade Catch comme un flux automatisé qui engage immédiatement les appelants manqués, recueille l'information sur le service demandé, alerte l'entrepreneur et oriente les clients qualifiés vers la prise de rendez-vous. Il relance aussi les soumissions jusqu'à ce que le client réponde, réserve le service ou se désinscrive.` },
-      { heading: "Réception des appels", body: `TradeCatch peut maintenant décrocher le téléphone lui-même. La réceptionniste IA répond aux appels entrants 24 h sur 24, 7 jours sur 7, comme une vraie réception, en français et en anglais : elle accueille l'appelant, comprend son besoin, recueille ses coordonnées et l'urgence, puis transmet une fiche de travail complète au bon technicien. Le diagnostic, les rabais et les urgences restent entre les mains de l'équipe de l'entrepreneur.` },
-      { heading: "Mon travail", body: `J'ai développé le concept produit, le parcours client, l'expérience du site Web et la logique d'automatisation. J'ai conçu la circulation de l'information entre les interactions client, les flux de qualification, les alertes entrepreneur, la planification et les rapports. J'ai aussi géré le déploiement et la configuration Cloudflare.` },
-      { heading: "Règles d’affaires", body: `Concevoir une automatisation qui paraît immédiate et utile sans devenir imprévisible. J'ai séparé la messagerie et la classification des prospects des règles strictes qui régissent la planification, la tarification, les désinscriptions, la sécurité et l'escalade. Le texte peut varier. Les décisions de facturation et de réservation, non.` },
-      { heading: "Prévisibilité des décisions", body: "La planification, les paiements, les désinscriptions et l’escalade suivent des règles explicites. La génération des messages reste séparée de ces décisions." },
+      { heading: "Vue d’ensemble", body: `TradeCatch est une plateforme bilingue de gestion des prospects et d’automatisation conçue pour les entrepreneurs et les entreprises de services locaux. Elle aide les entreprises à récupérer les occasions manquées, à répondre aux appels entrants, à qualifier les prospects, à planifier des rendez-vous, à relancer les soumissions et à gérer les interactions clients depuis un seul tableau de bord.` },
+      { heading: "Le problème", body: `Les entrepreneurs manquent souvent des appels lorsqu’ils travaillent sur un chantier, répondent trop tard aux clients potentiels ou oublient de relancer leurs soumissions. Ces petits délais peuvent entraîner la perte de contrats et de revenus. Le défi était de créer un système capable de gérer automatiquement les communications clients tout en restant fiable, professionnel et facile à utiliser pour les entrepreneurs.` },
+      { heading: "Implémentation", body: `J’ai conçu un workflow automatisé qui relie la réponse téléphonique, la récupération des appels manqués, la qualification des prospects, la prise de rendez-vous et les relances de soumissions. Les informations clients passent par des parcours structurés qui aident les entrepreneurs à repérer les occasions, à prioriser les demandes et à répondre sans gérer manuellement chaque interaction.` },
+      { heading: "Réceptionniste téléphonique IA", body: `TradeCatch comprend une réceptionniste IA bilingue qui répond aux appels entrants 24 h sur 24, en français et en anglais. Elle identifie les besoins de l’appelant, recueille ses coordonnées, détermine le degré d’urgence et prépare des informations structurées sur le travail pour l’entrepreneur.
+
+J’ai conçu le système pour séparer les conversations générées par IA des décisions commerciales critiques. Les prix, les restrictions de planification, la gestion des urgences et les escalades suivent des règles définies plutôt que de dépendre entièrement des réponses de l’IA.` },
+      { heading: "Ma contribution", body: `En tant que fondateur et développeur, je suis responsable du développement technique et de l’orientation commerciale de TradeCatch. J’ai conçu l’architecture du produit, l’expérience client, les workflows d’automatisation, la logique de qualification des prospects et le site Web. Je gère aussi le déploiement, la configuration Cloudflare, les tests et les améliorations continues.
+
+Au-delà du développement, je travaille à comprendre les besoins des entrepreneurs, à définir l’offre de service et à préparer la plateforme pour de véritables opérations clients.` },
+      { heading: "Décisions techniques", body: `L’une des décisions les plus importantes a été de séparer l’IA conversationnelle de la logique métier. L’IA prend en charge les conversations naturelles et la collecte d’informations, tandis que les opérations critiques comme la planification, les désabonnements, les restrictions de prix et les escalades suivent des règles explicites.
+
+J’ai aussi structuré les workflows autour de chaque interaction client afin que les informations recueillies pendant un appel puissent servir aux notifications de l’entrepreneur, à la qualification des prospects et aux suivis.` },
+      { heading: "Défis", body: `Le principal défi était de concevoir une automatisation qui semble naturelle aux clients tout en restant prévisible pour les entreprises.
+
+La gestion des conversations en français et en anglais a ajouté des considérations liées à la communication, à la cohérence et aux attentes des clients.
+
+Un autre défi était de déterminer quelles actions pouvaient être automatisées et lesquelles exigeaient une intervention humaine, particulièrement pour les urgences, les demandes incertaines et les règles de planification propres à chaque entreprise.` },
+      { heading: "Ce que j’ai appris", body: `Construire TradeCatch m’a appris que l’IA conversationnelle a besoin de plus qu’une bonne instruction pour fonctionner comme service aux entreprises. J’ai appris l’importance de séparer les conversations flexibles des règles opérationnelles strictes, particulièrement pour les réservations, les prix et les demandes clients.
+
+J’ai aussi acquis de l’expérience dans la conception de workflows autour de véritables processus d’affaires plutôt que de fonctionnalités isolées. Construire le produit comme développeur et fondateur m’a aidé à comprendre comment les décisions techniques influencent l’intégration des clients, la fiabilité, l’expérience client et le service dans son ensemble.` },
+      { heading: "État actuel", body: `TradeCatch est en ligne et accueille des entreprises pilotes fondatrices au Québec. Je travaille activement sur l’intégration des clients, les tests, la surveillance et l’amélioration de la plateforme autour de véritables processus d’entrepreneurs.
+
+La priorité actuelle est d’améliorer l’expérience des entrepreneurs et de leurs clients tout en validant le fonctionnement du service dans les opérations quotidiennes.` },
+      { heading: "Ce que j’améliorerais", body: `Mon prochain objectif est de rendre la plateforme plus adaptable aux différents processus des entrepreneurs. Cela comprend l’amélioration de la configuration propre à chaque entreprise, la qualification des prospects et la gestion des suivis de rendez-vous et de soumissions.
+
+J’aimerais aussi développer les rapports opérationnels pour aider les entrepreneurs à mieux comprendre la récupération des appels manqués, l’activité des prospects, la conversion en rendez-vous et la performance des suivis.` },
     ],
-    highlights: ["Réceptionniste IA qui répond aux appels 24 h sur 24 en français et en anglais","Expérience Web full stack réactive","Communication client bilingue","Récupération d'appels manqués et suivi automatisé","Qualification de prospects et alertes entrepreneur","Flux de prise de rendez-vous","Séquences de suivi de soumissions","Tableau de bord pour suivre prospects et résultats","Séparation claire entre messagerie et règles déterministes"],
+    highlights: ["Réceptionniste téléphonique IA bilingue en français et en anglais","Gestion automatisée des appels entrants 24 h sur 24","Workflows de récupération des appels manqués","Qualification automatisée des prospects","Collecte structurée des informations clients et des travaux","Notifications aux entrepreneurs et acheminement des prospects","Workflows de prise de rendez-vous","Relances automatisées de soumissions","Escalades et gestion de la sécurité fondées sur des règles","Séparation de l’IA conversationnelle et de la logique métier","Gestion des désabonnements des clients","Tableau de bord centralisé de gestion des prospects","Configuration et déploiement Cloudflare","Tests des workflows et surveillance opérationnelle"],
     stack: ["Next.js","React","TypeScript","Cloudflare Workers","OpenNext","Twilio","Stripe"],
   },
   {
@@ -191,7 +208,7 @@ export const projectsFr: Project[] = [
       { heading: "Implémentation", body: `J'ai conçu et développé la plateforme en tant que projet individuel, en combinant une interface Web avec des flux automatisés pour la découverte de stages, l'appariement basé sur le CV, la recherche de recruteurs, la génération de candidatures personnalisées et le suivi des relances.` },
       { heading: "Ma contribution", body: `J'ai pris en charge l'ensemble du projet, de l'interface et du parcours de candidature jusqu'à l'architecture d'automatisation et aux fonctionnalités assistées par l'IA.` },
       { heading: "Décisions techniques", body: `Le principal risque était une automatisation erronée. Trouver le mauvais contact, postuler à un poste non pertinent ou générer de l'information inexacte rendrait le système moins utile que de postuler manuellement.` },
-      { heading: "Bilan", body: "Le processus garde visibles la correspondance des postes, le choix des destinataires et le contenu des candidatures pour permettre une révision." },
+      { heading: "Bilan", body: `Le processus garde visibles la correspondance des postes, le choix des destinataires et le contenu des candidatures pour permettre une révision.` },
     ],
     highlights: ["Découverte de stages","Appariement basé sur le CV","Recherche de recruteurs","Courriels et lettres de présentation personnalisés","Suivi des candidatures","Suivi des relances","Révision humaine des étapes automatisées","Flux de candidature unifié"],
     stack: ["Full stack web","Workflow automation","LLM integration","AI assisted writing"],
@@ -218,7 +235,7 @@ export const projectsFr: Project[] = [
       { heading: "Implémentation", body: `J'ai conçu la plateforme autour de plusieurs agents IA spécialisés aux responsabilités distinctes, dont la recherche de marché, l'analyse d'entreprises, la surveillance du portefeuille et les questions-réponses sur l'investissement. Ces systèmes sont reliés par un tableau de bord unifié.` },
       { heading: "Ma contribution", body: `J'ai conçu l'architecture multiagent et le flux principal du produit, y compris la façon dont la recherche, les données de portefeuille, l'information de marché et l'analyse générée par l'IA sont organisées et présentées à l'utilisateur.` },
       { heading: "Décisions techniques", body: `Le plus grand risque était de traiter l'analyse générée par l'IA comme un fait. L'information financière change rapidement, et une information inexacte ou périmée peut complètement changer l'interprétation d'un investissement.` },
-      { heading: "Bilan", body: "Le tableau de bord distingue les données sources des analyses générées pour permettre de consulter les informations derrière chaque réponse." },
+      { heading: "Bilan", body: `Le tableau de bord distingue les données sources des analyses générées pour permettre de consulter les informations derrière chaque réponse.` },
     ],
     highlights: ["Architecture multiagent","Agent de recherche de marché","Agent d'analyse d'entreprises","Surveillance du portefeuille","Questions-réponses sur l'investissement","Analyse des nouvelles financières","Données sourcées séparées de l'analyse générée","Tableau de bord de recherche unifié"],
     stack: ["Full stack web","Multi agent AI","LLM integration","Financial data","Dashboard design"],
@@ -245,7 +262,7 @@ export const projectsFr: Project[] = [
       { heading: "Implémentation", body: `Notre équipe a développé la simulation dans Unity en C#. Le projet combine gestion de ville, systèmes de ressources, prise de décision par IA et événements perturbateurs comme des tornades, des pannes de courant, des attaques de bandits et une destruction à grande échelle.` },
       { heading: "Ma contribution", body: `Mon objectif était de rendre la compétition plus difficile et plus imprévisible. J'ai travaillé sur des événements de crise qui interrompent le développement, forcent à la fois le joueur et l'IA à s'adapter et empêchent l'une ou l'autre ville de progresser trop facilement.` },
       { heading: "Décisions techniques", body: `Le principal défi était de créer des événements capables d'affecter les deux camps sans rendre la simulation injuste. L'IA devait aussi réagir de façon logique aux situations imprévues au lieu de suivre une stratégie entièrement figée.` },
-      { heading: "Bilan", body: "Les mêmes crises permettent d’observer comment le joueur et la ville contrôlée par l’ordinateur réagissent aux changements." },
+      { heading: "Bilan", body: `Les mêmes crises permettent d’observer comment le joueur et la ville contrôlée par l’ordinateur réagissent aux changements.` },
     ],
     highlights: ["Compétition humain contre IA","Ville rivale contrôlée par une IA","Gestion de ville et de ressources","Systèmes de crise orientés événements","Événements de tornade et de panne de courant","Attaques de bandits","Destruction à grande échelle","Développement en équipe"],
     stack: ["C#","Unity","AI decision-making","Event driven systems","Gameplay systems"],
@@ -258,24 +275,56 @@ export const projectsFr: Project[] = [
     category: "software",
     doorKind: "secure",
     title: "SentinelOps",
-    type: "Plateforme infonuagique de sécurité et de gestion d'incidents",
-    tagline: `Une plateforme pour collecter, analyser et gérer les événements de sécurité, offrant aux analystes un endroit unique pour examiner les alertes, prioriser les incidents et coordonner une réponse.`,
+    type: "Plateforme infonuagique de sécurité et de gestion des incidents",
+    tagline: `Une plateforme d’opérations de sécurité conçue pour recueillir, normaliser et analyser les événements de sécurité infonuagiques tout en aidant les analystes à enquêter sur les menaces et à gérer les incidents.`,
     preview: `Les événements de sécurité arrivent de nombreux systèmes sous de nombreux formats. SentinelOps les normalise en un seul modèle et les fait traverser un flux de gestion d'incidents structuré, pour que les analystes traitent une file priorisée plutôt qu'un torrent.`,
     previewStack: "AWS · ASP.NET Core · Incident response",
     status: "Public",
-    statusNote: `SentinelOps est un projet de portfolio en évolution. Les phases à venir incluent des intégrations AWS plus poussées, un enrichissement automatisé, des flux de notification, l'automatisation de l'infrastructure et de l'analytique de sécurité avancée.`,
-    links: [],
-    meta: [["Rôle", "Architecture et full stack"], ["Année", "2026"], ["Domaine", "Opérations de sécurité"], ["Statut", "Public"]],
-    whyRated: `Ingestion d'événements infonuagiques, schéma normalisé d'événements de sécurité, flux d'incidents structuré, API authentifiée, persistance relationnelle, journalisation et gestion des échecs, dans un domaine où un bogue a de vraies conséquences. Évalué sur l'architecture et le risque, pas les heures passées.`,
+    links: [{ label: "Dépôt non public", href: "#" }],
+    meta: [["Rôle", "Architecture et full stack"], ["Année", "2026"], ["Domaine", "Opérations de sécurité"], ["Statut", "En développement"]],
+    whyRated: `Ingestion infonuagique d’événements de sécurité, schémas d’événements normalisés, architecture d’API ASP.NET Core, modélisation relationnelle des données, gestion du cycle de vie des incidents, authentification, validation des entrées, journalisation structurée, gestion des erreurs et séparation des responsabilités dans le système.`,
     sections: [
-      { heading: "Présentation", body: `SentinelOps est une plateforme infonuagique pour collecter, analyser et gérer les événements de sécurité. Elle offre aux équipes de sécurité une interface centralisée pour examiner les alertes, prioriser les incidents, suivre les enquêtes et coordonner les réponses.` },
-      { heading: "Besoins", body: `Les événements de sécurité proviennent de nombreux systèmes et arrivent sous des formats différents. Sans normalisation ni priorisation, les équipes peinent à repérer les menaces qui comptent, en comprendre le contexte et répondre de façon cohérente.` },
-      { heading: "Implémentation", body: `SentinelOps transforme les événements entrants en un modèle normalisé d'événements de sécurité et les fait traverser un flux structuré de gestion d'incidents. La plateforme relie le traitement d'événements infonuagique à une API backend, un stockage persistant et un tableau de bord analyste réactif.` },
-      { heading: "Ma contribution", body: `J'ai conçu l'architecture de la plateforme, le schéma d'événements de sécurité, la structure backend, le flux de traitement infonuagique et l'expérience frontend. Je me suis concentré sur des frontières claires entre ingestion, validation, stockage, analyse et réponse aux incidents.` },
-      { heading: "Décisions techniques", body: `Concevoir un système qui traite les événements de façon fiable tout en conservant une traçabilité complète. Chaque événement doit être validé, normalisé et relié à un incident sans perdre l'information dont un analyste a besoin pour enquêter.` },
-      { heading: "Bilan", body: "Le processus conserve le lien entre chaque alerte et l’événement brut nécessaire à son investigation." },
+      { heading: "Vue d’ensemble", body: `SentinelOps est une plateforme infonuagique d’opérations de sécurité qui centralise la surveillance des événements de sécurité et la gestion des incidents. Elle transforme les événements entrants en enregistrements structurés, ce qui permet aux analystes d’examiner les alertes, d’enquêter sur les activités suspectes, de prioriser les menaces potentielles et de suivre les incidents depuis un tableau de bord centralisé.` },
+      { heading: "Le problème", body: `Les événements de sécurité proviennent de différents systèmes, chacun produisant des journaux aux structures et aux niveaux de détail différents. Sans méthode cohérente pour traiter ces informations, il devient difficile d’identifier les menaces significatives.
+
+Le défi était de concevoir un système capable de standardiser les données de sécurité entrantes, de préserver les détails importants pour les enquêtes et de relier les événements à un workflow structuré de réponse aux incidents.` },
+      { heading: "Implémentation", body: `J’ai conçu une architecture full stack reliant le traitement infonuagique des événements à un backend ASP.NET Core, une base de données PostgreSQL et un tableau de bord React.
+
+La plateforme valide et normalise les événements de sécurité entrants avant de les stocker dans un format cohérent. Les événements peuvent ensuite être associés à des incidents, ce qui permet aux analystes d’enquêter sur l’activité, de gérer les priorités et de suivre l’état des incidents.` },
+      { heading: "Ma contribution", body: `J’ai conçu l’architecture globale du système, le schéma des événements de sécurité, la structure des API backend, le modèle de base de données et l’expérience frontend.
+
+Je me suis concentré sur la séparation de l’ingestion, de la validation, de la normalisation, du stockage et de la gestion des incidents en responsabilités distinctes.
+
+J’ai aussi travaillé sur l’authentification, la cohérence des réponses API, la journalisation, la gestion des erreurs et la structure nécessaire aux futures intégrations infonuagiques.` },
+      { heading: "Décisions techniques", body: `L’une de mes principales décisions architecturales a été d’introduire un modèle standardisé d’événement de sécurité plutôt que de laisser chaque source de données imposer sa propre structure dans toute l’application.
+
+Cela facilite le traitement d’événements de différentes sources sans devoir constamment modifier le backend ou le tableau de bord.
+
+J’ai aussi séparé les informations brutes des événements des données de gestion des incidents afin de préserver le contexte des enquêtes tout en permettant aux incidents d’évoluer indépendamment.
+
+Une autre décision importante a été d’utiliser une base de données relationnelle pour maintenir des relations claires entre les événements de sécurité, les alertes et les incidents.` },
+      { heading: "Défis", body: `L’un des principaux défis était de concevoir un schéma d’événement flexible capable de représenter différents types d’activités de sécurité sans perdre de détails importants.
+
+Un autre défi était de maintenir la traçabilité entre un incident et les événements d’origine qui l’ont déclenché.
+
+J’ai aussi dû réfléchir à la façon dont la plateforme devait gérer les données d’événements invalides, les échecs de traitement et les informations incohérentes sans compromettre la fiabilité du workflow de gestion des incidents.` },
+      { heading: "Ce que j’ai appris", body: `Construire SentinelOps m’a appris que les systèmes de sécurité exigent une approche différente de l’intégrité des données et de la gestion des erreurs. J’ai appris à quel point il est important de préserver les informations d’origine des événements tout en transformant les données dans un format standardisé.
+
+J’ai aussi approfondi ma compréhension de la conception de systèmes backend autour de responsabilités claires, particulièrement pour séparer le traitement des événements de la gestion des incidents.
+
+L’une des leçons les plus importantes est qu’une alerte n’est utile que si l’analyste peut comprendre son origine, ce qui l’a déclenchée et ses liens avec d’autres activités de sécurité.` },
+      { heading: "État actuel", body: `SentinelOps est un projet de portfolio en évolution, axé sur l’architecture des opérations de sécurité et le développement full stack.
+
+Les fondations actuelles couvrent le traitement structuré des événements de sécurité, la gestion des incidents, les API backend, le stockage persistant et un tableau de bord destiné aux analystes.
+
+Les prochaines étapes porteront sur l’élargissement des intégrations AWS, l’enrichissement automatisé des événements, l’amélioration des capacités de détection et le renforcement de l’automatisation de l’infrastructure.` },
+      { heading: "Ce que j’améliorerais", body: `J’élargirais le système d’ingestion des événements pour prendre en charge davantage de services de sécurité AWS et j’introduirais un enrichissement automatisé pour fournir plus de contexte sur les activités suspectes.
+
+J’explorerais aussi la corrélation d’événements pour repérer les relations entre des alertes qui pourraient autrement sembler sans lien.
+
+Les autres améliorations comprendraient des notifications en temps réel, l’infrastructure comme code, une journalisation d’audit plus détaillée et des tests automatisés des workflows sensibles sur le plan de la sécurité.` },
     ],
-    highlights: ["Schéma normalisé d'événements de sécurité","Ingestion et traitement d'événements infonuagiques","Création, priorisation et suivi d'état des incidents","API backend structurée","Tableau de bord analyste en React","Persistance PostgreSQL","Authentification, validation et réponses normalisées","Journalisation, gestion des erreurs et documentation API","Infrastructure conçue pour la montée en charge et l'automatisation future"],
+    highlights: ["Architecture infonuagique d’opérations de sécurité","Schéma standardisé des événements de sécurité","Ingestion et traitement infonuagiques des événements","Validation et normalisation des événements","Traçabilité des événements bruts","Relations entre alertes de sécurité et incidents","Création et priorisation des incidents","Gestion de l’état et du cycle de vie des incidents","API REST ASP.NET Core","Modélisation relationnelle des données PostgreSQL","Tableau de bord React pour les analystes","Authentification API et validation des entrées","Gestion structurée des erreurs et journalisation","Documentation des API","Architecture modulaire pour les futures intégrations"],
     stack: ["AWS","ASP.NET Core","C#","React","PostgreSQL","REST APIs"],
   },
 ];

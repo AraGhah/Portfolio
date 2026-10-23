@@ -18,6 +18,16 @@ with the already running development server.
 
 ## Browser review
 
+The three featured case studies now use Ara’s supplied Dossier, TradeCatch and
+SentinelOps content, with matching French translations. Dossier and SentinelOps
+have nine narrative sections; TradeCatch has ten. Their technical highlights
+contain 12, 15 and 14 items respectively. Current status and result sections
+appear once, in the supplied order, and multi-paragraph sections retain their
+paragraph breaks. All six pages were inspected in the browser; the French
+pages have no horizontal overflow at 320px. The production build passed.
+Content comparisons confirmed that all seven other projects remain unchanged.
+The French generator now has complete translation entries for all ten projects.
+
 The latest refinement removes decorative stars, the flower, portrait tape and
 drawn arrow, and handwritten annotations while preserving the warm layout.
 About Me now follows Ara’s supplied personal introduction, in English and French.

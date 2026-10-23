@@ -10,7 +10,9 @@ export function CaseStudyBody({ project }: { project: Project }) {
         <section key={section.heading}>
           <span className={styles.sectionIndex} aria-hidden>{String(index + 1).padStart(2, '0')}</span>
           <h2>{section.heading}</h2>
-          <p>{section.body}</p>
+          {section.body.split(/\n\s*\n/).map((paragraph, paragraphIndex) => (
+            <p key={paragraphIndex}>{paragraph}</p>
+          ))}
         </section>
       ))}
       {project.result && <aside className={styles.result}><h2>{t('result')}</h2><p>{project.result}</p></aside>}
