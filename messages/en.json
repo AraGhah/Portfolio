@@ -64,18 +64,27 @@
     }
   },
   "hall": {
-    "title": "The Hall of Projects",
-    "intro": "Projects are organized by category and technical complexity. Explore the applications, APIs, systems, and websites I have built.",
+    "title": "Selected work",
+    "intro": "A few things I’ve built, and what I learned along the way.",
     "hint": "Click a project to open its case study",
     "filterAll": "All",
     "categoryLabel": "Filter by category",
-    "categoryFullstack": "Fullstack",
-    "categorySoftware": "Software",
+    "categoryFullstack": "Full stack",
+    "categorySoftware": "Software & games",
     "complexityLabel": "Filter by complexity",
     "openDoor": "Open door",
     "doorAria": "Open case study: {title}",
-    "closeOverlay": "Close door ✕",
-    "empty": "No door matches these filters yet."
+    "closeOverlay": "Close case study",
+    "empty": "No projects in this category.",
+    "caseStudy": "Read the story",
+    "archive": "More from the workbench",
+    "archiveIntro": "Other projects, experiments and things that taught me something.",
+    "archiveToggle": "Explore all projects",
+    "projectCount": "{count, plural, one {# project} other {# projects}}",
+    "reset": "Show all",
+    "door": "Project",
+    "back": "All projects",
+    "diagram": "Illustrative product diagram"
   },
   "caseStudy": {
     "door": "Door",

@@ -64,18 +64,27 @@
     }
   },
   "hall": {
-    "title": "Le Couloir des projets",
-    "intro": "Les projets sont organisés par catégorie et complexité technique. Parcourez les applications, API, systèmes et sites Web que j’ai construits.",
+    "title": "Quelques projets",
+    "intro": "Ce que j’ai construit et ce que j’ai appris en chemin.",
     "hint": "Cliquez un projet pour ouvrir son étude de cas",
     "filterAll": "Tous",
     "categoryLabel": "Filtrer par catégorie",
-    "categoryFullstack": "Fullstack",
-    "categorySoftware": "Software",
+    "categoryFullstack": "Full stack",
+    "categorySoftware": "Logiciels et jeux",
     "complexityLabel": "Filtrer par complexité",
     "openDoor": "Ouvrir la porte",
     "doorAria": "Ouvrir l’étude de cas : {title}",
-    "closeOverlay": "Fermer la porte ✕",
-    "empty": "Aucune porte ne correspond à ces filtres pour l’instant."
+    "closeOverlay": "Fermer l’étude de cas",
+    "empty": "Aucun projet dans cette catégorie.",
+    "caseStudy": "Lire l’étude de cas",
+    "archive": "Aussi sur l’établi",
+    "archiveIntro": "D’autres projets, des expériences et des choses qui m’ont appris quelque chose.",
+    "archiveToggle": "Voir tous les projets",
+    "projectCount": "{count, plural, one {# projet} other {# projets}}",
+    "reset": "Tout afficher",
+    "door": "Projet",
+    "back": "Tous les projets",
+    "diagram": "Schéma illustratif du produit"
   },
   "caseStudy": {
     "door": "Porte",
