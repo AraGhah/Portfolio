@@ -24,7 +24,7 @@ export function ProjectVisual({ slug }: { slug: string }) {
       <div className={`${styles.canvas} ${styles.trade}`} aria-hidden="true">
         <span className={styles.corner}>{t('trade')}</span>
         <div className={styles.call}>
-          <span className={styles.callIcon}>↗</span>
+          <span className={styles.callIcon} aria-hidden="true" />
           <div className={styles.wave}>
             {[12, 22, 36, 18, 44, 29, 52, 32, 20, 38, 15, 26, 12].map((height, index) => <span key={index} style={{ height }} />)}
           </div>
