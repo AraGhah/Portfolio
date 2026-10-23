@@ -24,7 +24,7 @@ export default async function HomePage({ params }: Props) {
   setRequestLocale(locale);
 
   return (
-    <>
+    <div>
       <Nav />
       <div className="main-shell">
         <main id="main" tabIndex={-1}>
@@ -37,6 +37,6 @@ export default async function HomePage({ params }: Props) {
         </main>
         <Footer />
       </div>
-    </>
+    </div>
   );
 }

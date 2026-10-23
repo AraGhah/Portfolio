@@ -32,7 +32,7 @@ export default async function ProjectPage({ params }: Props) {
   const next = projects[(projects.findIndex((item) => item.slug === slug) + 1) % projects.length];
 
   return (
-    <>
+    <div>
       <Nav />
       <main id="main" tabIndex={-1} className={styles.page}>
         <Link href="/#hall" className={styles.back}><span aria-hidden>←</span> {t('back')}</Link>
@@ -45,6 +45,6 @@ export default async function ProjectPage({ params }: Props) {
         </nav>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
