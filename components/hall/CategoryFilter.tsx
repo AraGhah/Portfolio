@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import type { ProjectCategory } from '@/lib/types';
-import styles from './ComplexityFilter.module.css';
+import styles from './CategoryFilter.module.css';
 
 export type CategoryFilterValue = 'all' | ProjectCategory;
 

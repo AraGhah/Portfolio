@@ -27,7 +27,7 @@ export default async function HomePage({ params }: Props) {
     <>
       <Nav />
       <div className="main-shell">
-        <main id="main">
+        <main id="main" tabIndex={-1}>
           <Hero />
           <Hall />
           <About />

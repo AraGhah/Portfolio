@@ -68,6 +68,7 @@ img { display: block; height: auto; }
 button, a { -webkit-tap-highlight-color: transparent; }
 p { text-wrap: pretty; }
 h1, h2, h3, p { margin-top: 0; }
+main:focus { outline: none; }
 h1, h2, h3 { color: var(--ink); }
 :focus-visible { outline: 2px solid var(--acc); outline-offset: 5px; }
 ::selection { background: #dce8d0; color: var(--ink); }

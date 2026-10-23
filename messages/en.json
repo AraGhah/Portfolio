@@ -7,7 +7,7 @@
     "experience": "Experience",
     "contact": "Contact",
     "tagline": "Software Engineer building backend systems and full-stack products.",
-    "skipToHall": "Skip to the projects",
+    "skipToHall": "Skip to content",
     "languageToggle": "Switch to French",
     "languageTarget": "Français",
     "openMenu": "Open menu",
@@ -17,74 +17,30 @@
   "hero": {
     "available": "Open to internships",
     "location": "Montréal, Québec",
-    "role": "Software Engineer",
-    "buildPrefix": "I build",
-    "buildWords": [
-      "secure REST APIs",
-      "cloud-deployed apps",
-      "full-stack products",
-      "data pipelines"
-    ],
     "paragraph": "I build the APIs, databases and cloud systems behind useful products. A computer science student who likes understanding how things work — and making them work better.",
     "enterHall": "Explore my work",
     "hireMe": "Get in touch",
-    "trustProjects": "projects built",
-    "trustLive": "product live in production",
-    "trustLanguages": "English · French",
     "eyebrow": "Software developer · Montréal",
     "greeting": "Hi, I’m Ara",
     "current": "Currently building",
     "currentProject": "Dossier",
     "currentSuffix": "— research that makes outreach more personal.",
-    "photoNote": "The person behind the code",
-    "aside": "Away from the keyboard? Probably on a judo mat.",
-    "signature": "A little curiosity goes a long way."
-  },
-  "why": {
-    "eyebrow": "Why work with me",
-    "titleLead": "What I bring",
-    "titleAccent": "to your team",
-    "intro": "Four things you can expect from day one, each backed by a project you can open and inspect.",
-    "evidence": "See the proof: {project}",
-    "backend": {
-      "title": "Backend you can trust",
-      "body": "REST APIs with JWT authentication, validation and clean data models in Node.js, ASP.NET Core and SQL."
-    },
-    "cloud": {
-      "title": "Shipped, not just localhost",
-      "body": "Applications deployed on Cloudflare Workers and AWS, with the configuration and trade-offs documented."
-    },
-    "ownership": {
-      "title": "Ownership from idea to users",
-      "body": "Built Dossier end to end for a real pilot, measured the result, and fixed what production data revealed."
-    },
-    "clarity": {
-      "title": "Clear thinking, clear docs",
-      "body": "Requirements, diagrams and written decisions, so a team can understand and extend the work quickly."
-    }
+    "photoNote": "The person behind the code"
   },
   "hall": {
     "title": "Selected work",
     "intro": "A few things I’ve built, and what I learned along the way.",
-    "hint": "Click a project to open its case study",
     "filterAll": "All",
     "categoryLabel": "Filter by category",
     "categoryFullstack": "Full stack",
     "categorySoftware": "Software & games",
-    "complexityLabel": "Filter by complexity",
-    "openDoor": "Open door",
     "doorAria": "Open case study: {title}",
-    "closeOverlay": "Close case study",
     "empty": "No projects in this category.",
     "caseStudy": "Read the story",
     "archive": "More from the workbench",
     "archiveIntro": "Other projects, experiments and things that taught me something.",
-    "archiveToggle": "Explore all projects",
     "projectCount": "{count, plural, one {# project} other {# projects}}",
-    "reset": "Show all",
-    "door": "Project",
-    "back": "All projects",
-    "diagram": "Illustrative product diagram"
+    "reset": "Show all"
   },
   "caseStudy": {
     "door": "Project",
@@ -187,20 +143,11 @@
     ]
   },
   "contact": {
-    "titleLead": "Looking for a software",
-    "titleAccent": "development internship",
     "body": "I’m looking for a software development internship in Montréal. If you’re working on something interesting and could use another curious developer, I’d like to hear about it.",
-    "email": "Email",
     "phone": "Phone",
     "linkedIn": "LinkedIn",
     "copyEmail": "Copy email",
     "copied": "Copied",
-    "factRole": "Seeking",
-    "factRoleValue": "Software dev internship",
-    "factFocus": "Focus",
-    "factFocusValue": "Backend · Cloud · Full stack",
-    "factBase": "Based in",
-    "factBaseValue": "Montréal, QC",
     "title": "Let’s build something useful.",
     "note": "A conversation is a good place to start.",
     "copyFailed": "Couldn’t copy. You can select the email address above.",
@@ -210,8 +157,7 @@
   "footer": {
     "copyright": "© {year} Ara Ghahramanyan",
     "backToTop": "Back to top",
-    "tagline": "Made with care in Montréal.",
-    "colophon": "A small corner of the internet."
+    "tagline": "Made with care in Montréal."
   },
   "Meta": {
     "title": "Ara Ghahramanyan · Software Developer",

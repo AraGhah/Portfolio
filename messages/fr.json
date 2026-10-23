@@ -7,7 +7,7 @@
     "experience": "Parcours",
     "contact": "Contact",
     "tagline": "Ingénieur logiciel, systèmes backend et produits full-stack.",
-    "skipToHall": "Aller aux projets",
+    "skipToHall": "Aller au contenu",
     "languageToggle": "Passer à l’anglais",
     "languageTarget": "English",
     "openMenu": "Ouvrir le menu",
@@ -17,74 +17,30 @@
   "hero": {
     "available": "Disponible pour un stage",
     "location": "Montréal, Québec",
-    "role": "Ingénieur logiciel",
-    "buildPrefix": "Je construis",
-    "buildWords": [
-      "des API REST sécurisées",
-      "des applis dans le nuage",
-      "des produits full stack",
-      "des pipelines de données"
-    ],
     "paragraph": "Je construis les API, les bases de données et les systèmes qui font fonctionner des produits utiles. Étudiant en informatique, j’aime comprendre comment les choses marchent — et les améliorer.",
     "enterHall": "Découvrir mes projets",
     "hireMe": "Me contacter",
-    "trustProjects": "projets réalisés",
-    "trustLive": "produit en production",
-    "trustLanguages": "Français · Anglais",
     "eyebrow": "Développeur logiciel · Montréal",
     "greeting": "Salut, moi c’est Ara",
     "current": "Je travaille sur",
     "currentProject": "Dossier",
     "currentSuffix": "— de la recherche pour des échanges plus personnels.",
-    "photoNote": "La personne derrière le code",
-    "aside": "Loin du clavier ? Probablement sur un tatami.",
-    "signature": "La curiosité fait avancer les choses."
-  },
-  "why": {
-    "eyebrow": "Pourquoi travailler avec moi",
-    "titleLead": "Ce que j’apporte",
-    "titleAccent": "à votre équipe",
-    "intro": "Quatre choses sur lesquelles vous pouvez compter dès le premier jour, chacune appuyée par un projet que vous pouvez ouvrir et examiner.",
-    "evidence": "Voir la preuve : {project}",
-    "backend": {
-      "title": "Un backend fiable",
-      "body": "API REST avec authentification JWT, validation et modèles de données propres en Node.js, ASP.NET Core et SQL."
-    },
-    "cloud": {
-      "title": "Déployé, pas seulement en local",
-      "body": "Applications déployées sur Cloudflare Workers et AWS, avec la configuration et les compromis documentés."
-    },
-    "ownership": {
-      "title": "De l’idée jusqu’aux utilisateurs",
-      "body": "Dossier construit de bout en bout pour un vrai projet pilote : résultat mesuré, puis corrigé selon ce que les données de production ont révélé."
-    },
-    "clarity": {
-      "title": "Pensée claire, documentation claire",
-      "body": "Besoins, diagrammes et décisions écrites, pour qu’une équipe comprenne et prolonge le travail rapidement."
-    }
+    "photoNote": "La personne derrière le code"
   },
   "hall": {
     "title": "Quelques projets",
     "intro": "Ce que j’ai construit et ce que j’ai appris en chemin.",
-    "hint": "Cliquez un projet pour ouvrir son étude de cas",
     "filterAll": "Tous",
     "categoryLabel": "Filtrer par catégorie",
     "categoryFullstack": "Full stack",
     "categorySoftware": "Logiciels et jeux",
-    "complexityLabel": "Filtrer par complexité",
-    "openDoor": "Ouvrir la porte",
     "doorAria": "Ouvrir l’étude de cas : {title}",
-    "closeOverlay": "Fermer l’étude de cas",
     "empty": "Aucun projet dans cette catégorie.",
     "caseStudy": "Lire l’étude de cas",
     "archive": "Aussi sur l’établi",
     "archiveIntro": "D’autres projets, des expériences et des choses qui m’ont appris quelque chose.",
-    "archiveToggle": "Voir tous les projets",
     "projectCount": "{count, plural, one {# projet} other {# projets}}",
-    "reset": "Tout afficher",
-    "door": "Projet",
-    "back": "Tous les projets",
-    "diagram": "Schéma illustratif du produit"
+    "reset": "Tout afficher"
   },
   "caseStudy": {
     "door": "Projet",
@@ -187,20 +143,11 @@
     ]
   },
   "contact": {
-    "titleLead": "À la recherche d’un stage en",
-    "titleAccent": "développement logiciel",
     "body": "Je cherche un stage en développement logiciel à Montréal. Si votre équipe travaille sur un projet intéressant et a besoin d’un développeur curieux, j’aimerais en discuter.",
-    "email": "Courriel",
     "phone": "Téléphone",
     "linkedIn": "LinkedIn",
     "copyEmail": "Copier le courriel",
     "copied": "Copié",
-    "factRole": "Recherche",
-    "factRoleValue": "Stage en développement logiciel",
-    "factFocus": "Spécialités",
-    "factFocusValue": "Backend · Infonuagique · Full stack",
-    "factBase": "Basé à",
-    "factBaseValue": "Montréal, QC",
     "title": "Construisons quelque chose d’utile.",
     "note": "Tout commence par une conversation.",
     "copyFailed": "La copie a échoué. Vous pouvez sélectionner le courriel ci-dessus.",
@@ -210,8 +157,7 @@
   "footer": {
     "copyright": "© {year} Ara Ghahramanyan",
     "backToTop": "Retour en haut",
-    "tagline": "Fait avec soin à Montréal.",
-    "colophon": "Un petit coin d’Internet."
+    "tagline": "Fait avec soin à Montréal."
   },
   "Meta": {
     "title": "Ara Ghahramanyan · Développeur logiciel",

@@ -9,7 +9,7 @@
 .link:hover::after { width: 100%; }
 .link:hover { color: var(--acc); }
 .divider { height: 14px; width: 1px; background: var(--line-strong); }
-.language { font: 11px var(--font-mono); min-height: 44px; display: inline-flex; align-items: center; }
+.language { font: 11px var(--font-mono); min-width: 32px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
 .language:hover { color: var(--acc); }
 @media (max-width: 600px) { .header { padding-inline: 22px; } .inner { height: 76px; } .nav { gap: 18px; } .link { font-size: 12px; } }
 @media (max-width: 360px) { .nav { gap: 12px; } }

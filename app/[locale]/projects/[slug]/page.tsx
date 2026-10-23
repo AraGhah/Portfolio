@@ -34,7 +34,7 @@ export default async function ProjectPage({ params }: Props) {
   return (
     <>
       <Nav />
-      <main id="main" className={styles.page}>
+      <main id="main" tabIndex={-1} className={styles.page}>
         <Link href="/#hall" className={styles.back}><span aria-hidden>←</span> {t('back')}</Link>
         <CaseStudyContent project={project} />
         <nav className={styles.projectNav} aria-label={t('projectNav')}>

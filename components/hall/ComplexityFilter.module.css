@@ -1,5 +1,0 @@
-.filter { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-.label { font: 10px var(--font-mono); color: var(--ink-muted); margin-right: 8px; }
-.btn { border: 1px solid transparent; border-radius: 4px; background: transparent; padding: 9px 12px; min-height: 40px; font-size: 12px; color: var(--ink-muted); transition: color .2s, background .2s; }
-.btn:hover { color: var(--acc); background: var(--acc-06); }
-.btnActive { color: var(--acc); border-color: var(--line); background: var(--bg-raised); }

@@ -4,8 +4,6 @@ import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { pageMetadata } from '@/lib/metadata';
-import { MotionProvider } from '@/components/motion/MotionProvider';
-import { BackToTop } from '@/components/motion/BackToTop';
 import '../globals.css';
 
 type Props = {
@@ -41,10 +39,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html lang={locale}>
       <body>
         <NextIntlClientProvider messages={messages}>
-          <MotionProvider>
-            {children}
-            <BackToTop />
-          </MotionProvider>
+          {children}
         </NextIntlClientProvider>
       </body>
     </html>
