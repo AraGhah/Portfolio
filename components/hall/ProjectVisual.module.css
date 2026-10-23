@@ -15,9 +15,7 @@
 .check { border: 1px solid #a3b38b; border-radius: 50%; width: 19px; height: 19px; display: grid; place-items: center; }
 .trade { background: #eee2d2; color: #735433; }
 .call { position: absolute; width: 216px; left: calc(50% - 108px); top: 65px; padding: 18px; background: #fcf8f1; border: 1px solid #dac5aa; border-radius: 14px; transform: rotate(-4deg); box-shadow: 0 5px 12px #7c5d3610; }
-.callIcon { display: block; position: relative; width: 18px; height: 18px; color: currentColor; }
-.callIcon::before { content: ''; position: absolute; top: 1px; right: 1px; width: 11px; height: 11px; border-top: 1.5px solid currentColor; border-right: 1.5px solid currentColor; }
-.callIcon::after { content: ''; position: absolute; top: 8px; left: 2px; width: 14px; height: 1.5px; background: currentColor; transform: rotate(-45deg); transform-origin: left center; }
+.callIcon { display: block; font: 22px var(--font-display); font-variant-emoji: text; }
 .wave { display: flex; height: 58px; gap: 5px; align-items: center; justify-content: center; }
 .wave span { width: 4px; border-radius: 3px; background: #ae8355; transition: transform .3s; }
 .canvas:hover .wave span:nth-child(2n) { transform: scaleY(.65); }
