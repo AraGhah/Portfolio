@@ -2,23 +2,13 @@ import type { Project } from '@/lib/types';
 import { CaseStudyHeader } from './CaseStudyHeader';
 import { CaseStudyBody } from './CaseStudyBody';
 import { HighlightsSidebar } from './HighlightsSidebar';
+import styles from './CaseStudy.module.css';
 
-type CaseStudyContentProps = {
-  project: Project;
-};
-
-export function CaseStudyContent({ project }: CaseStudyContentProps) {
+export function CaseStudyContent({ project }: { project: Project }) {
   return (
     <>
       <CaseStudyHeader project={project} />
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(290px, 1fr))',
-          gap: 'clamp(40px, 5vw, 74px)',
-          alignItems: 'start',
-        }}
-      >
+      <div className={styles.content}>
         <CaseStudyBody project={project} />
         <HighlightsSidebar project={project} />
       </div>
