@@ -2,8 +2,10 @@
 
 ## Production and source checks
 
-- `npm run next:build`: passed on the final application source.
-  The build compiled, checked types, and generated all 27 static entries,
+- `npm run build`: passed with Next.js 16.4.3, OpenNext 1.20.13 and
+  Wrangler 4.152.0, producing `.open-next/worker.js` on Windows.
+- `npm run next:build`: passed as part of the Cloudflare build.
+  The build compiled, checked types, and generated all 26 static entries,
   including both home pages and all 20 localized project pages.
 - `npx tsc --noEmit`: passed.
 - `npm run lint`: completed with zero errors and two existing warnings:
@@ -13,8 +15,9 @@
 - `git diff --check`: passed.
 - No animation-library imports remain in the application.
 
-The production check used `PORTFOLIO_BUILD_DIR=.next-verify` to avoid interfering
-with the already running development server.
+The original portfolio production checks used `PORTFOLIO_BUILD_DIR=.next-verify`.
+The final Cloudflare packaging check used the normal `.next/` output. The
+development server's `.next-dev/` output remains separate.
 
 ## Browser review
 
@@ -78,13 +81,50 @@ Checked these interactions:
 The complete page and an introduction preview were captured for visual review.
 No automated browser test suite was added for these presentation changes.
 
-## Cloudflare packaging limitation
+## Cloudflare build and runtime verification
 
-`npm run build` reaches the existing OpenNext adapter, which rejects the
-installed Next.js 15.5.27 release under its framework support policy. It stops
-before creating a Cloudflare deployment package. The adapter also reports its
-existing Windows compatibility warning.
+Next.js 15 reached OpenNext's two-year support cutoff on 21 October 2026.
+The project now uses Next.js and `eslint-config-next` 16.4.3, OpenNext 1.20.13,
+and Wrangler 4.152.0. The lockfile records the updated dependency tree. Wrangler
+requires Node.js 22 or newer; verification used Node.js 24.13.0.
 
-The plain Next.js production build passes. Cloudflare packaging requires a
-separate framework compatibility update. No unsupported-version bypass was
-added, and no deployment or remote Git push was performed.
+Production explicitly uses Webpack. ESLint uses Next.js 16's native flat
+configuration and ignores generated Next.js, OpenNext and Wrangler directories.
+TypeScript uses the required React automatic JSX runtime and includes the
+Next.js 16 development route types.
+
+OpenNext 1.20.13 includes the Next.js 16.4 `preview-props.json` compatibility
+fix required for the packaged server to start. The existing Edge middleware
+preserves language routing while OpenNext's Node.js proxy support remains
+experimental. The middleware deprecation warning and OpenNext's Windows warning
+remain informational; the full build succeeds without a support-policy bypass.
+
+An OpenNext preview ran locally in the Cloudflare Workers runtime. HTTP checks
+confirmed:
+
+- All 22 localized pages return 200, with the correct HTML language and a title.
+- French language detection redirects `/` to `/fr`.
+- The English `/en` prefix redirects to `/`.
+- An unknown project returns 404.
+- The sitemap, portrait and a generated client JavaScript asset return 200.
+
+The temporary preview was stopped after verification. No deployment or remote
+Git push was performed.
+
+## Deployment target correction
+
+Cloudflare's deployment history confirms the `portfolio` Worker has an active
+deployment from 23 October 2026. Both deployment logs from that day list only
+`https://portfolio.ara-ghahramanyan07.workers.dev`; the local Wrangler
+configuration previously had no custom domain mapping. Direct inspection of
+`araghah.com` was blocked by the execution environment's network filter, so the
+domain's existing destination could not be independently confirmed.
+
+The attempted custom domain attachment failed because Cloudflare reported that
+the `araghah.com` zone does not exist in the Worker's account. Following the
+user's instructions, the custom domain mapping was removed. The configuration
+keeps `workers_dev: true`, the OpenNext entry point and assets, and all existing
+bindings. Canonical URLs, the sitemap and `robots.txt` now use
+`https://portfolio.ara-ghahramanyan07.workers.dev`.
+
+The final mapping removal is local; the user will run the deployment command.

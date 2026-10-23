@@ -19,13 +19,17 @@ npm run lint
 npx tsc --noEmit
 ```
 
-The existing Cloudflare commands are `npm run build`, `npm run preview`,
-`npm run upload`, and `npm run deploy`. These use OpenNext.
+The Cloudflare commands are `npm run build`, `npm run preview`,
+`npm run upload`, and `npm run deploy`. These use OpenNext with Next.js 16
+and require Node.js 22 or newer. Production builds explicitly use Webpack.
 
-**Current deployment limitation:** the installed OpenNext adapter rejects the
-existing Next.js 15.5.27 installation under its framework support policy.
-The Next.js production build succeeds; Cloudflare packaging needs a separate
-framework compatibility update before deployment. No bypass flag was added.
+`npm run deploy` publishes the `portfolio` Worker at
+`https://portfolio.ara-ghahramanyan07.workers.dev`. No custom domain is configured.
+`npm run upload` creates a version without making it the active deployment.
+
+Language routing keeps Edge middleware because OpenNext's Node.js proxy support
+is experimental. Next.js reports a middleware deprecation warning, and OpenNext
+reports its Windows compatibility warning; neither prevents the build.
 
 To check a production build while keeping an existing development server running,
 use a separate build directory. In PowerShell:
@@ -91,6 +95,4 @@ addresses recruiters and internship opportunities; all contact details are Araâ€
 
 ## Verification
 
-See `VERIFICATION.md` for the checks performed and the Cloudflare packaging
-limitation. The redesign is saved in focused commits on
-`codex/personal-portfolio`; the first commit preserves the pre-existing edits.
+See `VERIFICATION.md` for the checks performed and Cloudflare packaging notes.

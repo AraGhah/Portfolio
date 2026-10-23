@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://araghahramanyan.dev/sitemap.xml
+Sitemap: https://portfolio.ara-ghahramanyan07.workers.dev/sitemap.xml
