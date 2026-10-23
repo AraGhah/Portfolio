@@ -189,7 +189,7 @@
   "contact": {
     "titleLead": "À la recherche d’un stage en",
     "titleAccent": "développement logiciel",
-    "body": "Étudiant en troisième année en techniques de l’informatique à Montréal, ouvert à un stage en backend, infonuagique ou développement pleine pile. Le courriel est le moyen le plus rapide de me joindre.",
+    "body": "Je cherche un stage en développement logiciel à Montréal. Si votre équipe travaille sur un projet intéressant et a besoin d’un développeur curieux, j’aimerais en discuter.",
     "email": "Courriel",
     "phone": "Téléphone",
     "linkedIn": "LinkedIn",
@@ -200,7 +200,12 @@
     "factFocus": "Spécialités",
     "factFocusValue": "Backend · Infonuagique · Full stack",
     "factBase": "Basé à",
-    "factBaseValue": "Montréal, QC"
+    "factBaseValue": "Montréal, QC",
+    "title": "Construisons quelque chose d’utile.",
+    "note": "Tout commence par une conversation.",
+    "copyFailed": "La copie a échoué. Vous pouvez sélectionner le courriel ci-dessus.",
+    "github": "GitHub",
+    "intro": "Un projet ou un stage à proposer ?"
   },
   "footer": {
     "copyright": "© {year} Ara Ghahramanyan",

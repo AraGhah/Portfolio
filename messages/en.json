@@ -189,7 +189,7 @@
   "contact": {
     "titleLead": "Looking for a software",
     "titleAccent": "development internship",
-    "body": "Third year Computer Science student in Montréal, open to an internship in backend, cloud or full stack development. Email's the fastest way to reach me.",
+    "body": "I’m looking for a software development internship in Montréal. If you’re working on something interesting and could use another curious developer, I’d like to hear about it.",
     "email": "Email",
     "phone": "Phone",
     "linkedIn": "LinkedIn",
@@ -200,7 +200,12 @@
     "factFocus": "Focus",
     "factFocusValue": "Backend · Cloud · Full stack",
     "factBase": "Based in",
-    "factBaseValue": "Montréal, QC"
+    "factBaseValue": "Montréal, QC",
+    "title": "Let’s build something useful.",
+    "note": "A conversation is a good place to start.",
+    "copyFailed": "Couldn’t copy. You can select the email address above.",
+    "github": "GitHub",
+    "intro": "Have a project or an internship in mind?"
   },
   "footer": {
     "copyright": "© {year} Ara Ghahramanyan",
