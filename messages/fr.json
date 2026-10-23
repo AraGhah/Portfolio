@@ -210,7 +210,8 @@
   "footer": {
     "copyright": "© {year} Ara Ghahramanyan",
     "backToTop": "Retour en haut",
-    "tagline": "Conçu avec Next.js, TypeScript, Tailwind CSS et Framer Motion · déployé sur Cloudflare"
+    "tagline": "Fait avec soin à Montréal.",
+    "colophon": "Un petit coin d’Internet."
   },
   "Meta": {
     "title": "Ara Ghahramanyan · Ingénieur logiciel",
