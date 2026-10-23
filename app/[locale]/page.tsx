@@ -7,8 +7,6 @@ import { About } from '@/components/sections/About';
 import { Skills } from '@/components/sections/Skills';
 import { Experience } from '@/components/sections/Experience';
 import { Contact } from '@/components/sections/Contact';
-import { WhyHire } from '@/components/sections/WhyHire';
-import { Proof } from '@/components/sections/Proof';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -33,12 +31,10 @@ export default async function HomePage({ params }: Props) {
       <div className="main-shell">
         <main id="main">
           <Hero />
-          <Proof />
-          <WhyHire />
           <Hall />
+          <About />
           <Experience />
           <Skills />
-          <About />
           <Contact />
         </main>
         <Footer />
