@@ -17,14 +17,14 @@
   "hero": {
     "available": "Open to internships",
     "location": "Montréal, Québec",
-    "paragraph": "I build the APIs, databases and cloud systems behind useful products. A computer science student who likes understanding how things work — and making them work better.",
+    "paragraph": "I’m a computer science student in Montréal. I work on APIs, databases and web applications.",
     "enterHall": "Explore my work",
     "hireMe": "Get in touch",
     "eyebrow": "Software developer · Montréal",
     "greeting": "Hi, I’m Ara",
-    "current": "Currently building",
+    "current": "I’m building",
     "currentProject": "TradeCatch",
-    "currentSuffix": "— call handling, automation and cloud deployment."
+    "currentSuffix": "to handle calls and follow-ups for contractors in Québec."
   },
   "hall": {
     "title": "Selected work",
@@ -97,7 +97,7 @@
       {
         "role": "Computer Science Technology (DEC)",
         "company": "Collège de Bois-de-Boulogne",
-        "date": "2024–now",
+        "date": "2024 to now",
         "body": "Third year."
       },
       {
@@ -111,19 +111,19 @@
       {
         "role": "Founder & Developer",
         "company": "TradeCatch",
-        "date": "2026–present",
+        "date": "2026 to present",
         "body": "Building and running a bilingual call recovery and follow-up service for contractors in Québec. Product development, customer workflows, setup and monitoring."
       },
       {
         "role": "Customer Service & Sales Associate",
         "company": "Globo Shoes",
-        "date": "Sep 2026–present",
+        "date": "Sep 2026 to present",
         "body": "Selling shoes in store, welcoming customers, answering their questions and helping them find the right pair."
       },
       {
         "role": "Independent Developer",
         "company": "Self-employed",
-        "date": "2025–present",
+        "date": "2025 to present",
         "body": "Built Dossier and SentinelOps, with work on backend architecture, REST APIs, authentication, databases and cloud deployment.",
         "tags": [
           "TypeScript",
@@ -142,7 +142,7 @@
       {
         "role": "Busser",
         "company": "Grillade Nostos",
-        "date": "Sep–Nov 2025",
+        "date": "Sep to Nov 2025",
         "body": "Cleared and reset tables, supported the serving team through peak service."
       }
     ]

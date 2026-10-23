@@ -17,14 +17,14 @@
   "hero": {
     "available": "Disponible pour un stage",
     "location": "Montréal, Québec",
-    "paragraph": "Je construis les API, les bases de données et les systèmes qui font fonctionner des produits utiles. Étudiant en informatique, j’aime comprendre comment les choses marchent — et les améliorer.",
+    "paragraph": "Je suis étudiant en informatique à Montréal. Je développe des API, des bases de données et des applications Web.",
     "enterHall": "Découvrir mes projets",
     "hireMe": "Me contacter",
     "eyebrow": "Développeur logiciel · Montréal",
     "greeting": "Salut, moi c’est Ara",
-    "current": "Je travaille sur",
+    "current": "Je développe",
     "currentProject": "TradeCatch",
-    "currentSuffix": "— gestion des appels, automatisation et déploiement infonuagique."
+    "currentSuffix": "pour gérer les appels et les suivis des entrepreneurs du Québec."
   },
   "hall": {
     "title": "Quelques projets",
@@ -97,7 +97,7 @@
       {
         "role": "Techniques de l’informatique (DEC)",
         "company": "Collège de Bois-de-Boulogne",
-        "date": "2024–maintenant",
+        "date": "2024 à maintenant",
         "body": "Troisième année."
       },
       {
@@ -111,19 +111,19 @@
       {
         "role": "Fondateur et développeur",
         "company": "TradeCatch",
-        "date": "2026–maintenant",
+        "date": "2026 à maintenant",
         "body": "Développement et exploitation d’un service bilingue de récupération d’appels et de suivi pour les entrepreneurs du Québec. Produit, parcours clients, installation et suivi."
       },
       {
         "role": "Service à la clientèle et vente",
         "company": "Globo Chaussures",
-        "date": "Sep 2026–maintenant",
+        "date": "Sep 2026 à maintenant",
         "body": "Vente de chaussures en magasin, accueil de la clientèle, réponse à leurs questions et conseils pour trouver la bonne paire."
       },
       {
         "role": "Développeur indépendant",
         "company": "Travailleur autonome",
-        "date": "2025–maintenant",
+        "date": "2025 à maintenant",
         "body": "Développement de Dossier et SentinelOps : architecture backend, API REST, authentification, bases de données et déploiement infonuagique.",
         "tags": [
           "TypeScript",
@@ -142,7 +142,7 @@
       {
         "role": "Commis de salle",
         "company": "Grillade Nostos",
-        "date": "Sep–Nov 2025",
+        "date": "Sep à Nov 2025",
         "body": "Débarrassage et remise en place des tables, soutien à l’équipe de service aux heures de pointe."
       }
     ]

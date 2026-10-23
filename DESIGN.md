@@ -14,6 +14,10 @@ Decorative stars, flowers, portrait tape, drawn arrows and handwritten slogans
 are removed. The warm colours and project-card composition remain. About Me
 uses Ara’s personal introduction about curiosity, experimenting and growth.
 
+Write visible copy in plain sentences without em dashes or en dashes. Date
+ranges use words such as “to” in English and “à” in French. Avoid decorative
+punctuation in introductions and project captions.
+
 ## References
 
 - [Ratnesh Chipre](https://ratneshc.com/): compact introduction, personal voice,

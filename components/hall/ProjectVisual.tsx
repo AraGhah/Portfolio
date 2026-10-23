@@ -12,7 +12,7 @@ export function ProjectVisual({ slug }: { slug: string }) {
         <div className={styles.paper}>
           <div className={styles.paperHead}><span className={styles.serif}>dossier</span><span>↗</span></div>
           <div className={styles.paperRule} />
-          <span className={styles.micro}>01 — 02 — 03</span>
+          <span className={styles.micro}>01 / 02 / 03</span>
           <div className={styles.line} /><div className={styles.lineShort} /><div className={styles.line} />
           <div className={styles.paperFoot}><span>{t('pipeline')}</span><span className={styles.check}>✓</span></div>
         </div>
