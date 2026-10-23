@@ -10,5 +10,14 @@
 .primary:hover { background: var(--acc-hover); transform: translateY(-2px); }
 .primary span { font-size: 18px; }
 .available { display: flex; gap: 8px; align-items: center; margin: 24px 0 0; font: 10px/1.5 var(--font-mono); color: var(--acc); }
+.portrait { margin: 0; position: relative; padding: 8px 10px 40px; }
+.photoFrame { position: relative; background: #fffefa; padding: 10px 10px 0; transform: rotate(5deg); box-shadow: 0 3px 5px #252b2608, 0 10px 30px #252b260b; border: 1px solid #e8e7de; transition: transform .3s; }
+.photoFrame:hover { transform: rotate(1deg); }
+.photo { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: 50% 25%; filter: saturate(.65); }
+.photoFrame figcaption { display: flex; justify-content: space-between; align-items: center; padding: 11px 3px 13px; font: 10px var(--font-mono); color: var(--ink-muted); }
+.tape { position: absolute; top: -12px; left: 32%; width: 80px; height: 26px; z-index: 1; background: #d6d7bda3; transform: rotate(-7deg); }
+.photoNote { position: absolute; bottom: -8px; left: -12px; font: italic 14px var(--font-display); color: var(--acc); transform: rotate(-6deg); }
+.doodle { position: absolute; right: -18px; bottom: -9px; width: 74px; color: var(--acc); }
 @media (max-width: 700px) { .hero { grid-template-columns: minmax(0, 1fr); gap: 36px; padding-top: 52px; } }
+@media (max-width: 700px) { .portrait { grid-row: 1; width: 160px; justify-self: end; margin-bottom: -25px; padding-bottom: 20px; } .photoNote { font-size: 12px; left: -136px; bottom: 38px; max-width: 115px; } .doodle { left: -60px; bottom: 3px; width: 60px; } }
 @media (max-width: 600px) { .hero { padding: 50px 22px; } .title { font-size: clamp(42px, 10vw, 60px); } .lead { font-size: 16px; } }

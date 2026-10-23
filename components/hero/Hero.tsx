@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import { profile } from '@/content/profile';
 import styles from './Hero.module.css';
 
@@ -17,6 +18,17 @@ export function Hero() {
         </div>
         <p className={styles.available}><span className="status-dot" aria-hidden />{t('available')}</p>
       </div>
+      <figure className={styles.portrait}>
+        <div className={styles.photoFrame}>
+          <span className={styles.tape} aria-hidden />
+          <Image src="/ara.jpg" alt="Ara Ghahramanyan" width={480} height={600} priority className={styles.photo} sizes="(max-width: 700px) 160px, 220px" />
+          <figcaption>{t('location')} <span aria-hidden>↗</span></figcaption>
+        </div>
+        <p className={styles.photoNote}>{t('photoNote')}</p>
+        <svg className={styles.doodle} viewBox="0 0 100 60" fill="none" aria-hidden>
+          <path d="M6 50C45 55 90 42 83 14M75 22l8-10 10 7" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+        </svg>
+      </figure>
     </section>
   );
 }
