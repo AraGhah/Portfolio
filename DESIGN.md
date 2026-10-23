@@ -41,6 +41,11 @@ and small annotations give the work room to speak.
 24. Review responsive layouts and interaction details.
 25. Document the finished site and verification.
 
+Browser review also led to two focused navigation fixes: declare smooth scroll
+behaviour to Next.js, and keep route focus on the page content. These were saved
+as additional commits, bringing the completed sequence to 27 commits including
+the initial preservation commit and final documentation.
+
 ## Guardrails
 
 Keep the English and French experiences equivalent. Preserve supplied projects,
