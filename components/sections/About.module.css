@@ -1,0 +1,11 @@
+.grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 70px; align-items: start; }
+.copy p { font-size: 15px; line-height: 1.9; margin-bottom: 20px; }
+.copy a { font-size: 12px; }
+.note { position: relative; background: #e9ecdf; padding: 32px 28px 24px; transform: rotate(-2deg); margin-top: 10px; }
+.note h3 { font: 10px/1.7 var(--font-mono); text-transform: uppercase; letter-spacing: .05em; color: var(--acc); max-width: 78%; margin-bottom: 20px; }
+.note ul { list-style: none; padding: 0; margin: 0; }
+.note li { border-bottom: 1px solid #ced5c4; padding: 10px 0; font-size: 12px; }
+.note li::before { content: '↗'; margin-right: 12px; color: var(--acc); }
+.note p { font: italic 15px/1.5 var(--font-display); color: var(--acc); margin: 24px 0 0; }
+.flower { position: absolute; right: 16px; top: -22px; width: 55px; height: 55px; color: var(--acc); transform: rotate(15deg); }
+@media (max-width: 700px) { .grid { grid-template-columns: minmax(0, 1fr); gap: 26px; } .note { max-width: 440px; width: calc(100% - 10px); margin: 12px auto 0; } }

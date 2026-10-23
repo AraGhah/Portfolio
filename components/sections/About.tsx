@@ -1,132 +1,25 @@
-'use client';
-
-import { useRef } from 'react';
-import Image from 'next/image';
-import { motion, useScroll, useTransform } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import { RevealHeading } from '@/components/motion/RevealHeading';
-
-const EASE = [0.16, 0.84, 0.28, 1] as const;
-
-const paragraphs = [
-  { key: 'p1', color: 'var(--ink-muted)' },
-  { key: 'p2', color: 'var(--ink-dim)' },
-  { key: 'p3', color: 'var(--ink-dim)' },
-] as const;
+import { profile } from '@/content/profile';
+import styles from './About.module.css';
 
 export function About() {
   const t = useTranslations('about');
-  const tNav = useTranslations('nav');
-  const photoRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: photoRef,
-    offset: ['start end', 'end start'],
-  });
-  const imageY = useTransform(scrollYProgress, [0, 1], ['-8%', '8%']);
-
+  const interests = t.raw('interests') as string[];
   return (
-    <section
-      id="about"
-      className="section-block section-block--raised"
-      aria-labelledby="about-heading"
-    >
-      <div className="container-content about-grid">
-        <div className="about-photo-wrap" ref={photoRef}>
-          <motion.div
-            className="about-photo-frame"
-            initial={{ clipPath: 'inset(100% -30% -30% -30%)' }}
-            whileInView={{ clipPath: 'inset(-30% -30% -30% -30%)' }}
-            viewport={{ once: true, margin: '0px 0px -15% 0px' }}
-            transition={{ duration: 1.4, ease: EASE }}
-          >
-            <div className="about-photo-clip">
-              <motion.div
-                style={{ y: imageY }}
-                initial={{ scale: 1.25 }}
-                whileInView={{ scale: 1.12 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1.8, ease: EASE }}
-              >
-                <Image
-                  src="/ara.jpg"
-                  alt="Ara Ghahramanyan"
-                  width={640}
-                  height={800}
-                  className="about-photo"
-                  priority={false}
-                />
-              </motion.div>
-            </div>
-            {(['tl', 'tr', 'bl', 'br'] as const).map((corner, i) => (
-              <motion.span
-                key={corner}
-                aria-hidden
-                className={`about-corner about-corner--${corner}`}
-                initial={{ opacity: 0, scale: 0.4 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, ease: EASE, delay: 1 + i * 0.08 }}
-              />
-            ))}
-          </motion.div>
-          <motion.div
-            className="about-photo-meta"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.9 }}
-          >
-            <span>Montréal, QC</span>
-          </motion.div>
-        </div>
-
-        <div>
-          <span className="eyebrow-num">
-            <span className="eyebrow-line" aria-hidden />
-            04. {tNav('about')}
-          </span>
-          <RevealHeading
-            id="about-heading"
-            segments={[{ text: t('title') }]}
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'var(--t-h2)',
-              fontWeight: 400,
-              lineHeight: 1.02,
-              color: 'var(--ink)',
-              margin: '14px 0 0',
-            }}
-          />
-          <motion.div
-            aria-hidden
-            initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.3, ease: EASE, delay: 0.2 }}
-            style={{
-              height: 2,
-              transformOrigin: '0% 50%',
-              background: 'linear-gradient(90deg, var(--c-blue), var(--c-slate-deep) 60%, transparent)',
-              margin: '32px 0',
-            }}
-          />
-          {paragraphs.map((p, i) => (
-            <motion.p
-              key={p.key}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '0px 0px -8% 0px' }}
-              transition={{ duration: 0.9, ease: EASE, delay: 0.15 + i * 0.1 }}
-              style={{
-                fontSize: 'var(--t-body-sm)',
-                lineHeight: 1.75,
-                color: p.color,
-                margin: i === paragraphs.length - 1 ? 0 : '0 0 22px',
-              }}
-            >
-              {t(p.key)}
-            </motion.p>
-          ))}
+    <section id="about" className="section-block" aria-labelledby="about-heading">
+      <div className="container-content">
+        <div className="section-heading"><span className="section-number">02 /</span><h2 id="about-heading">{t('title')}</h2></div>
+        <div className={styles.grid}>
+          <div className={styles.copy}><p>{t('p1')}</p><p>{t('p2')}</p><a href={profile.github} target="_blank" rel="noreferrer" className="text-link">{t('link')} ↗</a></div>
+          <aside className={styles.note}>
+            <svg className={styles.flower} viewBox="0 0 80 80" aria-hidden fill="none" stroke="currentColor" strokeWidth="1.5">
+              <path d="M40 28C17-3 8 17 28 35-5 26-5 52 28 46 6 69 27 82 38 53 44 86 67 73 50 48 81 62 88 37 55 37 83 18 61 1 46 29 51-6 26-4 40 28Z" />
+              <circle cx="41" cy="40" r="8" />
+            </svg>
+            <h3>{t('offline')}</h3>
+            <ul>{interests.map((interest) => <li key={interest}>{interest}</li>)}</ul>
+            <p>{t('note')}</p>
+          </aside>
         </div>
       </div>
     </section>

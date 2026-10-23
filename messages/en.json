@@ -109,10 +109,18 @@
     "Public": "Public"
   },
   "about": {
-    "title": "About",
-    "p1": "Third-year Computer Science student at Collège de Bois-de-Boulogne. I mainly work on backend and full-stack projects involving REST APIs, authentication, databases, system design, and cloud infrastructure.",
-    "p2": "I focus on writing clean, maintainable code and building systems that are secure and easy to understand. Most of my experience comes from building my own projects, solving problems as they appear, and improving the architecture as the projects grow.",
-    "p3": "Outside programming, I train in wrestling, judo and weightlifting, follow financial markets, and spend my summers organizing activities for seniors at a community centre in Montréal."
+    "title": "A little about me",
+    "p1": "I’m Ara Ghahramanyan, a computer science student at Collège de Bois-de-Boulogne in Montréal. I’m drawn to the parts of software you don’t always see: the data model, the API contract, the decision that keeps a system understandable.",
+    "p2": "My projects are how I learn. I build something, find the rough edges, and work out how to make it better. I’m looking for an internship where I can bring that curiosity to a team.",
+    "p3": "Outside programming, I train in wrestling, judo and weightlifting, follow financial markets, and spend my summers organizing activities for seniors at a community centre in Montréal.",
+    "offline": "When the laptop closes",
+    "interests": [
+      "Wrestling, judo & weightlifting",
+      "Following the financial markets",
+      "Community activities for seniors"
+    ],
+    "note": "Different interests. The same curiosity.",
+    "link": "Find me on GitHub"
   },
   "skills": {
     "title": "Skills and technologies",
