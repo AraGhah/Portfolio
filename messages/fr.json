@@ -19,13 +19,26 @@
     "location": "Montréal, Québec",
     "role": "Ingénieur logiciel",
     "buildPrefix": "Je construis",
-    "buildWords": ["des API REST sécurisées", "des applis dans le nuage", "des produits full stack", "des pipelines de données"],
-    "paragraph": "Systèmes backend, infrastructure infonuagique et applications full stack. Chaque projet ci-dessous présente les technologies utilisées et les décisions qui le sous-tendent.",
-    "enterHall": "Voir mes projets",
-    "hireMe": "Embauchez-moi",
+    "buildWords": [
+      "des API REST sécurisées",
+      "des applis dans le nuage",
+      "des produits full stack",
+      "des pipelines de données"
+    ],
+    "paragraph": "Je construis les API, les bases de données et les systèmes qui font fonctionner des produits utiles. Étudiant en informatique, j’aime comprendre comment les choses marchent — et les améliorer.",
+    "enterHall": "Découvrir mes projets",
+    "hireMe": "Me contacter",
     "trustProjects": "projets réalisés",
     "trustLive": "produit en production",
-    "trustLanguages": "Français · Anglais"
+    "trustLanguages": "Français · Anglais",
+    "eyebrow": "Développeur logiciel · Montréal",
+    "greeting": "Salut, moi c’est Ara",
+    "current": "Je travaille sur",
+    "currentProject": "Dossier",
+    "currentSuffix": "— de la recherche pour des échanges plus personnels.",
+    "photoNote": "La personne derrière le code",
+    "aside": "Loin du clavier ? Probablement sur un tatami.",
+    "signature": "La curiosité fait avancer les choses."
   },
   "why": {
     "eyebrow": "Pourquoi travailler avec moi",
@@ -104,14 +117,51 @@
     "education": "Formation",
     "work": "Expérience",
     "educationItems": [
-      { "role": "Techniques de l’informatique (DEC)", "company": "Collège de Bois-de-Boulogne", "date": "2024–maintenant", "body": "Troisième année." },
-      { "role": "Diplôme d’études secondaires", "company": "École Sourp Hagop", "date": "", "body": "" }
+      {
+        "role": "Techniques de l’informatique (DEC)",
+        "company": "Collège de Bois-de-Boulogne",
+        "date": "2024–maintenant",
+        "body": "Troisième année."
+      },
+      {
+        "role": "Diplôme d’études secondaires",
+        "company": "École Sourp Hagop",
+        "date": "",
+        "body": ""
+      }
     ],
     "workItems": [
-      { "role": "Développeur indépendant", "company": "Travailleur autonome", "date": "2025–maintenant", "body": "Construction de Dossier, Trade Catch et SentinelOps : architecture backend, API REST, authentification, bases de données, déploiement infonuagique et applications full stack.", "tags": ["TypeScript", "Next.js", "React", "PostgreSQL", "AWS"] },
-      { "role": "Service à la clientèle et vente", "company": "Globo Chaussures", "date": "Sep 2026–maintenant", "body": "Vente de chaussures en magasin, accueil de la clientèle, réponse à leurs questions et conseils pour trouver la bonne paire." },
-      { "role": "Animateur jeunesse", "company": "Centre communautaire SCAMA", "date": "", "body": "Animation d’activités récréatives et sociales pour aînés pendant deux étés." },
-      { "role": "Commis de salle", "company": "Grillade Nostos", "date": "Sep–Nov 2025", "body": "Débarrassage et remise en place des tables, soutien à l’équipe de service aux heures de pointe." }
+      {
+        "role": "Développeur indépendant",
+        "company": "Travailleur autonome",
+        "date": "2025–maintenant",
+        "body": "Construction de Dossier, Trade Catch et SentinelOps : architecture backend, API REST, authentification, bases de données, déploiement infonuagique et applications full stack.",
+        "tags": [
+          "TypeScript",
+          "Next.js",
+          "React",
+          "PostgreSQL",
+          "AWS"
+        ]
+      },
+      {
+        "role": "Service à la clientèle et vente",
+        "company": "Globo Chaussures",
+        "date": "Sep 2026–maintenant",
+        "body": "Vente de chaussures en magasin, accueil de la clientèle, réponse à leurs questions et conseils pour trouver la bonne paire."
+      },
+      {
+        "role": "Animateur jeunesse",
+        "company": "Centre communautaire SCAMA",
+        "date": "",
+        "body": "Animation d’activités récréatives et sociales pour aînés pendant deux étés."
+      },
+      {
+        "role": "Commis de salle",
+        "company": "Grillade Nostos",
+        "date": "Sep–Nov 2025",
+        "body": "Débarrassage et remise en place des tables, soutien à l’équipe de service aux heures de pointe."
+      }
     ]
   },
   "contact": {

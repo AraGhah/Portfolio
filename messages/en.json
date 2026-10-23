@@ -19,13 +19,26 @@
     "location": "Montréal, Québec",
     "role": "Software Engineer",
     "buildPrefix": "I build",
-    "buildWords": ["secure REST APIs", "cloud-deployed apps", "full-stack products", "data pipelines"],
-    "paragraph": "Backend systems, cloud infrastructure, and full-stack applications. Every project below comes with the technologies I used and the decisions behind it.",
-    "enterHall": "See my projects",
-    "hireMe": "Hire me",
+    "buildWords": [
+      "secure REST APIs",
+      "cloud-deployed apps",
+      "full-stack products",
+      "data pipelines"
+    ],
+    "paragraph": "I build the APIs, databases and cloud systems behind useful products. A computer science student who likes understanding how things work — and making them work better.",
+    "enterHall": "Explore my work",
+    "hireMe": "Get in touch",
     "trustProjects": "projects built",
     "trustLive": "product live in production",
-    "trustLanguages": "English · French"
+    "trustLanguages": "English · French",
+    "eyebrow": "Software developer · Montréal",
+    "greeting": "Hi, I’m Ara",
+    "current": "Currently building",
+    "currentProject": "Dossier",
+    "currentSuffix": "— research that makes outreach more personal.",
+    "photoNote": "The person behind the code",
+    "aside": "Away from the keyboard? Probably on a judo mat.",
+    "signature": "A little curiosity goes a long way."
   },
   "why": {
     "eyebrow": "Why work with me",
@@ -104,14 +117,51 @@
     "education": "Education",
     "work": "Experience",
     "educationItems": [
-      { "role": "Computer Science Technology (DEC)", "company": "Collège de Bois-de-Boulogne", "date": "2024–now", "body": "Third year." },
-      { "role": "High School Diploma", "company": "Sourp Hagop High School", "date": "", "body": "" }
+      {
+        "role": "Computer Science Technology (DEC)",
+        "company": "Collège de Bois-de-Boulogne",
+        "date": "2024–now",
+        "body": "Third year."
+      },
+      {
+        "role": "High School Diploma",
+        "company": "Sourp Hagop High School",
+        "date": "",
+        "body": ""
+      }
     ],
     "workItems": [
-      { "role": "Independent Developer", "company": "Self-employed", "date": "2025–present", "body": "Building Dossier, Trade Catch and SentinelOps: backend architecture, REST APIs, authentication, databases, cloud deployment, and full-stack applications.", "tags": ["TypeScript", "Next.js", "React", "PostgreSQL", "AWS"] },
-      { "role": "Customer Service & Sales Associate", "company": "Globo Shoes", "date": "Sep 2026–present", "body": "Selling shoes in store, welcoming customers, answering their questions and helping them find the right pair." },
-      { "role": "Youth Leader", "company": "SCAMA Community Centre", "date": "", "body": "Led recreational and social activities for seniors over two summers." },
-      { "role": "Busser", "company": "Grillade Nostos", "date": "Sep–Nov 2025", "body": "Cleared and reset tables, supported the serving team through peak service." }
+      {
+        "role": "Independent Developer",
+        "company": "Self-employed",
+        "date": "2025–present",
+        "body": "Building Dossier, Trade Catch and SentinelOps: backend architecture, REST APIs, authentication, databases, cloud deployment, and full-stack applications.",
+        "tags": [
+          "TypeScript",
+          "Next.js",
+          "React",
+          "PostgreSQL",
+          "AWS"
+        ]
+      },
+      {
+        "role": "Customer Service & Sales Associate",
+        "company": "Globo Shoes",
+        "date": "Sep 2026–present",
+        "body": "Selling shoes in store, welcoming customers, answering their questions and helping them find the right pair."
+      },
+      {
+        "role": "Youth Leader",
+        "company": "SCAMA Community Centre",
+        "date": "",
+        "body": "Led recreational and social activities for seniors over two summers."
+      },
+      {
+        "role": "Busser",
+        "company": "Grillade Nostos",
+        "date": "Sep–Nov 2025",
+        "body": "Cleared and reset tables, supported the serving team through peak service."
+      }
     ]
   },
   "contact": {
