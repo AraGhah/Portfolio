@@ -4,6 +4,7 @@ import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { pageMetadata } from '@/lib/metadata';
+import { ReadingProgress } from '@/components/motion/ReadingProgress';
 import '../globals.css';
 
 type Props = {
@@ -39,6 +40,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html lang={locale} data-scroll-behavior="smooth">
       <body>
         <NextIntlClientProvider messages={messages}>
+          <ReadingProgress />
           {children}
         </NextIntlClientProvider>
       </body>
