@@ -115,6 +115,12 @@
         "body": "Développement et exploitation d’un service bilingue de récupération d’appels et de suivi pour les entrepreneurs du Québec. Produit, parcours clients, installation et suivi."
       },
       {
+        "role": "Service à la clientèle et vente",
+        "company": "Globo Chaussures",
+        "date": "Sep 2026–maintenant",
+        "body": "Vente de chaussures en magasin, accueil de la clientèle, réponse à leurs questions et conseils pour trouver la bonne paire."
+      },
+      {
         "role": "Développeur indépendant",
         "company": "Travailleur autonome",
         "date": "2025–maintenant",
@@ -126,12 +132,6 @@
           "PostgreSQL",
           "AWS"
         ]
-      },
-      {
-        "role": "Service à la clientèle et vente",
-        "company": "Globo Chaussures",
-        "date": "Sep 2026–maintenant",
-        "body": "Vente de chaussures en magasin, accueil de la clientèle, réponse à leurs questions et conseils pour trouver la bonne paire."
       },
       {
         "role": "Animateur jeunesse",
