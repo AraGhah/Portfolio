@@ -123,7 +123,7 @@
     "link": "Me retrouver sur GitHub"
   },
   "skills": {
-    "title": "Compétences et technologies",
+    "title": "Ma boîte à outils",
     "backend": "Backend",
     "backendItems": "Conception d’API REST · Authentification JWT · Node.js / Express · ASP.NET Core / C#",
     "data": "Données",
@@ -131,7 +131,8 @@
     "frontend": "Frontend",
     "frontendItems": "React · Next.js · TypeScript · Vite",
     "cloud": "Infonuagique et outils",
-    "cloudItems": "AWS · Cloudflare Workers · OpenNext · Supabase · n8n · Docker · Git & GitHub · Unity / C# (3D)"
+    "cloudItems": "AWS · Cloudflare Workers · OpenNext · Supabase · n8n · Docker · Git & GitHub · Unity / C# (3D)",
+    "intro": "Les outils que je choisis selon le problème à résoudre."
   },
   "experience": {
     "title": "Formation et expérience",
