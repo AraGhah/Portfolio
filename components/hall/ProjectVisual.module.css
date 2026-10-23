@@ -1,6 +1,5 @@
 .canvas { height: 250px; position: relative; overflow: hidden; border-radius: 6px; isolation: isolate; color: #354a37; }
 .corner { position: absolute; top: 18px; left: 20px; font: 9px var(--font-mono); opacity: .72; }
-.annotation { position: absolute; bottom: 20px; right: 22px; font: italic 14px var(--font-display); transform: rotate(-5deg); }
 .dossier { background: #e6eadd; }
 .paperBack, .paper { position: absolute; width: 200px; height: 150px; background: #fffefa; left: calc(50% - 100px); top: 62px; border: 1px solid #d5dacb; }
 .paperBack { transform: rotate(-10deg); background: #f3f2e7; }
@@ -14,7 +13,6 @@
 .lineShort { width: 65%; }
 .paperFoot { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; font: 8px var(--font-mono); }
 .check { border: 1px solid #a3b38b; border-radius: 50%; width: 19px; height: 19px; display: grid; place-items: center; }
-.star { position: absolute; left: 22px; bottom: 16px; color: #82925f; font-size: 34px; }
 .trade { background: #eee2d2; color: #735433; }
 .call { position: absolute; width: 216px; left: calc(50% - 108px); top: 65px; padding: 18px; background: #fcf8f1; border: 1px solid #dac5aa; border-radius: 14px; transform: rotate(-4deg); box-shadow: 0 5px 12px #7c5d3610; }
 .callIcon { display: block; font: 22px var(--font-display); }

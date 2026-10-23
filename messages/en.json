@@ -24,12 +24,11 @@
     "greeting": "Hi, I’m Ara",
     "current": "Currently building",
     "currentProject": "TradeCatch",
-    "currentSuffix": "— call handling, automation and cloud deployment.",
-    "photoNote": "The person behind the code"
+    "currentSuffix": "— call handling, automation and cloud deployment."
   },
   "hall": {
     "title": "Selected work",
-    "intro": "A few things I’ve built, and what I learned along the way.",
+    "intro": "A selection of my development projects.",
     "filterAll": "All",
     "categoryLabel": "Filter by category",
     "categoryFullstack": "Full stack",
@@ -37,11 +36,11 @@
     "doorAria": "Open case study: {title}",
     "empty": "No projects in this category.",
     "caseStudy": "Read the story",
-    "archive": "More from the workbench",
-    "archiveIntro": "Other projects, experiments and things that taught me something.",
+    "archive": "More projects",
+    "archiveIntro": "Browse the rest of my projects by category.",
     "projectCount": "{count, plural, one {# project} other {# projects}}",
     "reset": "Show all",
-    "annotation": "Made with a little persistence. ↙"
+    "categoryApi": "API"
   },
   "caseStudy": {
     "door": "Project",
@@ -66,17 +65,16 @@
     "Public": "Public"
   },
   "about": {
-    "title": "A little about me",
-    "p1": "I’m Ara Ghahramanyan, a computer science student at Collège de Bois-de-Boulogne in Montréal. I’m drawn to the parts of software you don’t always see: the data model, the API contract, the decision that keeps a system understandable.",
-    "p2": "My projects are how I learn. I build something, find the rough edges, and work out how to make it better. I’m looking for an internship where I can bring that curiosity to a team.",
-    "p3": "Outside programming, I train in wrestling, judo and weightlifting, follow financial markets, and spend my summers organizing activities for seniors at a community centre in Montréal.",
-    "offline": "When the laptop closes",
+    "title": "About me",
+    "p1": "Hey, I’m Ara. I’ve always been curious about how things work and how an idea can turn into something meaningful. I love creating, experimenting and learning along the way.",
+    "p2": "I don’t have everything figured out, but I enjoy the process of growing, making mistakes and getting better at what I do. Trying something new, seeing what works and starting again is part of what keeps me interested.",
+    "p3": "I believe the little details make a big difference, and I try to bring that mindset into everything I create. This website is a small reflection of who I am, what I’m passionate about and where I’m headed.",
+    "offline": "Outside of work",
     "interests": [
       "Wrestling, judo & weightlifting",
       "Following the financial markets",
       "Community activities for seniors"
     ],
-    "note": "Different interests. The same curiosity.",
     "link": "Find me on GitHub"
   },
   "skills": {
@@ -156,7 +154,6 @@
     "copyEmail": "Copy email",
     "copied": "Copied",
     "title": "Get in touch.",
-    "note": "A conversation is a good place to start.",
     "copyFailed": "Couldn’t copy. You can select the email address above.",
     "github": "GitHub",
     "intro": "Internships & development opportunities"
@@ -164,20 +161,17 @@
   "footer": {
     "copyright": "© {year} Ara Ghahramanyan",
     "backToTop": "Back to top",
-    "tagline": "Made with care in Montréal."
+    "tagline": "Montréal, Québec"
   },
   "Meta": {
     "title": "Ara Ghahramanyan · Software Developer",
     "description": "Software developer and computer science student in Montréal. Selected projects in backend development, APIs, cloud systems and full stack applications."
   },
   "diagrams": {
-    "dossier": "d / research, refined.",
-    "dossierNote": "A little more personal.",
+    "dossier": "Dossier",
     "pipeline": "research → relevance",
-    "trade": "tc / always on the line.",
-    "tradeNote": "Every call is a beginning.",
-    "sentinel": "so / order from the noise.",
-    "events": "events → incidents",
-    "sentinelNote": "A clearer signal."
+    "trade": "TradeCatch",
+    "sentinel": "SentinelOps",
+    "events": "events → incidents"
   }
 }

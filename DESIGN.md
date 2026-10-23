@@ -10,6 +10,10 @@ promotion across unrelated case studies. Contact copy focuses on internships
 and development opportunities. React entrances and reading progress remain,
 with support for reduced motion.
 
+Decorative stars, flowers, portrait tape, drawn arrows and handwritten slogans
+are removed. The warm colours and project-card composition remain. About Me
+uses Ara’s personal introduction about curiosity, experimenting and growth.
+
 ## References
 
 - [Ratnesh Chipre](https://ratneshc.com/): compact introduction, personal voice,

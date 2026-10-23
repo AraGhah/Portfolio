@@ -1,6 +1,5 @@
 .panel { background: #e9ecdf; padding: 40px; border-radius: 5px; position: relative; }
-.top { display: flex; align-items: center; gap: 18px; font: 10px/1.8 var(--font-mono); color: var(--acc); margin-bottom: 28px; padding-right: 36px; }
-.asterisk { position: absolute; top: 22px; right: 30px; font-size: 48px; font-weight: 400; line-height: 1; transform: rotate(12deg); }
+.top { display: flex; align-items: center; gap: 18px; font: 10px/1.8 var(--font-mono); color: var(--acc); margin-bottom: 28px; }
 .title { font: 400 clamp(32px, 4.5vw, 50px)/1.15 var(--font-display); letter-spacing: -.045em; max-width: 660px; margin: 0 0 20px; }
 .body { max-width: 610px; font-size: 14px; line-height: 1.85; margin-bottom: 30px; }
 .emailRow { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
@@ -14,5 +13,4 @@
 .socials { display: flex; gap: 24px; font-size: 11px; }
 .socials a { display: inline-flex; align-items: center; min-height: 40px; }
 .socials a:hover { color: var(--acc); text-decoration: underline; text-underline-offset: 4px; }
-.note { font: italic 14px var(--font-display); color: var(--acc); }
-@media (max-width: 600px) { .panel { padding: 28px 22px; } .asterisk { font-size: 36px; right: 20px; } .top { font-size: 9px; gap: 12px; } .email { gap: 12px; } .socials { gap: 20px; } }
+@media (max-width: 600px) { .panel { padding: 28px 22px; } .top { font-size: 9px; gap: 12px; } .email { gap: 12px; } .socials { gap: 20px; } }

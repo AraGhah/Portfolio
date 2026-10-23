@@ -11,7 +11,7 @@ type CategoryFilterProps = {
   onChange: (category: CategoryFilterValue) => void;
 };
 
-const OPTIONS: CategoryFilterValue[] = ['all', 'fullstack', 'software'];
+const OPTIONS: CategoryFilterValue[] = ['all', 'fullstack', 'api', 'software'];
 
 export function CategoryFilter({
   activeCategory,
@@ -29,7 +29,9 @@ export function CategoryFilter({
             ? t('filterAll')
             : option === 'fullstack'
               ? t('categoryFullstack')
-              : t('categorySoftware');
+              : option === 'api'
+                ? t('categoryApi')
+                : t('categorySoftware');
 
         return (
           <button

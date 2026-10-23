@@ -33,7 +33,7 @@ export const projectsEn: Project[] = [
     doorNumber: '02',
     order: 2,
     complexity: 3,
-    category: 'software',
+    category: 'api',
     doorKind: 'vault',
     title: 'Banking System API',
     type: 'Backend and database application · Academic team project',

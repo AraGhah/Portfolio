@@ -26,7 +26,7 @@ export function Contact() {
     <section id="contact" className="section-block" aria-labelledby="contact-heading">
       <div className="container-content">
         <div className={styles.panel}>
-          <div className={styles.top}><span className="section-number">05 /</span><span>{t('intro')}</span><span className={styles.asterisk} aria-hidden>✳</span></div>
+          <div className={styles.top}><span className="section-number">05 /</span><span>{t('intro')}</span></div>
           <h2 id="contact-heading" className={styles.title}>{t('title')}</h2>
           <p className={styles.body}>{t('body')}</p>
           <div className={styles.emailRow}>
@@ -40,7 +40,6 @@ export function Contact() {
               <a href={profile.linkedIn} target="_blank" rel="noreferrer">{t('linkedIn')} ↗</a>
               <a href={`tel:+1${profile.phone.replaceAll('-', '')}`}>{t('phone')} ↗</a>
             </div>
-            <span className={styles.note}>{t('note')}</span>
           </div>
         </div>
       </div>

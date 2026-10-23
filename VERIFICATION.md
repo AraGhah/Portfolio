@@ -18,6 +18,16 @@ with the already running development server.
 
 ## Browser review
 
+The latest refinement removes decorative stars, the flower, portrait tape and
+drawn arrow, and handwritten annotations while preserving the warm layout.
+About Me now follows Ara’s supplied personal introduction, in English and French.
+Banking System API belongs to the new API category; the French content generator
+also preserves project categories. The production build and type check passed.
+The English API filter shows only Banking System API (one result); software and
+games now has three results, and all seven archive projects remain available.
+The French API filter also shows one result at a 320px phone width, with no
+horizontal overflow. All three About Me paragraphs render in both languages.
+
 The personal-portfolio revision restores the earlier warm visual design and
 three equal featured project cards. The standalone TradeCatch sales feature,
 cross-project promotional banner and business contact copy have been removed.
@@ -41,7 +51,8 @@ Checked these interactions:
 
 - Expand the native project archive.
 - Filter full-stack work: three archive projects.
-- Filter software and games: four archive projects.
+- Filter software and games: three archive projects.
+- Filter API: Banking System API, one archive project.
 - Keep all seven remaining projects reachable alongside the three featured ones.
 - Open a case study from the project list.
 - Read the French Dossier case study on a phone layout.

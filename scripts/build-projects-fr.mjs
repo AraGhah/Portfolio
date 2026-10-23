@@ -47,6 +47,7 @@ for (const p of projectsFr) {
   lines.push(`    doorNumber: ${JSON.stringify(p.doorNumber)},`);
   lines.push(`    order: ${p.order},`);
   lines.push(`    complexity: ${p.complexity},`);
+  lines.push(`    category: ${JSON.stringify(p.category)},`);
   lines.push(`    doorKind: ${JSON.stringify(p.doorKind)},`);
   lines.push(`    title: ${JSON.stringify(p.title)},`);
   lines.push(`    type: ${JSON.stringify(p.type)},`);

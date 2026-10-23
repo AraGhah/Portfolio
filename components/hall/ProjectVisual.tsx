@@ -16,8 +16,6 @@ export function ProjectVisual({ slug }: { slug: string }) {
           <div className={styles.line} /><div className={styles.lineShort} /><div className={styles.line} />
           <div className={styles.paperFoot}><span>{t('pipeline')}</span><span className={styles.check}>✓</span></div>
         </div>
-        <span className={styles.annotation}>{t('dossierNote')}</span>
-        <span className={styles.star}>✳</span>
       </div>
     );
   }
@@ -32,7 +30,6 @@ export function ProjectVisual({ slug }: { slug: string }) {
           </div>
           <div className={styles.callFoot}><span>FR / EN</span><span>●</span></div>
         </div>
-        <span className={styles.annotation}>{t('tradeNote')}</span>
       </div>
     );
   }
@@ -43,7 +40,6 @@ export function ProjectVisual({ slug }: { slug: string }) {
         {[0, 1, 2].map((i) => <div key={i} className={styles.event}><span className={styles.eventDot} /><span className={styles.eventLine} /><span className={styles.eventArrow}>↗</span></div>)}
         <div className={styles.queue}><span>{t('events')}</span><span>⌁</span></div>
       </div>
-      <span className={styles.annotation}>{t('sentinelNote')}</span>
     </div>
   );
 }
