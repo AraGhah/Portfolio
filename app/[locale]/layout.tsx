@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, setRequestLocale } from 'next-intl/server';
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+import { pageMetadata } from '@/lib/metadata';
 import { MotionProvider } from '@/components/motion/MotionProvider';
 import { BackToTop } from '@/components/motion/BackToTop';
 import '../globals.css';
@@ -22,17 +23,8 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const title =
-    locale === 'fr'
-      ? 'Ara Ghahramanyan · Ingénieur logiciel'
-      : 'Ara Ghahramanyan · Software Engineer';
-  return {
-    title,
-    description:
-      locale === 'fr'
-        ? 'Portfolio · hall des projets et études de cas.'
-        : 'Portfolio · hall of projects and case studies.',
-  };
+  const t = await getTranslations({ locale, namespace: 'Meta' });
+  return pageMetadata(locale, t('title'), t('description'));
 }
 
 export default async function LocaleLayout({ children, params }: Props) {

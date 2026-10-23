@@ -1,8 +1,9 @@
 import type { MetadataRoute } from 'next';
 import { routing } from '@/i18n/routing';
 import { projectsEn } from '@/content/projects.en';
+import { profile } from '@/content/profile';
 
-const baseUrl = 'https://araghahramanyan.dev';
+const baseUrl = profile.siteUrl;
 
 export const dynamic = 'force-static';
 

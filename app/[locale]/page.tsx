@@ -7,6 +7,7 @@ import { About } from '@/components/sections/About';
 import { Skills } from '@/components/sections/Skills';
 import { Experience } from '@/components/sections/Experience';
 import { Contact } from '@/components/sections/Contact';
+import { pageMetadata } from '@/lib/metadata';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -15,10 +16,7 @@ type Props = {
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Meta' });
-  return {
-    title: t('title'),
-    description: t('description'),
-  };
+  return pageMetadata(locale, t('title'), t('description'));
 }
 
 export default async function HomePage({ params }: Props) {

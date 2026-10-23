@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aragahramanyan.dev/sitemap.xml
+Sitemap: https://araghahramanyan.dev/sitemap.xml

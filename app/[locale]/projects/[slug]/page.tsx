@@ -6,6 +6,7 @@ import { CaseStudyContent } from '@/components/case-study/CaseStudyContent';
 import { getProject, getProjects, getFeaturedProjects, getArchivedProjects } from '@/lib/projects';
 import { Link } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
+import { pageMetadata } from '@/lib/metadata';
 import styles from '@/components/case-study/CaseStudy.module.css';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
@@ -18,7 +19,7 @@ export async function generateMetadata({ params }: Props) {
   const { locale, slug } = await params;
   const project = getProject(locale, slug);
   if (!project) return {};
-  return { title: `${project.title} · Ara Ghahramanyan`, description: project.tagline };
+  return pageMetadata(locale, `${project.title} · Ara Ghahramanyan`, project.tagline, `/projects/${slug}`);
 }
 
 export default async function ProjectPage({ params }: Props) {
